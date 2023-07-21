@@ -1,0 +1,18 @@
+.circulo{
+    clip-path: circle(50% at 100% 50%);
+}
+.nav-link{
+    color: black;
+    margin-right: 40px;
+}
+.nav-link:hover{
+    color: #009694;
+}
+.nav-link:active{
+    border-bottom: 2px;
+    border-bottom-color: black;
+}
+.logo{
+    width: 30%;
+    height: 30%;
+}
