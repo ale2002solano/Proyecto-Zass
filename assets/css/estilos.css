@@ -6,11 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm&family=Homemade+Apple&family=Julius+Sans+One&family=Montserrat:ital@0;1&family=Sacramento&display=swap');
 /* /FINAL DE LAS FUENTES */
 .circulo{
-    background-color: #edb6a2b7;
+    background-image: url("../img/clip.png");
+    background-size: 50% 100%;
     width: 100%;
     height: 100%;
     position: absolute;
     clip-path: circle(50% at 100% 50%);
+    bottom: 0%;
 }
 .nav-link{
     color: black;
@@ -38,6 +40,7 @@
 	align-content: center;
     margin-right: 50%;
     margin-top: 10%;
+    top: 100%;
 }
 .msj-ln1{
     font-family:  'Julius Sans One', sans-serif;
@@ -58,14 +61,27 @@
     color: white;
     background-color: #e6795b;
     border-color:  #a7543d;
-    box-shadow: 8px 8px rgba(0,0,0,0.2);
+   
 }
 .btn-shop:hover{
     background-color: #f4997f;
     border-color:  #b16550;
 }
 .barra-nav{
-    display: inline-block;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+    background-color: rgba(255, 255, 255, 0.534);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+bottom: 90%;
 }
 .catg-1{
     display: flex;
@@ -74,8 +90,84 @@
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+    background-color: #b1b1b13a;
+    border-radius: 20px;
+    width: 250px;
+    height: 280px;
+    padding: 20px;
+    box-shadow: 8px 8px rgba(0,0,0,0.2);
 }
 #img-catg{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+.categorias{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 40px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    color: black;
+    font-size:large;
+    font-weight: 400;
+}
+#tit{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    font-family:  'Julius Sans One', sans-serif;
+    font-size:xx-large;
+    font-weight: 600;
+    color: black;
+    letter-spacing:4px;
+}
+.mvs-1{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    text-align: justify;
+    line-height: 30px;
+    background-color: #b1b1b13a;
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    box-shadow: 8px 8px rgba(0,0,0,0.2);
+}
+.mvs{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 40px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    color: black;
+}
+.contc{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 60px;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    color: black; 
+}
+#tit-mvs{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: medium;
+    font-weight: 700;
 }
