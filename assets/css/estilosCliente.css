@@ -1,0 +1,9 @@
+body, .container{
+    border: 1px solid red;
+    height: 98vh;
+}
+
+#loginCliente{
+    border: 1px solid black;
+    height: 100%;
+}
