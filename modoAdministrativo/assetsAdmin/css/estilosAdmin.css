@@ -1,4 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Homemade+Apple&family=Julius+Sans+One&family=Montserrat:ital@0;1&display=swap');
 #header{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: space-between;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.555);
+}
+#titulo{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size:xx-large;
+    font-weight: 700;
+    padding: 20px;
+}
+#logo{
+    width: 10%;
+    height: 10%;
+}
+.card{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    background-color: #b1b1b13a;
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    box-shadow: 8px 8px rgba(0,0,0,0.2);
+    background-color: #2dc2ac;
+}
+#cardsAdmin{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    color: white;
+    font-size:large;
+    font-weight: 400;
+}
+#icons-card{
+    padding: 15px;
 }
