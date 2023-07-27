@@ -4,13 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/estilosCliente.css">
+    <script src="https://kit.fontawesome.com/d7073a8296.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <title>login</title>
 </head>
 <body>
+
+<!-- navegador gris cliente -->
+<nav id="navegadorCliente" class="navbar navbar-expand-lg">
+        <div id="nav">
+            <div class="container-fluid">
+                <button id="botonBar" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars" style="color: #000000;"></i>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 shadow-lg all-text-bar ">
+                            <li class="nav-item bar-text">
+                                <a class="nav-link" href="#"><p>Home</p></a>
+                            </li>
+                            <li class="nav-item bar-text">
+                                <a class="nav-link" href="#"><p>Categories</p></a>
+                            </li>
+                            <li class="nav-item bar-text">
+                                    <a class="nav-link" href="#"><p>About</p></a>
+                            </li>
+                            <li class="nav-item bar-text">
+                                <a class="nav-link" href="#"><p>Contact</p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div><i id="carrito" class="fa-solid fa-cart-shopping" style="color: #000000;"></i></div>
+            </div>
+        </div>
+</nav>
+
+<!-- pagina "log in" cliente -->
     <div id="loginCliente">
-
-
-
+        <div><p>Iniciar sesión</p></div>
+        <div id="login-box" class="shadow-lg">
+            <div>
+                <div><input class="login-inputs" placeholder="Correo electrónico" type="email"></div>
+                <div><input class="login-inputs" placeholder="Contraseña" type="password"></div>
+                <button id="boton-iniciar">Iniciar</button>
+            </div>
+            <div id="login-registrarse">
+                <p style="color: gray;">¿No tienes cuenta?</p>
+                <div style="color: #009694;">Crear cuenta</div>
+            </div>
+        </div>
     </div>
 
 
@@ -30,9 +73,10 @@
 
     </div>
 
-    <a href="index.html"><button>Regresar Landing</button></a>
+    <!-- <a href="index.html"><button>Regresar Landing</button></a> -->
 
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="assets/js/controlador.js"></script>
 </body>
 </html>
