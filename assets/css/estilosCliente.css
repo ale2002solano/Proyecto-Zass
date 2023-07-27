@@ -49,6 +49,7 @@ body, .container{
     font-size: 22px;
     font-weight: bold;
     padding-top: 25px;
+    position: absolute;
 }
 
 .all-text-bar p{
@@ -70,6 +71,19 @@ body, .container{
     align-items: center;
 }
 
+#iniciarSesion{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: 30px;
+}
+
+#carita{
+    margin-top: -120px;
+    margin-left: 36%;
+    font-size: 90px;
+}
+
 #login-registrarse{
     /* border: 1px solid blue; */
     width: 42%;
@@ -83,10 +97,12 @@ body, .container{
     width: 93%;
     border-radius: 18px;
     margin: 10px;
+    margin-top: 15px;
     padding: 3%;
     font-weight: bold;
     color: rgb(158, 157, 157);
     font-size: 15px;
+    border: 2px solid rgb(139, 139, 139);
 }
 
 #boton-iniciar{

@@ -18,7 +18,7 @@
                 <button id="botonBar" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars" style="color: #000000;"></i>
                 </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse nav-text" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 shadow-lg all-text-bar ">
                             <li class="nav-item bar-text">
                                 <a class="nav-link" href="#"><p>Home</p></a>
@@ -40,14 +40,23 @@
         </div>
 </nav>
 
+<!-- Figuras de fondo -->
+<div><img src="" alt=""></div>
+<div></div>
+<div></div>
+<div></div>
+
 <!-- pagina "log in" cliente -->
     <div id="loginCliente">
-        <div><p>Iniciar sesión</p></div>
+        <div>
+            <div><p id="iniciarSesion">Iniciar sesión</p></div>
+        </div>
         <div id="login-box" class="shadow-lg">
+            <i id="carita" style="color: #2dc2ac;" class="fa-solid fa-user"></i>
             <div>
-                <div><input class="login-inputs" placeholder="Correo electrónico" type="email"></div>
-                <div><input class="login-inputs" placeholder="Contraseña" type="password"></div>
-                <button id="boton-iniciar">Iniciar</button>
+                <div><input class="login-inputs shadow" placeholder="Correo electrónico" type="email"></div>
+                <div><input class="login-inputs shadow" placeholder="Contraseña" type="password"></div>
+                <button class="shadow" id="boton-iniciar">Iniciar</button>
             </div>
             <div id="login-registrarse">
                 <p style="color: gray;">¿No tienes cuenta?</p>
@@ -73,7 +82,7 @@
 
     </div>
 
-    <!-- <a href="index.html"><button>Regresar Landing</button></a> -->
+    <a href="index.html"><button>Regresar Landing</button></a>
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
