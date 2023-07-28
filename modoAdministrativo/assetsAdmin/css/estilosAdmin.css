@@ -50,3 +50,54 @@
 #icons-card{
     padding: 15px;
 }
+#head-admin{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+#new-empresa{
+    margin-left: 85%;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e6795b;
+    color: white;
+}
+.card-empresa{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    color: black;
+    font-size:large;
+    font-weight: 400;
+    box-shadow: 8px 8px rgba(43, 194, 171, 0.493);
+}
+.card-img-top{
+    width: 60px;
+    height: 60px;
+    margin-left: 40%;
+    margin-right: 60%;
+}
+.card-title{
+    margin-left: 35%;
+    margin-right: 65%;
+}
+#empresas{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
