@@ -31,7 +31,7 @@
             <i class="fa-solid fa-motorcycle fa-xl" id="icons-card"></i>
             Administrar Motoristas
           </div>
-          <div class="card">
+          <div class="card" onclick="adminOrdenes();">
             <i class="fa-solid fa-pen-to-square fa-xl" id="icons-card"></i>
             Administrar ordenes
           </div>
@@ -112,7 +112,19 @@
       <p id="sub-titulo">ADMINISTRAR PRODUCTOS</p>
     </div>
     <!-- EMPRESAS-PRODUCTOS -->
-    <div id="categorias-productos">
+    <div id="empresasProducto">
+      
+      <div class="card-empresa-producto" onclick="empresasProductos();">
+        <img src="assetsAdmin/img/shop.png" class="card-img-producto" alt="...">
+        <div class="card-body">
+          <h5 class="card-title-empresa-producto">CHARLY</h5>
+          <br>
+        </div>
+      </div>
+
+    </div>
+    <!-- CATEGORIAS DE LOS PRODUCTOS DE LA EMPRESA -->
+    <div id="categorias-productos" style="display: none;">
         <div class="categorias">
 
           <div class="catg-1" onclick="camisasProductos();">
@@ -334,7 +346,168 @@
     <!-- FIN DE PRODUCTOS -->
    </div>
    <!-- FIN ADMIN EMPRESAS-PRODUCTOS -->
+   
+   <!-- INICIO DE ADMINISTRAR ORDENES -->
+   <div id="admin-ordenes" style="display: none;">
+    <div id="head-admin">
+      <p id="sub-titulo">ADMINISTRAR ORDENES</p>
+    </div>
 
+    <!-- TIPOS DE ORDENES -->
+    <div id="tipoOrdenes">
+
+      <div id="cardsAdmin">
+        <div class="card-ordenes" onclick="formatoOrdenes();">
+          <img src="assetsAdmin/img/orden-disponible.png" id="img-tip-ordenes">
+            Ordenes disponibles
+          </div>
+          <div class="card-ordenes" onclick="formatoOrdenes();">
+            <img src="assetsAdmin/img/orden-pendiente.png" id="img-tip-ordenes">
+            Ordenes pendientes
+          </div>
+          <div class="card-ordenes" onclick="formartoOrdenes();">
+            <img src="assetsAdmin/img/orden-entregada.png" id="img-tip-ordenes">
+            Ordenes entregadas
+          </div>
+        
+    </div>
+      
+    </div>
+    <!-- FIN DE TIPO DE ORDENES -->
+
+    <!-- INICIO DEL FORMATO DE LAS ORDENES -->
+    <div id="formato" style="display: none;">
+      <div id="boton"><button id="new-empresa"><i class="fa-solid fa-plus"></i> Agregar</button> <br></div>
+      <div id="formato-ordenes">
+
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th scope="row">Nombre cliente:</th>
+              <td>Axel</td>
+            </tr>
+            <tr>
+              <th scope="row">Carrito/Pedido:</th>
+              <td>
+                <table class="carrito">
+                  <tbody>
+                    <tr>
+                      <th>Cant.</th>
+                      <th>Descrip.</th>
+                      <th>Precio.</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Camisa amarilla</td>
+                      <td>L.500</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Impuesto:</th>
+              <td>99</td>
+            </tr>
+            <tr>
+              <th scope="row">Total:</th>
+              <td>400</td>
+            </tr>
+            <tr>
+              <th scope="row">Fecha:</th>
+              <td>15-05-22</td>
+            </tr>
+            <tr>
+              <th scope="row">Estado orden:</th>
+              <td>disponible</td>
+            </tr>
+            <tr>
+              <th scope="row">Establecimiento:</th>
+              <td>Charly</td>
+            </tr>
+            <tr>
+              <th scope="row">Domicilio:</th>
+              <td>Comayaguela,Bo. La Obrera</td>
+            </tr>
+            <tr>
+              <th scope="row">Motorista:</th>
+              <td>
+                <select name="" id="">
+                  <option disabled selected>Seleccione un motorista</option>
+                  <option>Mario</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th scope="row">Nombre cliente:</th>
+              <td>Axel</td>
+            </tr>
+            <tr>
+              <th scope="row">Carrito/Pedido:</th>
+              <td>
+                <table class="carrito">
+                  <tbody>
+                    <tr>
+                      <th>Cant.</th>
+                      <th>Descrip.</th>
+                      <th>Precio.</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Camisa amarilla</td>
+                      <td>L.500</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Impuesto:</th>
+              <td>99</td>
+            </tr>
+            <tr>
+              <th scope="row">Total:</th>
+              <td>400</td>
+            </tr>
+            <tr>
+              <th scope="row">Fecha:</th>
+              <td>15-05-22</td>
+            </tr>
+            <tr>
+              <th scope="row">Estado orden:</th>
+              <td>disponible</td>
+            </tr>
+            <tr>
+              <th scope="row">Establecimiento:</th>
+              <td>Charly</td>
+            </tr>
+            <tr>
+              <th scope="row">Domicilio:</th>
+              <td>Comayaguela,Bo. La Obrera</td>
+            </tr>
+            <tr>
+              <th scope="row">Motorista:</th>
+              <td>
+                <select name="" id="">
+                  <option disabled selected>Seleccione un motorista</option>
+                  <option>Mario</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      
+    </div>
+    <!-- FIN DEL FORMATO -->
+    </div>
+   <!-- FIN DE ADMINISTRADOR DE ORDENES -->
 
 
 

@@ -90,7 +90,7 @@
     color: black;
     font-size:large;
     font-weight: 400;
-    box-shadow: 8px 8px rgba(43, 194, 171, 0.493);
+    box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
 }
 .card-img-top{
     width: 60px;
@@ -126,7 +126,7 @@
     color: black;
     font-size:large;
     font-weight: 400;
-    box-shadow: 8px 8px rgba(43, 194, 171, 0.493);
+    box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
 }
 .card-img{
     width: 80px;
@@ -152,7 +152,7 @@
     width: 200px;
     height: 200px;
     padding: 20px;
-    box-shadow: 8px 8px rgba(43, 194, 171, 0.493);
+    box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
 }
 .catg-1:hover{
     cursor: pointer;
@@ -178,4 +178,78 @@
 #camisas{
     display: grid;
     grid-template-columns: auto auto auto auto;
+}
+.card-empresa-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 50px;
+    color: black;
+    font-size:large;
+    font-weight: 400;
+    box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
+
+    width: 200px;
+    height: 200px;
+}
+.card-empresa-producto:hover{
+    cursor: pointer;
+}
+.card-img-producto{
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+}
+#empresasProducto{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+}
+.card-ordenes{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    background-color: #b1b1b13a;
+    border-radius: 20px;
+    width: 240px;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 8px 8px rgba(0,0,0,0.2);
+    background-color: #e6795b;
+}
+.card-ordenes:hover{
+    cursor: pointer;
+    background-color:  #d46242;
+}
+#img-tip-ordenes{
+    width: 100px;
+    height: 100px;
+}
+.table{
+    width: 500px;
+    font-size:15px;
+    border-collapse: collapse;
+    border: 2.5px solid rgb(230, 121, 91);
+    box-shadow: 10px 10px rgba(230, 121, 91, 0.493);
+}
+td,th,tr{
+    border: none;
+}
+th{
+    width: 200px;
+    padding: 10px;
+}
+#formato-ordenes{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
 }
