@@ -253,3 +253,26 @@ th{
     align-content: center;
     padding: 10px;
 }
+.card-motoristas{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    color: black;
+    font-size:large;
+    font-weight: 400;
+    box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
+}
+#motoristas{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}

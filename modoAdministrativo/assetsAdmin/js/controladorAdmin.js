@@ -2,19 +2,27 @@ function adminEmpresas(){
     document.getElementById("admin-empresa").style.display="block";
     document.getElementById("admin-producto-categoria").style.display="none";
     document.getElementById("admin-ordenes").style.display="none";
+    document.getElementById("admin-motorista").style.display="none";
 }
 function adminProductos(){
     document.getElementById("admin-producto-categoria").style.display="block";
     document.getElementById("admin-empresa").style.display="none";
+    document.getElementById("admin-motorista").style.display="none";
     document.getElementById("productos").style.display="none";
     document.getElementById("categorias-productos").style.display="none";
     document.getElementById("admin-ordenes").style.display="none";
 }
-function adminMotoristas(){}
+function adminMotoristas(){
+    document.getElementById("admin-motorista").style.display="block";
+    document.getElementById("admin-producto-categoria").style.display="none";
+    document.getElementById("admin-empresa").style.display="none";
+    document.getElementById("admin-ordenes").style.display="none";
+}
 function adminOrdenes(){
     document.getElementById("admin-ordenes").style.display="block";
     document.getElementById("admin-producto-categoria").style.display="none";
     document.getElementById("admin-empresa").style.display="none";
+    document.getElementById("admin-motorista").style.display="none";
 }
 
 function empresasProductos(){
