@@ -15,6 +15,12 @@
     font-weight: 700;
     padding: 20px;
 }
+#sub-titulo{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size:x-large;
+    font-weight: 700;
+    padding: 20px;
+}
 #logo{
     width: 10%;
     height: 10%;
@@ -28,15 +34,19 @@
 	align-content: center;
     background-color: #b1b1b13a;
     border-radius: 20px;
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 200px;
     padding: 20px;
     box-shadow: 8px 8px rgba(0,0,0,0.2);
     background-color: #2dc2ac;
 }
+.card:hover{
+    cursor: pointer;
+    background-color: #009496;
+}
 #cardsAdmin{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     column-gap: 50px;
     row-gap: 35px;
     justify-content: center;
@@ -94,10 +104,78 @@
 }
 #empresas{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     column-gap: 50px;
     row-gap: 35px;
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+.btn{
+    margin-right: 5px;
+}
+.card-categoria-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
+    padding-top: 50px;
+    border-radius: 50px;
+    color: black;
+    font-size:large;
+    font-weight: 400;
+    box-shadow: 8px 8px rgba(43, 194, 171, 0.493);
+}
+.card-img{
+    width: 80px;
+    height: 80px;
+}
+#categorias-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    
+}
+.catg-1{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 8px 8px rgba(43, 194, 171, 0.493);
+}
+.catg-1:hover{
+    cursor: pointer;
+    background-color: #b4b4b43f;
+}
+.categorias{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 40px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    color: black;
+    font-size:large;
+    font-weight: 400;
+}
+#img-catg{
+    width: 100px;
+    height: 100px;
+}
+#camisas{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }

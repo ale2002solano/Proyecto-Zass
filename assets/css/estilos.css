@@ -103,7 +103,7 @@ bottom: 90%;
 }
 .categorias{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     column-gap: 40px;
     row-gap: 35px;
     justify-content: center;
