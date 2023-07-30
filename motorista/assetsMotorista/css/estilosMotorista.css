@@ -1,0 +1,65 @@
+#loginMotorista{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    margin: 100px 50px;
+    border-radius: 20px;
+    background-color: #f0f0f0bb;
+    box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
+}
+#logo{
+    width: 200px;
+    height: 150px;
+}
+.input-log{
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #209180;
+    margin: 5px;
+    padding: 5px;
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.731);
+}
+#links{
+    margin: 5px;
+    text-decoration: underline;
+    font-size: small;
+    color: blue;
+}
+#btnlogin{
+    margin: 5px;
+    color: white;
+    background-color: #009694;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+#btnlogin,#links:hover{
+    cursor: pointer;
+}
+#registro{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    margin: 100px 50px;
+    border-radius: 20px;
+    background-color: #f0f0f0bb;
+    box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
+}
+.input-registro{
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #209180;
+    margin: 5px;
+    padding: 5px;
+}
