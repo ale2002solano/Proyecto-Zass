@@ -11,6 +11,7 @@ const mostrarLogIn = () => {
     document.getElementById('loginCliente').style.width= '100%';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('carrito').style.display= 'none';
+    document.getElementById('finalizar-compra').style.display= 'none';
 }
 
 const mostrarCrearCuenta = () => {
@@ -25,6 +26,7 @@ const mostrarCrearCuenta = () => {
     document.getElementById('crearCuenta').style.display= 'block';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('carrito').style.display= 'none';
+    document.getElementById('finalizar-compra').style.display= 'none';
 }
 
 const mostrarCategoriasEmpresas = () => {
@@ -38,6 +40,7 @@ const mostrarCategoriasEmpresas = () => {
     document.getElementById('producto').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carrito').style.display= 'block';
+    document.getElementById('finalizar-compra').style.display= 'none';
 }
 
 const mostrarCategoriasProductos = () => {
@@ -51,6 +54,7 @@ const mostrarCategoriasProductos = () => {
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carrito').style.display= 'block';
+    document.getElementById('finalizar-compra').style.display= 'none';
 }
 
 const mostrarProductos = () => {
@@ -64,6 +68,7 @@ const mostrarProductos = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('carrito').style.display= 'block';
+    document.getElementById('finalizar-compra').style.display= 'none';
 }
 
 const mostrarProducto = () => {
@@ -77,6 +82,7 @@ const mostrarProducto = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('carrito').style.display= 'block';
+    document.getElementById('finalizar-compra').style.display= 'none';
 }
 
 const mostrarCarrito = () => {
@@ -90,4 +96,19 @@ const mostrarCarrito = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'block';
     document.getElementById('carrito').style.display= 'block';
+    document.getElementById('finalizar-compra').style.display= 'none';
+}
+
+const mostrarFinalizarCompra = () => {
+    document.getElementById('categoriasEmpresas').style.display= 'none';
+    document.getElementById('loginCliente').style.display= 'none';
+    document.getElementById('categoriasProductos').style.display= 'none';
+    document.getElementById('crearCuenta').style.display= 'none';
+    document.getElementById('productos').style.display= 'none';
+    document.getElementById('producto').style.display= 'none';
+    document.getElementById('logo').style.display= 'block';
+    document.getElementById('crearCuenta').style.display= 'none';
+    document.getElementById('carritoIcon').style.display= 'none';
+    document.getElementById('carrito').style.display= 'block';
+    document.getElementById('finalizar-compra').style.display= 'block';
 }

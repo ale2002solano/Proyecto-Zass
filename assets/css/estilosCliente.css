@@ -445,5 +445,57 @@ body, .container{
     font-weight: bold;
 }
 
+/* finalizar compra */
 
+#finalizar-compra{
+    display: none;
+    border: 1px solid black;
+    display: block;
+    height: 71%;
+    width: 88%;
+    margin: 117px 23px 0;
+}
 
+#carrito-pago{
+    border: 1px solid gray;
+
+}
+
+#mapa{
+    border: 1px solid blue;
+    border: 1px solid blue;
+    padding: 29px;
+}
+
+#texto-mapa{
+    display: flex;
+    padding: 14px;
+    border: 1px solid brown;
+    width: 97%;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+#pagar{
+    border: 1px solid yellow;
+    padding: 24px;
+}
+
+#metodo-pago{
+    border: 1px solid purple;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mtd-pago{
+    border: 1px solid green;
+    height: 132px;
+    width: 139px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#realizar-factura{
+    border: 1px solid red;
+    padding: 22px;
+}
