@@ -32,6 +32,7 @@ body, .container{
 }
 
 #carrito{
+    display: none;
     font-size: 30px;
     margin-top: 15px;
 }
@@ -182,7 +183,7 @@ body, .container{
 /* crear cuenta */
 #crearCuenta{
     height: 100%;
-    padding-top: 35%;
+    padding-top: 48%;
     padding-left: 10%;
     display: none;
 }
@@ -276,7 +277,8 @@ body, .container{
 #flex{
     display: flex;
     flex-direction: column;
-    height: 77%;
+    height: 74%;
+    top: 22%;
     width: 100%;
     margin-left: -20px;
     position: absolute;
@@ -335,6 +337,8 @@ body, .container{
 .card-text{
     margin-left: 30px;
 }
+
+/* añadir a carrito y visualizacion de producto*/
 
 #producto-carrito{
     margin-top: 75px;
@@ -397,6 +401,8 @@ body, .container{
     cursor: pointer;
     background-color: #ce4822;
 }
+
+/* carrito */
 
 #carritoIcon{  
     display: none;
