@@ -1,16 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+
+/* navegador */
+#navegadorCliente{
+    /* border: 1px solid black; */
+    height: 8%;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: gainsboro;
+    box-sizing: border-box;
+    width: 95%;
+    margin-top: 5%;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+#botonBar{
+    border: 0px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+#carrito{
+    display: none;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.barra{
+    display: flex;
+}
+
+.all-text-bar{
+    /* border: 1px solid black; */
+    padding: 10px;
+    border-radius: 20px;
+    height: 300px;
+    width: 250px;
+    /* margin: 30px 0 30px 10px; */
+    /* padding-top: 60px; */
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 25px;
+    position: absolute;
+    z-index: 2;
+}
+
+.all-text-bar p{
+    color: white;
+}
+
+.bar-text:hover{
+    cursor: pointer;
+}
+
+/* fondo de figuras */
+.figuras-fondo{
+    height: 100px;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#fig1{
+    height: 200px;
+    left: 50%;
+    top: 80%;
+}
+
+#fig2{
+    height: 150px;
+    left: 2%;
+    top: 68%
+}
+
+#fig3{
+    height: 126px;
+    top: -1%;
+    left: -2%;
+}
+
+#fig4{
+    height: 120px;
+    left: 60%;
+    top: 39%;
+}
+
+#logo{
+    height: 110px;
+    left: 29%;
+    top: 11%;
+    display: none;
+}
+
+
+
+
 #loginMotorista{
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-    margin: 100px 50px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 192px 50px;
     border-radius: 20px;
-    background-color: #f0f0f0bb;
+    background-color: white;
     box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
+    height: 438px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #2dc2ac 0%, #edb6a2 100%) 1;
 }
-#logo{
+#logo2{
     width: 200px;
     height: 150px;
 }
@@ -43,6 +151,7 @@
 #btnlogin,#links:hover{
     cursor: pointer;
 }
+
 #registro{
     display: flex;
 	flex-direction: column;
@@ -50,11 +159,24 @@
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-    margin: 100px 50px;
+    margin: 270px 50px 0;
     border-radius: 20px;
-    background-color: #f0f0f0bb;
+    background-color: white;
     box-shadow: 8px 8px rgba(230, 121, 91, 0.493);
+    height: 400px;
+    padding-top: 213px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #2dc2ac 0%, #edb6a2 100%) 1;
 }
+
+.iniciar{
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    font-size: 33px;
+    font-weight: 400;
+}
+
 .input-registro{
     border-radius: 5px;
     border: none;
@@ -63,3 +185,160 @@
     margin: 5px;
     padding: 5px;
 }
+
+
+/* categorias motorista */
+
+#categoriasMotorista{
+    display: none;
+}
+.catg{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    background-color: #b1b1b13a;
+    border-radius: 100%;
+    width: 39%;
+    height: 15%;
+    padding: 20px;
+    box-shadow: 8px 8px rgba(0,0,0,0.2);
+    margin: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 2px solid #edb6a2;
+}
+
+.catgEmpresas{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    width: 39%;
+    height: 215px !important;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 2px solid #edb6a2;
+}
+.categorias{
+    margin-top: 54%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorias img{
+    height: 90px;
+    padding: 15px 0 15px 0;
+}
+
+.descripcion-categoria{
+    position: absolute;
+    font-size: 32px;
+    font-weight: bold;
+    /* color: rgb(78, 77, 77); */
+    top: 25%;
+    left: 70px;
+    font-family: 'Parisienne', cursive;
+}
+
+.descripcion-empresa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Pedidos disponibles */
+#pedidos-disponibles{
+    display: none;
+    border: 1px solid black;
+}
+
+#producto{
+    display: none;
+}
+
+#flex{
+    display: flex;
+    flex-direction: column;
+    height: 74%;
+    top: 22%;
+    width: 100%;
+    margin-left: -20px;
+    position: absolute;
+    overflow: scroll !important;
+}
+
+.card-productos{
+    height: 130px;
+    width: 92%;
+    padding: 18px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #edb6a2 0%, #2dc2ac 100%) 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px !important;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.catg-producto{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    height: 415px !important;
+    padding: 10px;
+    margin: 90px 5px 20px 60px;
+    background-color: white;
+    border: 2px solid #edb6a2;
+}
+
+.card-productos div h4{
+    font-size: 20px;
+}
+
+.card-productos div h5{
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.icon{
+    font-size: 15px;
+}
+
+.card-img{
+    height: 90px;
+    width: 90px;
+    /* border: 1px solid red; */
+}
+
+.card-text{
+    margin-left: 30px;
+}
+
+
+/* Pedidos pendientes */
+#pedidos-pendientes{
+    display: none;
+}
+
+/* Pedidos entregados */
+#pedidos-entregados{
+    display: none;
+}
+
+
+
+

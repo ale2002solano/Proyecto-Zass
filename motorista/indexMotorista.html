@@ -4,26 +4,72 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZASS Motorista</title>
-    <link rel="stylesheet" href="assetsMotorista/css/estilosMotorista.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/d7073a8296.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assetsMotorista/css/estilosMotorista.css">
+    <title>ZASS Motorista</title>
 </head>
 <body>
+
+<!-- navegador gris cliente -->
+<nav id="navegadorCliente" class="navbar navbar-expand-lg">
+    <div id="nav">
+        <div class="container-fluid">
+            <button id="botonBar" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" style="color: #000000;"></i>
+            </button>
+                <div class="collapse navbar-collapse nav-text" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 shadow-lg all-text-bar ">
+                        <li class="nav-item bar-text">
+                            <a onclick="mostrarCategoriasMotoristas()" class="nav-link" href="#"><p>Home</p></a>
+                        </li>
+                        <li class="nav-item bar-text">
+                            <a class="nav-link" href="#"><p>About</p></a>
+                        </li>
+                        <li class="nav-item bar-text">
+                                <a class="nav-link" href="#"><p>Contact</p></a>
+                        </li>
+                        <li class="nav-item bar-text">
+                            <a onclick="irLogin()" class="nav-link" href="#"><p>Salir</p></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div><i id="carrito" onclick="mostrarCarrito()" class="fa-solid fa-cart-shopping" style="color: #000000;"></i></div>
+        </div>
+    </div>
+</nav>
+
+<!-- Figuras de fondo -->
+<div><img id="fig1" class="figuras-fondo" src="../assets/img/figura1.png" alt=""></div>
+<div><img id="fig2" class="figuras-fondo" src="../assets/img/figura2.png" alt=""></div>
+<div><img id="fig3" class="figuras-fondo" src="../assets/img/figura3.png" alt=""></div>
+<div><img id="fig4" class="figuras-fondo" src="../assets/img/firgura4.png" alt=""></div>
+<div><img id="logo" class="figuras-fondo" src="../assets/img/logo.png" alt=""></div>
+
+
     <!-- INICIO DEL LOGIN MOTORISTA -->
     <div id="login">
-    <div id="loginMotorista">
-        <img src="assetsMotorista/img/logoverde.png" id="logo">
+        <div>
+            <div><p class="iniciar">Iniciar sesión</p></div>
+        </div>
+    <div id="loginMotorista" class="shadow-lg">
+        <img src="assetsMotorista/img/logoverde.png" id="logo2">
         <input type="text" placeholder="username" class="input-log">
         <input type="password" placeholder="password" class="input-log">
         <a href="" id="links">¿Haz olvidado tu contraseña?</a>
-        <button id="btnlogin">Iniciar Sesión</button>
+        <div onclick="mostrarCategoriasMotoristas()"><button id="btnlogin">Iniciar Sesión</button></div>
         <p style="font-size: small;">¿No tienes cuenta?.<a id="links" onclick="registro();">Crear cuenta</a></p>
     </div>
 </div>
     <!-- FIN DEL LOGIN MOTORISTA -->
     <!-- REGISTRO MOTORISTA -->
 <div id="registros" style="display: none;">
-    <div id="registro">
+    <div>
+        <div><p class="iniciar">Registrate</p></div>
+    </div>
+    <div id="registro" class="shadow-lg">
+        <i style="color: #2dc2ac; margin-top: -347px; margin-left: 11%; font-size: 78px; padding-bottom: 61px;" class="carita fa-solid fa-user-plus"></i>
         <img src="assetsMotorista/img/logoverde.png" id="logo">
         <input type="text" placeholder="name" class="input-registro">
         <input type="email" placeholder="email" class="input-registro">
@@ -40,7 +86,83 @@
     </div>
     <!-- FIN DEL PERFIL -->
 
+    <div id="categoriasMotorista">
+        <div><p class="descripcion-categoria">Elige tu próxima entrega</p></div>
+        <div class="categorias">
+            <div onclick="mostrarPedidosDisponibles()" class="catgEmpresas shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><img id="img-tip-ordenes" src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png"></div>
+                    <div><h5>
+                        Pedidos disponibles
+                    </h4></div>
+                </div>
+            </div>
+            <div onclick="mostrarPedidosPendientes()" class="catgEmpresas shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><img id="img-tip-ordenes" src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png"></div>
+                    <div><h5>
+                        Pedidos pendientes
+                    </h4></div>
+                </div>
+            </div>
+            <div onclick="mostrarPedidosEntregados()" class="catgEmpresas shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><img id="img-tip-ordenes" src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png"></div>
+                    <div><h5>
+                        Pedidos entregados
+                    </h4></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pedidos-disponibles">
+        
+            <!-- <div id="flex">
+                
+                <div class=" card-productos shadow" onclick="mostrarProducto()">
+                    <div class="img"><img class="card-img" src="assets/img/pantalones.png" class="card-img-top" alt="..."></div>
+                    <div class="card-text card-body">
+                        <h5 class="card-title">Pantalon</h5>
+                        <h4>L.599.99</h4>
+                        <h4>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-regular fa-star"></i>
+                        </h4>
+                    </div>
+                </div>
     
+                <div class=" card-productos shadow" onclick="mostrarProducto()">
+                    <div class="img"><img class="card-img" src="assets/img/pantalones.png" class="card-img-top" alt="..."></div>
+                    <div class="card-text card-body">
+                        <h5 class="card-title">Pantalon</h5>
+                        <h4>L.599.99</h4>
+                        <h4>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-solid fa-star"></i>
+                            <i class="icon fa-regular fa-star"></i>
+                        </h4>
+                    </div>
+                </div>
+
+            </div> -->
+        
+    </div>
+
+    <div id="pedidos-pendientes">
+
+    </div>
+
+    <div id="pedidos-entregados">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="assetsMotorista/js/controladorMotorista.js"></script>
 </body>
 </html>

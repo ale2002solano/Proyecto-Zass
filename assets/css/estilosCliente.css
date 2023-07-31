@@ -357,7 +357,7 @@ body, .container{
 #cant{
     display: flex;
     font-size: 25px;
-    
+
 }
 
 #carrito2{
@@ -404,7 +404,7 @@ body, .container{
 
 /* carrito */
 
-#carritoIcon{  
+#carritoIcon{
     display: none;
     border: 1px solid green;
     height: 85%;
@@ -449,53 +449,129 @@ body, .container{
 
 #finalizar-compra{
     display: none;
-    border: 1px solid black;
     display: block;
     height: 71%;
     width: 88%;
     margin: 117px 23px 0;
-}
-
-#carrito-pago{
-    border: 1px solid gray;
-
+    background-color: white;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #2dc2ac 0%, #edb6a2 100%) 1;
 }
 
 #mapa{
-    border: 1px solid blue;
-    border: 1px solid blue;
     padding: 29px;
+    padding-top: 45px;
 }
 
 #texto-mapa{
     display: flex;
     padding: 14px;
-    border: 1px solid brown;
     width: 97%;
     border-radius: 10px;
     font-size: 17px;
+    border: 1px solid #ce4822;
 }
 
 #pagar{
-    border: 1px solid yellow;
     padding: 24px;
 }
 
 #metodo-pago{
-    border: 1px solid purple;
     display: flex;
     justify-content: space-around;
 }
 
 .mtd-pago{
-    border: 1px solid green;
     height: 132px;
     width: 139px;
     text-align: center;
     border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    padding-top: 27px;
+    font-size: 20px;
+}
+
+#metodo{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
 }
 
 #realizar-factura{
-    border: 1px solid red;
     padding: 22px;
+}
+
+#escribir-direccion{
+    display: flex;
+    margin: 18px;
+    flex-direction: column;
+}
+
+#txt-direccion{
+    font-size: 30px;
+    margin-left: -17px;
+    padding-top: 40px;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+}
+
+#ubicacion{
+    padding-right: 20px;
+    font-size: 25px;
+}
+
+#texto-ubicacion{
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+#direccion{
+    border-radius: 10px;
+    height: 45px;
+    width: 287px;
+    margin-top: 10px;
+    margin-left: -16px;
+    border: 2px solid #009694;
+    padding: 10px;
+}
+
+#realizar-factura{
+    display: flex;
+    justify-content: center;
+}
+
+#buton-fact{
+    width: 200px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#pago-tajeta{
+    background-color: #e6795b;
+}
+
+#pago-efectivo{
+    background-color: #2dc2ac;
+}
+
+.icon-pago{
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+#gracias{
+    border: 1px solid black;
+}
+
+.txt-final{
+    border: 1px solid black;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 40px;
 }

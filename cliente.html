@@ -402,7 +402,7 @@
     </div>
 
     <!-- finalizar compra -->
-    <div id="finalizar-compra">
+    <div id="finalizar-compra" class="shadow-lg">
         <div id="carrito-pago">
             <div id="mapa">
                 <div id="texto-mapa">
@@ -413,18 +413,31 @@
                         <div id="txt-direccion">Direccion</div>
                         <input id="direccion" type="text" placeholder="direccion"></div>
             </div>
-        
+        <!-- ubicacion y metodo de pago -->
             <div id="pagar">
                 <div id="metodo">Método de pago</div>
                 <div id="metodo-pago">
-                    <div class="mtd-pago" id="tarjeta">Tarjeta</div>
-                    <div class="mtd-pago" id="efectivo">Efectivo</div>
+                    <div class="mtd-pago" id="pago-tajeta">
+                        <div id="tarjeta">Tarjeta</div>
+                        <i class="icon-pago fa-regular fa-credit-card" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="mtd-pago" id="pago-efectivo">
+                        <div id="efectivo">Efectivo</div> 
+                        <i class="icon-pago fa-solid fa-hand-holding-dollar" style="color: #ffffff;"></i>
+                    </div>
                 </div>
             </div>
             
             <div id="">
-                <div id="realizar-factura">
-                    <button id="buton-fact">Relizar factura</button>
+                <div id="realizar-factura" onclick="mostrarFinalizacion()">
+                    <button id="buton-fact">Relizar compra</button>
+                </div>
+            </div>
+
+            <div id="gracias">
+                <div>
+                    <div class="txt-final">Gracias por su compra</div>
+                    <div class="txt-final">Pedido en proceso de entrega</div>
                 </div>
             </div>
             
@@ -446,9 +459,7 @@
             </div> -->
         </div>
     </div>
-    <!-- ubicacion y metodo de pago -->
-
-    <!-- factura -->
+    
 
     <!-- <a href="index.html"><button>Regresar Landing</button></a> -->
 
