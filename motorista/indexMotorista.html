@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/d7073a8296.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/estilosCliente.css">
     <link rel="stylesheet" href="assetsMotorista/css/estilosMotorista.css">
     <title>ZASS Motorista</title>
 </head>
@@ -21,7 +22,7 @@
                 <div class="collapse navbar-collapse nav-text" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 shadow-lg all-text-bar ">
                         <li class="nav-item bar-text">
-                            <a onclick="mostrarCategoriasMotoristas()" class="nav-link" href="#"><p>Home</p></a>
+                            <a onclick="mostrarCategoriasMotoristas()" class="nav-link" href="#"><p>Pedidos</p></a>
                         </li>
                         <li class="nav-item bar-text">
                             <a class="nav-link" href="#"><p>About</p></a>
@@ -62,7 +63,7 @@
         <p style="font-size: small;">¿No tienes cuenta?.<a id="links" onclick="registro();">Crear cuenta</a></p>
     </div>
 </div>
-    <!-- FIN DEL LOGIN MOTORISTA -->
+    <!-- FIN DEL LOGIN MOTORISTAS -->
     <!-- REGISTRO MOTORISTA -->
 <div id="registros" style="display: none;">
     <div>
@@ -117,49 +118,118 @@
     </div>
 
     <div id="pedidos-disponibles">
-        
-            <!-- <div id="flex">
-                
-                <div class=" card-productos shadow" onclick="mostrarProducto()">
-                    <div class="img"><img class="card-img" src="assets/img/pantalones.png" class="card-img-top" alt="..."></div>
-                    <div class="card-text card-body">
-                        <h5 class="card-title">Pantalon</h5>
-                        <h4>L.599.99</h4>
-                        <h4>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-regular fa-star"></i>
-                        </h4>
-                    </div>
+        <div><p class="descripcion">Elige tu próximo pedido</p></div>
+        <div class="pedidos">
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
                 </div>
-    
-                <div class=" card-productos shadow" onclick="mostrarProducto()">
-                    <div class="img"><img class="card-img" src="assets/img/pantalones.png" class="card-img-top" alt="..."></div>
-                    <div class="card-text card-body">
-                        <h5 class="card-title">Pantalon</h5>
-                        <h4>L.599.99</h4>
-                        <h4>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-solid fa-star"></i>
-                            <i class="icon fa-regular fa-star"></i>
-                        </h4>
-                    </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png">
+                    <div><button class="button-tomar-pedido">Tomar pedido</button></div>
                 </div>
+            </div>
 
-            </div> -->
-        
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png">
+                    <div><button class="button-tomar-pedido">Tomar pedido</button></div>
+                </div>
+            </div>
+
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png">
+                    <div><button class="button-tomar-pedido">Tomar pedido</button></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="pedidos-pendientes">
+        <div><p class="descripcion">Entregas pendientes</p></div>
+        <div class="pedidos">
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png">
+                    <div><button class="button-tomar-pedido">Entregado</button></div>
+                </div>
+            </div>
 
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png">
+                    <div><button class="button-tomar-pedido">Entregado</button></div>
+                </div>
+            </div>
+
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png">
+                    <div><button class="button-tomar-pedido">Entregado</button></div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <div id="pedidos-entregados">
+        <div><p class="descripcion">¡Felicidades! Entregas</p></div>
+        <div class="pedidos">
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png">
+                    <div><button class="button-tomar-pedido">Factura</button></div>
+                </div>
+            </div>
 
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png">
+                    <div><button class="button-tomar-pedido">Factura</button></div>
+                </div>
+            </div>
+
+            <div class="tamaño-pedidos shadow-lg" >
+                <div class="descripcion-empresa">
+                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
+                </div>
+                <div class="fin">
+                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png">
+                    <div><button class="button-tomar-pedido">Factura</button></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
