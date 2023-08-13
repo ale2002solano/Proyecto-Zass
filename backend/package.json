@@ -1,0 +1,32 @@
+{
+  "name": "backend-zass",
+  "version": "1.0.0",
+  "description": "backend de empresa delivery zass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ale2002solano/Proyecto-Zass.git"
+  },
+  "author": "Alejandra Solano y Stephany Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ale2002solano/Proyecto-Zass/issues"
+  },
+  "homepage": "https://github.com/ale2002solano/Proyecto-Zass#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.10",
+    "concurrently": "^8.2.0",
+    "typescript": "^5.1.6"
+  }
+}
