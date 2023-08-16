@@ -606,22 +606,44 @@
     
 }
 
-@media screen and (min-width:600px) {
+
+/* RESPONSIVE */
+/* @media screen and (min-width:500px) {
     #loginCliente{
         margin-top: 30%;
         margin-left: 10%;
     }
-}
-
-@media screen and (min-width:800px) {
-    #loginCliente{
-        margin-top: 25%;
-        margin-left: 20%;
+    #logo1 {
+        width: 85%;
     }
-}
 
-@media screen and (min-width:1000px) {
+    .img-logo {
+        width: 25%;
+        height: 45%;
+        margin-bottom: 5%;
+        margin-left: 323px;
+        margin-top: -101px;
+    }
+
+    .categorias {
+        /* margin-top: 6%;
+        margin-left: 5%; 
+        margin-top: 3%;
+    margin-left: 20%;
+    width: 68%;
     
+    }
+
+    #flex{
+        width: 95%;
+    }
+} */
+
+@media screen and (min-width:900px) {
+    body{
+        border: 1px solid black;
+    }
+
     #loginCliente{
         margin-top: 11%;
         margin-left: 32%;
@@ -637,28 +659,34 @@
         height: 60px;
     }
 
-    .all-text-bar{
-    padding: 10px;
-    border-radius: 20px;
-    height: 60%px;
-    width: 50%;
-    /* margin: 30px 0 30px 10px; */
-    /* padding-top: 60px; */
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    padding-top: 25px;
-    z-index: 2;
+    .all-text-bar {
+        /* border: 1px solid black; */
+        box-shadow: 0;
+        padding: 10px;
+        border-radius: 20px;
+        height: 60%px;
+        width: 50%;
+        /* margin: 30px 0 30px 10px; */
+        /* padding-top: 60px; */
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        padding-top: 25px;
+        /* position: absolute; */
+        z-index: 2;
     }
 
     #logo1 {
-        width: 101%;
+        width: 90%;
     }
 
     .img-logo {
         width: 14%;
         height: 45%;
         margin-bottom: 5%;
+        margin-left: 100px;
+        margin-top: -57px;
     }
 
     .categorias {
@@ -667,7 +695,6 @@
         margin-top: 3%;
     margin-left: 20%;
     width: 68%;
-    
     }
 
     .catg{
@@ -679,5 +706,127 @@
     #logo-descripcion {
         margin-top: 3%;
         margin-left: 3%;
+    }
+
+    #carritoIcon{
+        width: 72%;
+    margin-left: 15%;
+    height: 600px;
+    position: absolute;
+    overflow: hidden;
+    }
+    #productos-elegidos{
+        width: 89%;
+        margin-top: -5%;
+        height: 450px;
+        margin-left: -153px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #finalizar{
+        margin-left: 150px;
+    }
+
+    #direccion{
+        width: 99%;
+    }
+    #finalizar-compra{
+        height: 656px;
+    width: 88%;
+    margin: 117px 23px 0px 100px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    #navegadorCliente{
+        margin: 1%;
+        width: 98%;
+    }
+    .categorias {
+        /* margin-top: 6%;
+        margin-left: 5%; */
+        margin-top: 3%;
+    margin-left: 30%;
+    width: 700px;
+    }
+
+    .img-logo {
+        margin-bottom: 1%;
+        margin-left: -54px;
+        margin-top: 100px;
+    }
+
+    #logo-descripcion {
+        margin-top: -5.5%;
+        margin-left: 7%;
+    }
+
+    #logo1 {
+        width: 75%;
+    }
+
+    .catgEmpresas{
+        height: 130px;
+    }
+
+    .descripcion-categoria{
+        font-size: 30px;
+        margin-left: -50px;
+        /* margin-top: 25%; */
+        width: 300px;
+    }
+
+    .catg{
+        width: 227px;
+        height: 206px;
+        margin: 13px;
+    }
+
+    .login-box{
+        width: 70%;
+    }
+
+    #flex{
+        top: 15%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 54px;
+        margin-left: 200px;
+        width: 1200px;
+    }
+
+    .card-productos{
+        width: 28%;
+        margin-bottom: 0;
+    }
+
+    #carritoIcon{
+        width: 72%;
+    margin-left: 15%;
+    height: 600px;
+    position: absolute;
+    overflow: hidden;
+    }
+    #productos-elegidos{
+        width: 89%;
+        margin-top: -5%;
+        height: 450px;
+        margin-left: -153px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #finalizar{
+        margin-left: 150px;
+    }
+
+    #direccion{
+        width: 99%;
+    }
+    #finalizar-compra{
+        height: 625px;
+    width: 70%;
+    margin: 20px 23px 0px 200px;
     }
 }
