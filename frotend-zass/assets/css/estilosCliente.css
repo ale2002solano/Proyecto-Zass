@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 
-body, .container{
-    height: 98vh;
+/* body, .container{
+    height: 120vh;
+    width: 53vh;
     overflow: hidden;
-}
+
+} */
 
 /* navegador */
 #navegadorCliente{
@@ -13,8 +15,8 @@ body, .container{
     margin: 10px;
     border-radius: 15px;
     background-color: gainsboro;
-    box-sizing: border-box;
-    width: 95%;
+    /* box-sizing: border-box; */
+    width: 100%;
     margin-top: 5%;
 }
 
@@ -45,8 +47,8 @@ body, .container{
     /* border: 1px solid black; */
     padding: 10px;
     border-radius: 20px;
-    height: 300px;
-    width: 250px;
+    height: 60%px;
+    width: 50%;
     /* margin: 30px 0 30px 10px; */
     /* padding-top: 60px; */
     background-color: rgba(0, 0, 0, 0.8);
@@ -98,11 +100,21 @@ body, .container{
     top: 39%;
 }
 
-#logo{
+/* #logo{
     height: 110px;
     left: 29%;
     top: 11%;
     display: none;
+} */
+
+#logo1{
+    width: 95%;
+}
+
+.img-logo{
+    width: 40%;
+    height: 50%;
+    margin-bottom: 5%;
 }
 
 /* css login */
@@ -114,7 +126,8 @@ body, .container{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
+    margin-top: 60%;
+    margin-left: 4%;
 }
 
 .iniciar{
@@ -235,8 +248,20 @@ body, .container{
     background-color: white;
     border: 2px solid #edb6a2;
 }
+
+
+
+#logo-descripcion{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .categorias{
-    margin-top: 54%;
+    /* margin-top: 35%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -249,12 +274,13 @@ body, .container{
 }
 
 .descripcion-categoria{
-    position: absolute;
+    
+    /* position: absolute; */
     font-size: 32px;
     font-weight: bold;
     /* color: rgb(78, 77, 77); */
-    top: 25%;
-    left: 70px;
+    /* top: 25%; */
+    /* left: 70px; */
     font-family: 'Parisienne', cursive;
 }
 
@@ -406,8 +432,7 @@ body, .container{
 
 #carritoIcon{
     display: none;
-    border: 1px solid green;
-    height: 85%;
+    height: 800px;
     width: 89%;
     margin-top: 20px;
     margin-left: 10%;
@@ -431,6 +456,7 @@ body, .container{
     overflow: scroll;
     top: 20%;
     width: 370px;
+    left: 20%;
 }
 
 #finalizar{
@@ -449,7 +475,6 @@ body, .container{
 
 #finalizar-compra{
     display: none;
-    display: block;
     height: 71%;
     width: 88%;
     margin: 117px 23px 0;
@@ -530,7 +555,7 @@ body, .container{
 #direccion{
     border-radius: 10px;
     height: 45px;
-    width: 287px;
+    width: 110%;
     margin-top: 10px;
     margin-left: -16px;
     border: 2px solid #009694;
@@ -566,7 +591,8 @@ body, .container{
 }
 
 #gracias{
-    border: 1px solid black;
+    display: none;
+    margin-top: 50%;
 }
 
 .txt-final{
@@ -574,4 +600,15 @@ body, .container{
     font-family: 'Parisienne', cursive;
     font-weight: bold;
     font-size: 40px;
+    width: 90%;
+    background-color: white;
+    margin: 2%;
+    
+}
+
+@media screen and (max-width:600px) {
+    /* #loginCliente{
+        margin-top: 20%;
+        margin-left: 30%;
+    } */
 }

@@ -45,7 +45,7 @@
 <div><img id="fig2" class="figuras-fondo" src="assets/img/figura2.png" alt=""></div>
 <div><img id="fig3" class="figuras-fondo" src="assets/img/figura3.png" alt=""></div>
 <div><img id="fig4" class="figuras-fondo" src="assets/img/firgura4.png" alt=""></div>
-<div><img id="logo" class="figuras-fondo" src="assets/img/logo.png" alt=""></div>
+<!-- <div><img id="logo1" class="figuras-fondo" src="assets/img/logo.png" alt=""></div> -->
 
 
 
@@ -93,7 +93,11 @@
 
 <!-- Categorias de empresas -->
     <div id="categoriasEmpresas">
-        <div><p class="descripcion-categoria">Elige tu tienda favorita</p></div>
+        <div id="logo-descripcion">
+            <div class="img-logo"><img id="logo1" src="assets/img/logo.png" alt=""></div>
+            <div><p class="descripcion-categoria">Elige tu tienda favorita</p></div>
+        </div>
+        
         <div class="categorias">
             <div onclick="mostrarCategoriasProductos()" class="catgEmpresas shadow-lg" >
                 <div><img alt="" style="height: 120px; " src="assets/img/zara.png"></div>
@@ -163,7 +167,10 @@
 
 <!-- categorias de productos -->
     <div id="categoriasProductos">
-        <div><p style="left: 106px;" class="descripcion-categoria">Elige la categoria </p></div>
+        <div id="logo-descripcion">
+            <div class="img-logo"><img id="logo1" src="assets/img/logo.png" alt=""></div>
+            <div><p style="left: 106px;" class="descripcion-categoria">Elige la categoria </p></div>
+        </div>
         <div class="categorias">
             <div onclick="mostrarProductos()" class="catg shadow-lg">
                 <img alt="" src="assets/img/camisas.png">Camisas
@@ -183,7 +190,7 @@
 <!-- Visualizacion de productos -->
     <div id="productos">
         <div id="flex">
-            
+            <div class="img-logo"><img id="logo1" src="assets/img/logo.png" alt=""></div>
             <div class=" card-productos shadow" onclick="mostrarProducto()">
                 <div class="img"><img class="card-img" src="assets/img/pantalones.png" class="card-img-top" alt="..."></div>
                 <div class="card-text card-body">
@@ -429,15 +436,8 @@
             </div>
             
             <div id="">
-                <div id="realizar-factura" onclick="mostrarFinalizacion()">
-                    <button id="buton-fact">Relizar compra</button>
-                </div>
-            </div>
-
-            <div id="gracias">
-                <div>
-                    <div class="txt-final">Gracias por su compra</div>
-                    <div class="txt-final">Pedido en proceso de entrega</div>
+                <div id="realizar-factura">
+                    <button onclick="mostrarGracias()" id="buton-fact">Relizar compra</button>
                 </div>
             </div>
             
@@ -457,6 +457,13 @@
                 <div class="fact">Método de pago:</div>
                 <div class="fact">Fecha:</div>
             </div> -->
+        </div>
+    </div>
+
+    <div id="gracias">
+        <div>
+            <div class="txt-final">Gracias por su compra</div>
+            <div class="txt-final">Pedido en proceso de entrega</div>
         </div>
     </div>
     

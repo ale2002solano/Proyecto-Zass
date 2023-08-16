@@ -25,7 +25,7 @@ const mostrarCategoriasMotoristas = () => {
     document.getElementById("pedidos-disponibles").style.display="none";
     document.getElementById("pedidos-pendientes").style.display="none";
     document.getElementById("pedidos-entregados").style.display="none";
-    document.getElementById("logo").style.display="block";
+    document.getElementById("logo").style.display="none";
 
 }
 
