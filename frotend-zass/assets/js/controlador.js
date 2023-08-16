@@ -1,5 +1,6 @@
 const mostrarLogIn = () => {
     document.getElementById('categoriasEmpresas').style.display= 'none';
+    document.getElementById('finalizar-compra').style.display= 'none';
     document.getElementById('loginCliente').style.display= 'block';
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
@@ -64,16 +65,16 @@ const mostrarCategoriasProductos = () => {
 const mostrarProductos = () => {
     document.getElementById('productos').style.display= 'block';
     document.getElementById('carrito').style.display= 'block';
+    document.getElementById('gracias').style.display= 'none';
+    document.getElementById('producto').style.display= 'none';
     document.getElementById('finalizar-compra').style.display= 'none';
     document.getElementById('categoriasEmpresas').style.display= 'none';
     document.getElementById('loginCliente').style.display= 'none';
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('logo').style.display= 'block';
-    document.getElementById('producto').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
-    document.getElementById('gracias').style.display= 'none';
 }
 
 const mostrarProducto = () => {

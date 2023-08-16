@@ -640,9 +640,9 @@
 } */
 
 @media screen and (min-width:900px) {
-    body{
+    /* body{
         border: 1px solid black;
-    }
+    } */
 
     #loginCliente{
         margin-top: 11%;
