@@ -17,13 +17,13 @@ const mostrarLogIn = () => {
 }
 
 const mostrarCrearCuenta = () => {
+    document.getElementById('producto').style.display= 'none';
+    document.getElementById('crearCuenta').style.display= 'block';
     document.getElementById('categoriasEmpresas').style.display= 'none';
     document.getElementById('loginCliente').style.display= 'none';
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
     document.getElementById('logo').style.display= 'none';
-    document.getElementById('producto').style.display= 'none';
-    document.getElementById('crearCuenta').style.display= 'block';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'block';
     document.getElementById('carritoIcon').style.display= 'none';

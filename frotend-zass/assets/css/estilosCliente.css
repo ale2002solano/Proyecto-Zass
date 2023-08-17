@@ -73,7 +73,7 @@
     height: 100px;
     position: absolute;
     overflow: hidden;
-    z-index: -1;
+    z-index: -2;
 }
 
 #fig1{
@@ -82,21 +82,33 @@
     top: 80%;
 }
 
-#fig2{
-    height: 150px;
+#fig6{
+    height: 200px;
     left: 2%;
     top: 68%
 }
 
-#fig3{
+#fig4{
     height: 126px;
     top: -1%;
     left: -2%;
 }
 
-#fig4{
-    height: 120px;
-    left: 60%;
+#fig5{
+    height: 180px;
+    top: 80%;
+    left: 70%;
+}
+
+#fig2{
+    height: 180px;
+    top: 15%;
+    left: 90%;
+}
+
+#fig7{
+    height: 170px;
+    left: 45%;
     top: 39%;
 }
 
@@ -596,7 +608,6 @@
 }
 
 .txt-final{
-    border: 1px solid black;
     font-family: 'Parisienne', cursive;
     font-weight: bold;
     font-size: 40px;
@@ -828,5 +839,42 @@
         height: 625px;
     width: 70%;
     margin: 20px 23px 0px 200px;
+    }
+
+    #crearCuenta{
+        padding-top: 5%;
+        padding-left: 35%;
+        padding-right: 10%;
+    }
+
+    .carita{
+        margin-left: 40%;
+    }
+
+    .catg-producto {
+        margin: 110px 0px 16px 506px;
+        height: 300px !important;
+        width: 45%;
+        margin-left: 27%;
+    }
+
+    #carrito2{
+        align-items: center;
+        height: 170px;
+    }
+
+    #producto-carrito{
+        margin-top: 0;
+    }
+
+    #gracias{
+        margin-top: 16%;
+        margin-left: 36%;
+    }
+
+    .txt-final{
+        height: 70px;
+        width: 60%;
+        text-align: center;
     }
 }
