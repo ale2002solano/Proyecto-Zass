@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "nombre": "Valeria",
+        "apellido": "",
+        "correo": "valeria@gmail.com",
+        "contrasena": "asd.456",
+        "direccion": "El hato"
+    },
+    {
+        "id": "2",
+        "nombre": "Josue",
+        "apellido": "",
+        "correo": "josue@gmail.com",
+        "contrasena": "asd.456",
+        "direccion": "La kennedy"
+    },
+    {
+        "id": "3",
+        "nombre": "Erick",
+        "apellido": "",
+        "correo": "erick@gmail.com",
+        "contrasena": "asd.456",
+        "direccion": "21 de Octubre"
+    }
+]

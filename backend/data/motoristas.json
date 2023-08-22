@@ -1,0 +1,30 @@
+[ 
+    {
+        "id": "1",
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "correo": "juan@gmail.com",
+        "contrasena": "asd.456"
+    },
+    {
+        "id": "2",
+        "nombre": "Maria",
+        "apellido": "Hernandez",
+        "correo": "maria@gmail.com",
+        "contrasena": "asd.456"
+    },
+    {
+        "id": "3",
+        "nombre": "Pedro",
+        "apellido": "Flores",
+        "correo": "pedro@gmail.com",
+        "contrasena": "asd.456"
+    },
+    {
+        "id": "4",
+        "nombre": "Elisa",
+        "apellido": "Lopez",
+        "correo": "jelisa@gmail.com",
+        "contrasena": "asd.456"
+    }
+]
