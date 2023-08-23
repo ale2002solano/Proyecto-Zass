@@ -36,6 +36,7 @@ const mostrarCategoriasEmpresas = () => {
     document.getElementById('categoriasEmpresas').style.display= 'block';
     document.getElementById('loginCliente').style.display= 'none';
     document.getElementById('categoriasProductos').style.display= 'none';
+    document.getElementById('gracias').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
     document.getElementById('logo').style.display= 'block';
@@ -44,7 +45,6 @@ const mostrarCategoriasEmpresas = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carrito').style.display= 'block';
     document.getElementById('finalizar-compra').style.display= 'none';
-    document.getElementById('gracias').style.display= 'none';
 }
 
 const mostrarCategoriasProductos = () => {

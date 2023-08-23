@@ -178,6 +178,58 @@
     display: none;
 }
 
+@media screen and (min-width:1000px) {
+    #loginMotorista{
+        width: 40%;
+        height: 40%;
+        margin-top: 8%;
+        margin-left: 32%;
+    }
+
+    #logo2{
+        height: 200px;
+        width: 250px;
+    }
+
+    .iniciar{
+        font-family: 'Parisienne', cursive;
+        font-size: 45px;
+    }
+
+    #registro{
+        width: 630px;
+        margin: 121px 429px 0;
+    }
+
+    .input-registro{
+        width: 76%;
+        
+    }
+
+    #btnlogin{
+        width: auto;
+    }
+
+    .tamaño-pedidos{
+        width: 44%;
+        height: 60%;
+    }
+
+    #logo-descripcion{
+        margin-top: -3.5%;
+    }
+
+    .pedidos{
+        height: 70%;
+        margin-top: 2%;
+        margin-left: 4%;
+    }
+
+    .descripcion{
+        padding-top: 50px;
+    }
+
+}
 
 
 
