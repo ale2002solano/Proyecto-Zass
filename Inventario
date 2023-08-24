@@ -43,7 +43,8 @@ coleccion categorias
 
 ----Administrar motoristas
 (coleccion motoristas) Agregar motorista
-(coleccion empresas) Obtener motoristas
+(coleccion motoristas) Eliminar motorista
+(coleccion motoristas) Obtener motoristas
 
 ----Administrar ordenes
 (coleccion pedidos) obtener pedidos disponibles
