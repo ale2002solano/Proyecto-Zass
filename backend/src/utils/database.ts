@@ -10,7 +10,7 @@ export class Database {
     conectar(){
         mongoose.connect(bdMongoAtlas)
         .then(()=>{
-            console.log('Se conecto a mongo');
+            console.log('Se conecto a base de datos zass');
         }).catch((error)=>{
             console.error('Ocurrio un error al conectarse', error);
         });

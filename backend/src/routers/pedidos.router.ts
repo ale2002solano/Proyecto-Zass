@@ -1,15 +1,27 @@
 import express from "express";
+import { agregarPedido, obtenerPedidosConDireccion, obtenerPedidosDisponibles, obtenerPedidosEntregados, obtenerPedidosPendientes } from "../controllers/pedidos.controller";
 
 const router = express();
 
-
-//--------------Estructura
-// (collection preguntas) get preguntas cruce con usuario para obtener nombre e imagen
-//http://localhost:8088/preguntas
-// router.get('/', obtenerPreguntas);
-
 // (coleccion pedidos) agregar pedido
+//http://localhost:8088/pedidos/agregar
+router.put('/guardar', agregarPedido);
+
 // (coleccion pedidos) obtener pedido y direccion de usuario (cruce)
+//http://localhost:8088/pedidos/:id/pedido
+router.get('/:id/pedido', obtenerPedidosConDireccion);
+
 // (coleccion pedidos) obtener pedidos disponibles
+//http://localhost:8088/pedidos/disponibles
+router.get('/disponibles', obtenerPedidosDisponibles);
+
 // (coleccion pedidos) obtener pedidos pendientes
+//http://localhost:8088/pedidos/pendientes
+router.get('/pendientes', obtenerPedidosPendientes);
+
 // (coleccion pedidos) obtener pedidos entregados
+//http://localhost:8088/pedidos/entregados
+router.get('/entregados', obtenerPedidosEntregados);
+
+
+export default router;

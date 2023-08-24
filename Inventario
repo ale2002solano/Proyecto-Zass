@@ -5,27 +5,26 @@ coleccion empresas
 coleccion productos
 coleccion categorias
 
-
-
---------Cliente----------
-(coleccion usuarios) login (correo y contrasena)
+--------------------------------Cliente--------------------
+TERMINADO (coleccion usuarios) login (correo y contrasena) 
 (coleccion usuarios) resgistro (nombres, apellidos, correo, contrasena y confirmar contrasena)
 (coleccion empresas) obtener todas las empresas 
 (coleccion categorias) obtener categorias
-(coleccion productos) obtener productos (cruce categorias)
-(coleccion productos) obtener un productos
+TERMINADO (coleccion productos) obtener productos 
+TERMINADO (coleccion productos) obtener un producto
 (coleccion productos) agregar cantidad de productos para pedidos
 (coleccion pedidos) agregar pedido
 (coleccion usuarios) actualizar usuario con direccion
 
 
---------Motorista---------
+-------------------------------Motorista-------------------
 (coleccion motoristas) login
 (coleccion motoristas) resgistro
 (coleccion categorias) obtener cat pedidos
 (coleccion pedidos) obtener pedido y direccion de usuario (cruce)
 
--------Administrativo-------
+
+-----------------------------Administrativo------------------
 
 ----Administrar empresas
 (coleccion empresas) agregar empresa 
@@ -39,7 +38,7 @@ coleccion categorias
 (coleccion categorias) obtener productos de categoria (cruce)
 (coleccion productos) agregar producto
  (actualizar producto podemos eliminarlo)
- eliminar producto
+TERMINADO eliminar producto
 
 ----Administrar motoristas
 (coleccion motoristas) Agregar motorista

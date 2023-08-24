@@ -1,15 +1,21 @@
 import express from "express";
 import { ClientRequest } from "http";
+import { obtenerCategorias } from "../controllers/categorias.controller";
 
 const router = express();
 
-
-//--------------Estructura
-// (collection preguntas) get preguntas cruce con usuario para obtener nombre e imagen
-//http://localhost:8088/preguntas
-// router.get('/', obtenerPreguntas);
-
 // (coleccion categorias) obtener categorias (Cliente)
-// (coleccion categorias) obtener cat pedidos
-// (coleccion categorias) obtener productos de categoria (cruce)
+//http://localhost:8088/categorias
+router.get('/', obtenerCategorias);
 
+//----------Ignorar por ahora
+// (coleccion categorias) obtener cat pedidos
+//http://localhost:8088/categorias
+// router.get('/', obtenerCategorias);
+
+//---------Cruce hecho en mongo
+// (coleccion categorias) obtener detalle de productos de categoria (cruce)
+//http://localhost:8088/categorias/detalle
+// router.get('/detalle', obtenerCategorias);
+
+export default router;

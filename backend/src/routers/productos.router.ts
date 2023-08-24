@@ -1,15 +1,26 @@
 import express from "express";
+import { actualizarProducto, eliminarProducto, guardarProducto, obtenerProducto, obtenerProductos } from "../controllers/productos.controller";
 
 const router = express();
 
-
-//--------------Estructura
-// (collection preguntas) get preguntas cruce con usuario para obtener nombre e imagen
-//http://localhost:8088/preguntas
-// router.get('/', obtenerPreguntas);
-
 // (coleccion productos) obtener productos (cruce categorias)
+//http://localhost:8088/productos
+router.get('/', obtenerProductos);
+
 // (coleccion productos) obtener un productos
-// (coleccion productos) agregar cantidad de productos para pedidos
+//http://localhost:8088/productos/:id/producto
+router.get('/:id/producto', obtenerProducto);
+
+// (coleccion productos) actualizar cantidad de productos para pedidos
+//http://localhost:8088/productos/:id/producto/actualizar
+router.put('/:id/producto/actualizar', actualizarProducto);
+
 // (coleccion productos) agregar producto
+//http://localhost:8088/productos/guardar
+router.post('/guardar', guardarProducto);
+
 //  eliminar producto
+//http://localhost:8088/productos/:id/producto/eliminar
+router.delete('/:id/producto/eliminar', eliminarProducto);
+
+export default router;

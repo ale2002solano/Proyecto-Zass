@@ -9,14 +9,18 @@ import pedidosRouter from './routers/pedidos.router';
 import productosRouter from './routers/productos.router';
 import categoriasRouter from './routers/categorias.router'
 
+/**
+ * Para compilar: npx tsc --watch
+ * nodemon dist/index.js en otra terminal
+ */
 dotenv.config();
 
 const app: Express = express();
-const port: string | undefined = process.env.PORT;
-const database:Database = new Database();
+const port = process.env.PORT;
+const database = new Database();
 
 app.use(cors());
-app.use(express.json);
+app.use(express.json()); 
 app.use(express.urlencoded({extended:true}));
 
 app.use('/usuarios', usuariosRouter);
@@ -26,12 +30,10 @@ app.use('/pedidos', pedidosRouter);
 app.use('/productos', productosRouter);
 app.use('/categorias', categoriasRouter);
 
-
-
 app.get('/', (req: Request, res: Response) => {
-    res.send('Backend zass');
+    res.send('Servidor zass');
 });
 
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log(`[server]: Server zass is running at http://localhost:${port}`);
 });
