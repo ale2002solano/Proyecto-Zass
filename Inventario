@@ -1,9 +1,9 @@
-coleccion pedidos
+coleccion pedidos TERMINADO
 coleccion usuarios TERMINADO
 coleccion motoristas
 coleccion empresas
 coleccion productos TERMINADO
-coleccion categorias
+coleccion categorias TERMINADO
 
 --------------------------------Cliente--------------------
 TERMINADO (coleccion usuarios) login (correo y contrasena) 
@@ -13,15 +13,15 @@ TERMINADO (coleccion usuarios) resgistro (nombres, apellidos, correo, contrasena
 TERMINADO (coleccion productos) obtener productos 
 TERMINADO (coleccion productos) obtener un producto
 TERMINADO (coleccion productos) agregar cantidad de productos para pedidos
-(coleccion pedidos) agregar pedido
+TERMINADO (coleccion pedidos) agregar pedido
 TERMINADO (coleccion usuarios) actualizar usuario con direccion
 
 
 -------------------------------Motorista-------------------
 (coleccion motoristas) login
 (coleccion motoristas) resgistro
-(coleccion categorias) obtener cat pedidos
-(coleccion pedidos) obtener pedido y direccion de usuario (cruce)
+TERMINADO (coleccion categorias) obtener cat pedidos
+TERMINADO (coleccion pedidos) obtener pedido y direccion de usuario
 
 
 -----------------------------Administrativo------------------
@@ -34,8 +34,8 @@ TERMINADO (coleccion usuarios) actualizar usuario con direccion
 
 ---Administrar productos
 (coleccion empresas) obtener empresas
-(coleccion categorias) obtener categorias
-(coleccion categorias) obtener productos de categoria (cruce)
+TERMINADO (coleccion categorias) obtener categorias
+TERMINADO (coleccion categorias) obtener productos de categoria (cruce)
 TERMINADO (coleccion productos) agregar producto
  (actualizar producto podemos eliminarlo)
 TERMINADO eliminar producto
@@ -46,10 +46,10 @@ TERMINADO eliminar producto
 (coleccion motoristas) Obtener motoristas
 
 ----Administrar ordenes
-(coleccion pedidos) obtener pedidos disponibles
-(coleccion pedidos) obtener pedidos pendientes
-(coleccion pedidos) obtener pedidos entregados
-(coleccion pedidos) agregar pedido
+TERMINADO (coleccion pedidos) obtener pedidos disponibles
+TERMINADO (coleccion pedidos) obtener pedidos pendientes
+TERMINADO (coleccion pedidos) obtener pedidos entregados
+TERMINADO (coleccion pedidos) agregar pedido
 
 
 

@@ -1,52 +1,19 @@
 [
     {
-        "idCategoria": "1",
-        "nombre": "Camisas",
-        "imagen": "",
-        "detalleProducto": [
-                "idProducto"
-            ]
-    },
-    {
-        "idCategoria": "2",
-        "nombre": "Pantalones",
-        "imagen": "",
-        "detalleProducto": [
-                {
-                    "idProducto": ""
-                }
-            ]
-    },
-    {
-        "idCategoria": "3",
-        "nombre": "Accesorios",
-        "imagen": "",
-        "detalleProducto": [
-            "idProducto"
-
-            ]
-    },
-    {
-        "idCategoria": "4",
-        "nombre": "Zapatos",
-        "imagen": "",
-        "detalleProducto": [
-            "idProducto"
-
-            ]
-    },
-    {
         "idCategoria": "5",
+        "tipo": "pedido",
         "nombre": "Pedidos disponibles",
         "imagen": ""
     },
     {
         "idCategoria": "6",
+        "tipo": "pedido",
         "nombre": "Pedidos entregados",
         "imagen": ""
     },
     {
         "idCategoria": "7",
+        "tipo": "pedido",
         "nombre": "Pedidos pendientes",
         "imagen": ""
     }

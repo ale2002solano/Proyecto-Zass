@@ -1,5 +1,5 @@
 import express from "express";
-import { agregarPedido, obtenerPedidosConDireccion, obtenerPedidosDisponibles, obtenerPedidosEntregados, obtenerPedidosPendientes } from "../controllers/pedidos.controller";
+import { agregarPedido, obtenerPedido, obtenerPedidosDisponibles, obtenerPedidosEntregados, obtenerPedidosPendientes } from "../controllers/pedidos.controller";
 
 const router = express();
 
@@ -9,7 +9,7 @@ router.put('/guardar', agregarPedido);
 
 // (coleccion pedidos) obtener pedido y direccion de usuario (cruce)
 //http://localhost:8088/pedidos/:id/pedido
-router.get('/:id/pedido', obtenerPedidosConDireccion);
+router.get('/:id/pedido', obtenerPedido);
 
 // (coleccion pedidos) obtener pedidos disponibles
 //http://localhost:8088/pedidos/disponibles

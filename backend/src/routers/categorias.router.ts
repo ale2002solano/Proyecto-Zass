@@ -1,6 +1,6 @@
 import express from "express";
 import { ClientRequest } from "http";
-import { obtenerCategorias } from "../controllers/categorias.controller";
+import { obtenerCategorias, obtenerCategoriasPedidos } from "../controllers/categorias.controller";
 
 const router = express();
 
@@ -8,10 +8,9 @@ const router = express();
 //http://localhost:8088/categorias
 router.get('/', obtenerCategorias);
 
-//----------Ignorar por ahora
 // (coleccion categorias) obtener cat pedidos
-//http://localhost:8088/categorias
-// router.get('/', obtenerCategorias);
+//http://localhost:8088/categorias/pedidos
+router.get('/pedidos', obtenerCategoriasPedidos);
 
 //---------Cruce hecho en mongo
 // (coleccion categorias) obtener detalle de productos de categoria (cruce)

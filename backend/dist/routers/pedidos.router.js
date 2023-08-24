@@ -11,7 +11,7 @@ const router = (0, express_1.default)();
 router.put('/guardar', pedidos_controller_1.agregarPedido);
 // (coleccion pedidos) obtener pedido y direccion de usuario (cruce)
 //http://localhost:8088/pedidos/:id/pedido
-router.get('/:id/pedido', pedidos_controller_1.obtenerPedidosConDireccion);
+router.get('/:id/pedido', pedidos_controller_1.obtenerPedido);
 // (coleccion pedidos) obtener pedidos disponibles
 //http://localhost:8088/pedidos/disponibles
 router.get('/disponibles', pedidos_controller_1.obtenerPedidosDisponibles);
