@@ -276,3 +276,9 @@ th{
     align-content: center;
     padding: 10px;
 }
+.save{background-color: #2dc2ac;
+color: white;}
+.save:hover{
+    cursor: pointer;
+    background-color: #009496;
+}
