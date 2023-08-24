@@ -7,5 +7,5 @@ export interface Usuario {
     apellido: string;
     correo: string;
     contrasena: string;
-    direccion: string;
+    direccion?: string;
 }

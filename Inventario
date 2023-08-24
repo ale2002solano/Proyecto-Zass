@@ -1,0 +1,57 @@
+coleccion pedidos
+coleccion usuarios
+coleccion motoristas
+coleccion empresas
+coleccion productos
+coleccion categorias
+
+
+
+--------Cliente----------
+(coleccion usuarios) login (correo y contrasena)
+(coleccion usuarios) resgistro (nombres, apellidos, correo, contrasena y confirmar contrasena)
+(coleccion empresas) obtener todas las empresas 
+(coleccion categorias) obtener categorias
+(coleccion productos) obtener productos (cruce categorias)
+(coleccion productos) obtener un productos
+(coleccion productos) agregar cantidad de productos para pedidos
+(coleccion pedidos) agregar pedido
+(coleccion usuarios) actualizar usuario con direccion
+
+
+--------Motorista---------
+(coleccion motoristas) login
+(coleccion motoristas) resgistro
+(coleccion categorias) obtener cat pedidos
+(coleccion pedidos) obtener pedido y direccion de usuario (cruce)
+
+-------Administrativo-------
+
+----Administrar empresas
+(coleccion empresas) agregar empresa 
+(coleccion empresas) obtener empresas
+(coleccion empresas) actualizar empresa 
+(coleccion empresas) eliminar empresa
+
+---Administrar productos
+(coleccion empresas) obtener empresas
+(coleccion categorias) obtener categorias
+(coleccion categorias) obtener productos de categoria (cruce)
+(coleccion productos) agregar producto
+ (actualizar producto podemos eliminarlo)
+ eliminar producto
+
+----Administrar motoristas
+(coleccion motoristas) Agregar motorista
+(coleccion empresas) Obtener motoristas
+
+----Administrar ordenes
+(coleccion pedidos) obtener pedidos disponibles
+(coleccion pedidos) obtener pedidos pendientes
+(coleccion pedidos) obtener pedidos entregados
+(coleccion pedidos) agregar pedido
+
+
+
+
+

@@ -9,4 +9,4 @@ const schema = new mongoose.Schema<Motorista>({
     contrasena: String
 });
 
-export const EmpresaSchema = mongoose.model('motoristas', schema);
+export const MotoristaSchema = mongoose.model('motoristas', schema);

@@ -7,7 +7,7 @@ import empresasRouter from './routers/empresas.router';
 import motoristasRouter from './routers/motoristas.router';
 import pedidosRouter from './routers/pedidos.router';
 import productosRouter from './routers/productos.router';
-
+import categoriasRouter from './routers/categorias.router'
 
 dotenv.config();
 
@@ -24,6 +24,8 @@ app.use('/motoristas', motoristasRouter);
 app.use('/empresas', empresasRouter);
 app.use('/pedidos', pedidosRouter);
 app.use('/productos', productosRouter);
+app.use('/categorias', categoriasRouter);
+
 
 
 app.get('/', (req: Request, res: Response) => {

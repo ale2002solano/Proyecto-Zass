@@ -10,4 +10,4 @@ const schema = new mongoose.Schema<Usuario>({
     direccion: String
 });
 
-export const EmpresaSchema = mongoose.model('usuarios', schema);
+export const UsuarioSchema = mongoose.model('usuarios', schema);

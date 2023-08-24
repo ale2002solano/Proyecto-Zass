@@ -1,33 +1,78 @@
 [
     {
         "idPedido": "1",
-        "pedido": [
-            {
-                "idProducto": "1",
-                "cantidad": "3"
-            }
-        ]
-    },
-    {
-        "idPedido": "2",
+        "nombreCliente": "Axel",
         "pedido": [
             {
                 "idProducto": "2",
-                "cantidad": "2"
+                "idCategoria": "1",
+                "nombreProducto": "Camisa amarilla",
+                "precio": "L.500",
+                "cantidad": "3"
             },
             {
-                "idProducto": "4",
-                "cantidad": "3"
+                "idProducto": "10",
+                "idCategoria": "2",
+                "nombreProducto": "Pantalon negro",
+                "precio": "L.500",
+                "cantidad": "2"
             }
-        ]
+        ],
+        "impuesto": "L.99",
+        "total": "L.400",
+        "fecha": "15/05/22",
+        "establecimiento": "Charly",
+        "direccion": "Comayaguela",
+        "motorista": "Maria",
+        "estadoOrden": "entregado"
+    }
+    ,
+    {
+        "idPedido": "2",
+        "nombreCliente": "Samuel",
+        "pedido": [
+            {
+                "idProducto": "18",
+                "idCategoria": "4",
+                "nombreProducto": "Tenis blancos",
+                "precio": "L.500",
+                "cantidad": "5"
+            }
+        ],
+        "impuesto": "L.99",
+        "total": "L.400",
+        "fecha": "15/05/22",
+        "establecimiento": "Charly",
+        "direccion": "Comayaguela",
+        "motorista": "Elisa",
+        "estado": "pendiente"
     },
     {
         "idPedido": "3",
+        "nombreCliente": "Verenice",
         "pedido": [
             {
-                "idProducto": "1",
+                "idProducto": "17",
+                "idCategoria": "4",
+                "nombreProducto": "Sandalias strappy",
+                "precio": "L.500",
+                "cantidad": "1"
+            },
+            {
+                "idProducto": "12",
+                "idCategoria": "3",
+                "nombreProducto": "Gancho de perlas",
+                "precio": "L.500",
                 "cantidad": "4"
             }
-        ]
+        ],
+        "impuesto": "L.99",
+        "total": "L.400",
+        "fecha": "15/05/22",
+        "establecimiento": "Charly",
+        "direccion": "Comayaguela",
+        "motorista": "Pedro",
+        "estadoOrden": "disponible"
     }
+    
 ]

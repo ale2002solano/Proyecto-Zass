@@ -1,9 +1,21 @@
 import mongoose from "mongoose";
-import { Pedido, PedidoCantidad } from "./pedidos.model";
+import { Pedido, Estado } from "./pedidos.model";
+import { Producto } from "./productos.model";
 
 const schema = new mongoose.Schema<Pedido>({
-    idPedido: Number,
-    pedido: Array<PedidoCantidad>
+    idPedido: String,
+    nombreCliente: String,
+    pedido: Array<Producto>,
+    impuesto: String,
+    total: String,
+    fecha: String,
+    establecimiento: String,
+    direccion: String,
+    motorista: String,
+    estadoOrden: {
+        type: String,
+        required: true
+        }
 });
 
-export const EmpresaSchema = mongoose.model('pedidos', schema);
+export const PedidoSchema = mongoose.model('pedidos', schema);

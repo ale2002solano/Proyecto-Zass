@@ -1,6 +1,9 @@
-{
+[
+    {
     "idProducto": "",
-    "idCatProducto": "",
-    "idEmpresa": "",
-    "Descripcion": ""
-},
+    "idCategoria": "",
+    "imagen": "",
+    "nombreProducto": "",
+    "precio": ""
+    }
+]
