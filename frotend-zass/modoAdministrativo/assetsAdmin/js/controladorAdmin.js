@@ -60,3 +60,15 @@ function zapatosProductos(){
 function formatoOrdenes(){
     document.getElementById("formato").style.display="block";
 }
+
+function nuevaApp(){
+    indiceAppSeleccionada = null;
+    document.getElementById("nombre-app").value = null;
+    document.getElementById("desarrollador" ).value = null;
+    document.getElementById("calificacion").value = null;
+    document.getElementById("lista-imagenes").value = null;
+  
+    document.getElementById("btn-guardar").style.display="block";//OCULTO
+    document.getElementById("btn-actualizar").style.display="none";//MOSTRANDO
+  
+  }
