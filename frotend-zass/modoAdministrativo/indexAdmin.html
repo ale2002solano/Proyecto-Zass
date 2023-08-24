@@ -151,9 +151,9 @@
 
     <!-- INCIO DE PRODUCTOS -->
     <div id="productos">
+      <button id="new-empresa" data-toggle="modal" data-target="#productosModal"><i class="fa-solid fa-plus"></i> Agregar</button> <br>
       <!-- CAMISAS -->
       <div id="camisa" style="display: none;">
-        <button id="new-empresa"><i class="fa-solid fa-plus"></i> Agregar</button> <br>
       <div id="camisas">
         <div class="card-empresa" style="width: 18rem;">
           <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
@@ -201,7 +201,6 @@
 
     <!-- PANTALONES -->
     <div id="pantalones" style="display: none;">
-      <button id="new-empresa"><i class="fa-solid fa-plus"></i> Agregar</button> <br>
     <div id="camisas">
       <div class="card-empresa" style="width: 18rem;">
         <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
@@ -249,7 +248,6 @@
 
      <!-- ACCESORIOS -->
      <div id="accesorios" style="display: none;">
-      <button id="new-empresa"><i class="fa-solid fa-plus"></i> Agregar</button> <br>
     <div id="camisas">
       <div class="card-empresa" style="width: 18rem;">
         <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
@@ -297,7 +295,6 @@
 
     <!-- ZAPATOS -->
     <div id="zapatos" style="display: none;">
-      <button id="new-empresa"><i class="fa-solid fa-plus"></i> Agregar</button> <br>
     <div id="camisas">
       <div class="card-empresa" style="width: 18rem;">
         <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
@@ -357,15 +354,15 @@
     <div id="tipoOrdenes">
 
       <div id="cardsAdmin">
-        <div class="card-ordenes" onclick="formatoOrdenes();">
+        <div class="card-ordenes" onclick="formatoOrdenes(); estadoOrden();" id="1">
           <img src="assetsAdmin/img/orden-disponible.png" id="img-tip-ordenes">
             Ordenes disponibles
           </div>
-          <div class="card-ordenes" onclick="formatoOrdenes();">
+          <div class="card-ordenes" onclick="formatoOrdenes();" id="2">
             <img src="assetsAdmin/img/orden-pendiente.png" id="img-tip-ordenes">
             Ordenes pendientes
           </div>
-          <div class="card-ordenes" onclick="formartoOrdenes();">
+          <div class="card-ordenes" onclick="formartoOrdenes();" id="3">
             <img src="assetsAdmin/img/orden-entregada.png" id="img-tip-ordenes">
             Ordenes entregadas
           </div>
@@ -377,7 +374,7 @@
 
     <!-- INICIO DEL FORMATO DE LAS ORDENES -->
     <div id="formato" style="display: none;">
-      <div id="boton"><button id="new-empresa"><i class="fa-solid fa-plus"></i> Agregar</button> <br></div>
+      <div id="boton"><button id="new-empresa" data-toggle="modal" data-target="#pedidoModal"><i class="fa-solid fa-plus"></i> Agregar</button> <br></div>
       <div id="formato-ordenes">
 
         <table class="table table-borderless">
@@ -514,7 +511,7 @@
     <div id="head-admin">
       <p id="sub-titulo">ADMINISTRAR MOTORISTAS</p>
     </div>
-    <div id="boton"><button id="new-empresa"><i class="fa-solid fa-plus"></i> Agregar</button> <br></div>
+    <div id="boton"><button id="new-empresa" data-toggle="modal" data-target="#motoristaModal"><i class="fa-solid fa-plus"></i> Agregar</button> <br></div>
 
     <div id="motoristas">
 
@@ -564,6 +561,106 @@
 </div>
   
    <!--FIN AGREGAR EMPRESA-->
+
+
+   <!--VENTANA MODAL AGREGAR PRODUCTOS-->
+
+<!-- Modal -->
+<div class="modal fade" id="productosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar productos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control my-2"  type="text"  id="nombre-producto" placeholder="Nombre producto">
+        <input class="form-control my-2"  type="text"  id="precio-producto" placeholder="Precio producto">
+        <select id="lista-imagenes">
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button id="btn-guardar" type="button" class="btn save" onclick="guardar()">Guardar</button>
+        <button id="btn-actualizar" type="button" class="btn btn-primary" onclick="actualizar()">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+   <!--FIN AGREGAR PRODUCTOS-->
+
+    <!--VENTANA MODAL AGREGAR MOTORISTAS-->
+
+<!-- Modal -->
+<div class="modal fade" id="motoristaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar motorista</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control my-2"  type="text"  id="nombre-motorista" placeholder="Nombre">
+        <textarea class="form-control my-2"  id="descrip" placeholder="Descripcion" cols="30" rows="10"></textarea>
+        <input class="form-control my-2"  type="text"  id="region-trabajo" placeholder="Region de trabajo">
+        <input class="form-control my-2"  type="tel"  id="numero-celular" placeholder="+504 ---- -----">
+        <select id="lista-imagenes">
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button id="btn-guardar" type="button" class="btn save" onclick="guardar()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+   <!--FIN AGREGAR MOTORISTA-->
+
+    <!--VENTANA MODAL AGREGAR PEDIDOS-->
+
+<!-- Modal -->
+<div class="modal fade" id="pedidoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar pedido</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control my-2"  type="text"  id="nombre-motorista" placeholder="Nombre cliente">
+        <label for="">Carrito/Pedido:</label>
+        <input class="form-control my-2"  type="number"  id="cantidad" placeholder="Cantidad producto">
+        <input class="form-control my-2"  type="text"  id="descrip" placeholder="Descripcion/nombre producto">
+        <input class="form-control my-2"  type=""  id="precio" placeholder="Precio Lps.">
+        <hr>
+        <input class="form-control my-2"  type="text"  id="impuesto" placeholder="Impuesto">
+        <input class="form-control my-2"  type="text"  id="total" placeholder="Total">
+        <input class="form-control my-2"  type="datetime-local"  id="fecha" placeholder="fecha">
+        <input class="form-control my-2"  type="text"  id="estado-orden" placeholder="Estado orden" value="" readonly>
+        <input class="form-control my-2"  type="text"  id="empresa" placeholder="Establecimiento">
+        <input class="form-control my-2"  type="text"  id="Domicilio" placeholder="Domicilio">
+        <select id="Motorista" aria-placeholder="Motorista">
+          <option disabled selected>Motorista</option>
+          <option value="mario">Mario</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button id="btn-guardar" type="button" class="btn save" onclick="guardar()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+   <!--FIN AGREGAR PEDIDOS-->
 
   
 

@@ -61,14 +61,32 @@ function formatoOrdenes(){
     document.getElementById("formato").style.display="block";
 }
 
-function nuevaApp(){
-    indiceAppSeleccionada = null;
-    document.getElementById("nombre-app").value = null;
-    document.getElementById("desarrollador" ).value = null;
-    document.getElementById("calificacion").value = null;
-    document.getElementById("lista-imagenes").value = null;
+// function nuevaApp(){
+//     indiceAppSeleccionada = null;
+//     document.getElementById("nombre-app").value = null;
+//     document.getElementById("desarrollador" ).value = null;
+//     document.getElementById("calificacion").value = null;
+//     document.getElementById("lista-imagenes").value = null;
   
-    document.getElementById("btn-guardar").style.display="block";//OCULTO
-    document.getElementById("btn-actualizar").style.display="none";//MOSTRANDO
+//     document.getElementById("btn-guardar").style.display="block";//OCULTO
+//     document.getElementById("btn-actualizar").style.display="none";//MOSTRANDO
   
-  }
+//   }
+
+//ESTABLECER ESTADO DE LA ORDEN
+var divs = document.querySelectorAll("div");
+var input=document.getElementById("estado-orden");
+
+divs.forEach(function(div){
+    div.addEventListener("click", function(){
+        var idclick=this.id;
+        if(idclick=="1"){
+            input.value="Disponible";
+        }else if(idclick=="2"){
+            input.value="Pendiente";
+        }else if(idclick=="3"){
+            input.value="Entregada";
+        }
+    });
+});
+//FIN ESTABLECER ESTADO DE LA ORDEN
