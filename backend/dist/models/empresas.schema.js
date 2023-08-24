@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmpresaSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const schema = new mongoose_1.default.Schema({
-    idEmpresa: Number,
+    idEmpresa: String,
     nombre: String,
     imagen: String,
     calificacion: String

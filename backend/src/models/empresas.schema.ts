@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { Empresa } from "./empresas.model";
 
 const schema = new mongoose.Schema<Empresa>({
-    idEmpresa: Number,
+    idEmpresa: String,
     nombre: String,
     imagen: String,
     calificacion: String

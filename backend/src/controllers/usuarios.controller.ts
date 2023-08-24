@@ -9,14 +9,15 @@ export const loginUsuario = async (req:Request, res:Response) => {
         res.send({status: true, message: 'Login correcto', usuario});
         res.end();
     }
-    else 
+    else{
         res.send({status: false, message: 'Login incorrecto'});
         res.end();
+    }
 }
 
 
 export const registrarUsuarios = (req:Request, res:Response) => {
-    if(req.body.contrasena == req.body.contrasenaNueva){
+    if(req.body.contrasena == req.body.contrasenaVerificar){
         let usuario = new UsuarioSchema(req.body);
         usuario.save()
         .then((result)=>{
@@ -30,13 +31,11 @@ export const registrarUsuarios = (req:Request, res:Response) => {
         res.send("Contraseñas no coinciden");
         res.end();
     }
-    
-    
 }
 
 
 export const actualizarUsuario = (req:Request, res:Response) => {
-    UsuarioSchema.updateOne({Number(id): req.params.id},
+    UsuarioSchema.updateOne({id: req.params.id},
         {
             direccion: req.body.direccion
         }

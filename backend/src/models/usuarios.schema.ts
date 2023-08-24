@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { Usuario } from "./usuarios.model";
 
 const schema = new mongoose.Schema<Usuario>({
-    id: Number,
+    id: String,
     nombre: String,
     apellido: String,
     correo: String,

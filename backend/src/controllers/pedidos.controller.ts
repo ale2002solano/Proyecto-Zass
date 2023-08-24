@@ -15,7 +15,7 @@ export const agregarPedido = (req:Request, res:Response) => {
 }
 
 export const obtenerPedido = async (req:Request, res:Response) => {
-    PedidoSchema.findOne({Number(id): req.body.id})
+    PedidoSchema.findOne({idPedido: req.params.id})
     .then((result)=>{
         res.send({status: true, message: 'Pedido obtenido', result});
         res.end();

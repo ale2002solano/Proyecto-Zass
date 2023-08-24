@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { Motorista } from "./motorista.model";
 
 const schema = new mongoose.Schema<Motorista>({
-    id: Number,
+    id: String,
     nombre: String,
     apellido: String,
     correo: String,

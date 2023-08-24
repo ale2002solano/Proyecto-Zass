@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import { CategoriaSchema } from "../models/categorias.schema";
 
 export const obtenerCategorias = (req:Request, res:Response) => {
-    CategoriaSchema.find()
+    CategoriaSchema.find({tipo: "producto"})
     .then((result)=>{
         res.send({status: true, message: 'Todos las categorias obtenidas', result});
         res.end();

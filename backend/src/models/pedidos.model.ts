@@ -5,6 +5,7 @@ export type Estado = "disponible" | "entegado" | "pendiente";
 
 export interface Pedido {
     idPedido: string;
+    idUsuario?: string,
     nombreCliente: string;
     pedido: Array<Producto>;
     impuesto: string;

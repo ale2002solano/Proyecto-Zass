@@ -4,6 +4,7 @@ import { Producto } from "./productos.model";
 
 const schema = new mongoose.Schema<Categoria>({
     idCategoria: String,
+    tipo: String,
     nombreCategoria: String,
     detalleProductos: Array<Producto>
 });

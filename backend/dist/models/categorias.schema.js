@@ -7,6 +7,7 @@ exports.CategoriaSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const schema = new mongoose_1.default.Schema({
     idCategoria: String,
+    tipo: String,
     nombreCategoria: String,
     detalleProductos: (Array)
 });

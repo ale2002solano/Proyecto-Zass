@@ -24,7 +24,7 @@ const agregarPedido = (req, res) => {
 };
 exports.agregarPedido = agregarPedido;
 const obtenerPedido = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    pedidos_schema_1.PedidoSchema.findOne({})
+    pedidos_schema_1.PedidoSchema.findOne({ idPedido: req.params.id })
         .then((result) => {
         res.send({ status: true, message: 'Pedido obtenido', result });
         res.end();

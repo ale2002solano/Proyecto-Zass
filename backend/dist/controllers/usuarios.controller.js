@@ -17,13 +17,14 @@ const loginUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         res.send({ status: true, message: 'Login correcto', usuario });
         res.end();
     }
-    else
+    else {
         res.send({ status: false, message: 'Login incorrecto' });
-    res.end();
+        res.end();
+    }
 });
 exports.loginUsuario = loginUsuario;
 const registrarUsuarios = (req, res) => {
-    if (req.body.contrasena == req.body.contrasenaNueva) {
+    if (req.body.contrasena == req.body.contrasenaVerificar) {
         let usuario = new usuarios_schema_1.UsuarioSchema(req.body);
         usuario.save()
             .then((result) => {
@@ -41,7 +42,7 @@ const registrarUsuarios = (req, res) => {
 };
 exports.registrarUsuarios = registrarUsuarios;
 const actualizarUsuario = (req, res) => {
-    usuarios_schema_1.UsuarioSchema.updateOne({}, {
+    usuarios_schema_1.UsuarioSchema.updateOne({ id: req.params.id }, {
         direccion: req.body.direccion
     }).then(result => {
         res.send({ message: 'Usuario actualizado', result });
