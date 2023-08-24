@@ -15,6 +15,7 @@ const loginUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     const usuario = yield usuarios_schema_1.UsuarioSchema.findOne({ correo: req.body.correo, contrasena: req.body.contrasena }, { contrasena: false });
     if (usuario) {
         res.send({ status: true, message: 'Login correcto', usuario });
+        res.end();
     }
     else
         res.send({ status: false, message: 'Login incorrecto' });
@@ -22,23 +23,31 @@ const loginUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* (
 });
 exports.loginUsuario = loginUsuario;
 const registrarUsuarios = (req, res) => {
-    res.send('registro usuario');
-    res.end();
+    if (req.body.contrasena == req.body.contrasenaNueva) {
+        let usuario = new usuarios_schema_1.UsuarioSchema(req.body);
+        usuario.save()
+            .then((result) => {
+            res.send({ status: true, message: 'Usuario agregado', result });
+            res.end();
+        }).catch((error) => {
+            res.send(error);
+            res.end();
+        });
+    }
+    else {
+        res.send("Contraseñas no coinciden");
+        res.end();
+    }
 };
 exports.registrarUsuarios = registrarUsuarios;
 const actualizarUsuario = (req, res) => {
-    usuarios_schema_1.UsuarioSchema.updateOne({ id: req.params.id }, {
-        id: req.body.id,
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        correo: req.body.correo,
-        contrasena: req.body.contrasena,
+    usuarios_schema_1.UsuarioSchema.updateOne({}, {
         direccion: req.body.direccion
-    }).then((result) => {
-        res.send({ status: true, message: 'Direccion agregada', result });
+    }).then(result => {
+        res.send({ message: 'Usuario actualizado', result });
         res.end();
-    }).catch((error) => {
-        res.send(error);
+    }).catch(error => {
+        res.send({ message: 'Ocurrio un error', error });
         res.end();
     });
 };

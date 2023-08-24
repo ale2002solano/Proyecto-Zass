@@ -27,17 +27,10 @@ export const obtenerProducto = (req:Request, res:Response) => {
 }
 
 export const actualizarProducto = (req:Request, res:Response) => {
-    ProductoSchema.updateOne({idProductos: req.params.id},
-        {
-            _id: new mongoose.Types.ObjectId(req.params._id),
-            idProductos: req.body.idProductos,
-            img: req.body.img,
-            idCategoria: req.body.idCategoria,
-            nombreProducto: req.body.nombreProducto,
-            precio: req.body.precio
-        }
+    ProductoSchema.updateOne({Number(idProductos): req.params.id},req.body
+    //req.body
     ).then((result)=>{
-        res.send({status: true, message: 'Direccion agregada', result});
+        res.send({status: true, message: 'Cantidad agregada', result});
         res.end();
     }).catch((error)=>{
         res.send(error);

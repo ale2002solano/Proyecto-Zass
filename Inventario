@@ -1,20 +1,20 @@
 coleccion pedidos
-coleccion usuarios
+coleccion usuarios TERMINADO
 coleccion motoristas
 coleccion empresas
-coleccion productos
+coleccion productos TERMINADO
 coleccion categorias
 
 --------------------------------Cliente--------------------
 TERMINADO (coleccion usuarios) login (correo y contrasena) 
-(coleccion usuarios) resgistro (nombres, apellidos, correo, contrasena y confirmar contrasena)
+TERMINADO (coleccion usuarios) resgistro (nombres, apellidos, correo, contrasena y confirmar contrasena)
 (coleccion empresas) obtener todas las empresas 
 (coleccion categorias) obtener categorias
 TERMINADO (coleccion productos) obtener productos 
 TERMINADO (coleccion productos) obtener un producto
-(coleccion productos) agregar cantidad de productos para pedidos
+TERMINADO (coleccion productos) agregar cantidad de productos para pedidos
 (coleccion pedidos) agregar pedido
-(coleccion usuarios) actualizar usuario con direccion
+TERMINADO (coleccion usuarios) actualizar usuario con direccion
 
 
 -------------------------------Motorista-------------------
@@ -36,7 +36,7 @@ TERMINADO (coleccion productos) obtener un producto
 (coleccion empresas) obtener empresas
 (coleccion categorias) obtener categorias
 (coleccion categorias) obtener productos de categoria (cruce)
-(coleccion productos) agregar producto
+TERMINADO (coleccion productos) agregar producto
  (actualizar producto podemos eliminarlo)
 TERMINADO eliminar producto
 

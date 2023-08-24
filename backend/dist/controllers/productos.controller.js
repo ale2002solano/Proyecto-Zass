@@ -1,10 +1,6 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.eliminarProducto = exports.guardarProducto = exports.actualizarProducto = exports.obtenerProducto = exports.obtenerProductos = void 0;
-const mongoose_1 = __importDefault(require("mongoose"));
 const productos_schema_1 = require("../models/productos.schema");
 const obtenerProductos = (req, res) => {
     productos_schema_1.ProductoSchema.find()
@@ -31,15 +27,10 @@ const obtenerProducto = (req, res) => {
 };
 exports.obtenerProducto = obtenerProducto;
 const actualizarProducto = (req, res) => {
-    productos_schema_1.ProductoSchema.updateOne({ idProductos: req.params.id }, {
-        _id: new mongoose_1.default.Types.ObjectId(req.params._id),
-        idProductos: req.body.idProductos,
-        img: req.body.img,
-        idCategoria: req.body.idCategoria,
-        nombreProducto: req.body.nombreProducto,
-        precio: req.body.precio
-    }).then((result) => {
-        res.send({ status: true, message: 'Direccion agregada', result });
+    productos_schema_1.ProductoSchema.updateOne({}, req.body
+    //req.body
+    ).then((result) => {
+        res.send({ status: true, message: 'Cantidad agregada', result });
         res.end();
     }).catch((error) => {
         res.send(error);
