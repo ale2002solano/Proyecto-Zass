@@ -1,15 +1,15 @@
 coleccion pedidos TERMINADO
 coleccion usuarios TERMINADO
-coleccion motoristas
-coleccion empresas
+coleccion motoristas TERMINADO
+coleccion empresas TERMINADO 
 coleccion productos TERMINADO
 coleccion categorias TERMINADO
 
 --------------------------------Cliente--------------------
 TERMINADO (coleccion usuarios) login (correo y contrasena) 
 TERMINADO (coleccion usuarios) resgistro (nombres, apellidos, correo, contrasena y confirmar contrasena)
-(coleccion empresas) obtener todas las empresas 
-(coleccion categorias) obtener categorias
+TERMINADO (coleccion empresas) obtener todas las empresas 
+TERMINADO (coleccion categorias) obtener categorias
 TERMINADO (coleccion productos) obtener productos 
 TERMINADO (coleccion productos) obtener un producto
 TERMINADO (coleccion productos) agregar cantidad de productos para pedidos
@@ -18,8 +18,8 @@ TERMINADO (coleccion usuarios) actualizar usuario con direccion
 
 
 -------------------------------Motorista-------------------
-(coleccion motoristas) login
-(coleccion motoristas) resgistro
+TERMINADO (coleccion motoristas) login
+TERMINADO (coleccion motoristas) resgistro
 TERMINADO (coleccion categorias) obtener cat pedidos
 TERMINADO (coleccion pedidos) obtener pedido y direccion de usuario
 
@@ -27,23 +27,22 @@ TERMINADO (coleccion pedidos) obtener pedido y direccion de usuario
 -----------------------------Administrativo------------------
 
 ----Administrar empresas
-(coleccion empresas) agregar empresa 
-(coleccion empresas) obtener empresas
-(coleccion empresas) actualizar empresa 
-(coleccion empresas) eliminar empresa
+TERMINADO (coleccion empresas) agregar empresa 
+TERMINADO (coleccion empresas) obtener empresas
+TERMINADO (coleccion empresas) actualizar empresa 
+TERMINADO (coleccion empresas) eliminar empresa
 
 ---Administrar productos
-(coleccion empresas) obtener empresas
+TERMINADO (coleccion empresas) obtener empresas
 TERMINADO (coleccion categorias) obtener categorias
 TERMINADO (coleccion categorias) obtener productos de categoria (cruce)
 TERMINADO (coleccion productos) agregar producto
- (actualizar producto podemos eliminarlo)
 TERMINADO eliminar producto
 
 ----Administrar motoristas
-(coleccion motoristas) Agregar motorista
-(coleccion motoristas) Eliminar motorista
-(coleccion motoristas) Obtener motoristas
+TERMINADO (coleccion motoristas) Agregar motorista
+TERMINADO (coleccion motoristas) Eliminar motorista
+TERMINADO (coleccion motoristas) Obtener motoristas
 
 ----Administrar ordenes
 TERMINADO (coleccion pedidos) obtener pedidos disponibles
