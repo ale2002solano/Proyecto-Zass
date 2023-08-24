@@ -56,6 +56,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"4\",\r\n\"nombre\": \"Tommy\",\r\n\"apellido\": \"\",\r\n\"correo\": \"tommy@gmail.com\",\r\n\"contrasena\": \"asd.456\",\r\n\"contrasenaVerificar\": \"asd.456\",\r\n\"direccion\": \"21 de Octubre\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8088/usuarios/registrar",
 					"protocol": "http",
@@ -78,7 +87,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"1\",\r\n    \"nombre\": \"Valeria\",\r\n    \"apellido\": \"\",\r\n    \"correo\": \"valeria@gmail.com\",\r\n    \"contrasena\": \"asd.456\",\r\n    \"direccion\": \"Valle de angeles\"\r\n}",
+					"raw": "{\r\n    \"direccion\": \"Las casitas\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,7 +95,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8088/usuarios/1/actualizar",
+					"raw": "http://localhost:8088/usuarios/4/actualizar",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -94,7 +103,7 @@
 					"port": "8088",
 					"path": [
 						"usuarios",
-						"1",
+						"4",
 						"actualizar"
 					]
 				}
@@ -126,7 +135,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8088/productos/1/producto",
+					"raw": "http://localhost:8088/productos/2/producto",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -134,7 +143,7 @@
 					"port": "8088",
 					"path": [
 						"productos",
-						"1",
+						"2",
 						"producto"
 					]
 				}
@@ -148,7 +157,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idProductos\": \"1\",\r\n    \"nombreProducto\": \"Camisa rosa\",\r\n    \"precio\": \"L.430\",\r\n    \"img\": \"https://i.pinimg.com/564x/98/57/eb/9857eb9fd60d71465c232ec30102ddbc.jp…\",\r\n    \"idCategoria\": \"1\"\r\n}",
+					"raw": "{\r\n    \"idProductos\": \"1\",\r\n    \"nombreProducto\": \"Camisa azul\",\r\n    \"precio\": \"L.430\",\r\n    \"img\": \"https://i.pinimg.com/564x/98/57/eb/9857eb9fd60d71465c232ec30102ddbc.jp…\",\r\n    \"idCategoria\": \"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -228,6 +237,15 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPedido\": \"5\",\r\n    \"nombreCliente\": \"Valeria\",\r\n    \"pedido\": [{\r\n        \"idProductos\": \"8\",\r\n        \"nombreProducto\": \"Pantalon rasgado\",\r\n        \"precio\": \"L.630\",\r\n        \"img\": \"https://i.pinimg.com/564x/a9/d9/25/a9d9259c6daa286267441b4c4d57c2dc.jp…\",\r\n        \"idCategoria\": \"2\",\r\n        \"cantidad\": 4\r\n    }],\r\n    \"impuesto\": \"L.99\",\r\n    \"total\": \"L.400\",\r\n    \"fecha\": \"15/05/22\",\r\n    \"establecimiento\": \"Charly\",\r\n    \"direccion\": \"Comayaguela\",\r\n    \"motorista\": \"Pedro\",\r\n    \"estadoOrden\": \"pendiente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8088/pedidos/guardar",
 					"protocol": "http",
@@ -249,7 +267,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8088/pedidos/1/pedido",
+					"raw": "http://localhost:8088/pedidos/5/pedido",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -257,7 +275,7 @@
 					"port": "8088",
 					"path": [
 						"pedidos",
-						"1",
+						"5",
 						"pedido"
 					]
 				}
@@ -329,6 +347,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"carlos@gmail.com\",\r\n    \"contrasena\": \"asd.456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8088/motoristas/login",
 					"protocol": "http",
@@ -349,6 +376,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"nombre\": \"Luis\",\r\n    \"apellido\": \"Castillo\",\r\n    \"correo\": \"luis@gmail.com\",\r\n    \"contrasena\": \"asd.456\",\r\n    \"contrasenaVerificar\": \"asd.456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8088/motoristas/registrar",
 					"protocol": "http",
@@ -369,6 +405,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"nombre\": \"Frenanda\",\r\n    \"apellido\": \"Martinez\",\r\n    \"correo\": \"fernanda@gmail.com\",\r\n    \"contrasena\": \"asd.456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8088/motoristas/guardar",
 					"protocol": "http",
@@ -390,7 +435,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8088/motoristas/1/motorista/eliminar",
+					"raw": "http://localhost:8088/motoristas/4/motorista/eliminar",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -398,7 +443,7 @@
 					"port": "8088",
 					"path": [
 						"motoristas",
-						"1",
+						"4",
 						"motorista",
 						"eliminar"
 					]
@@ -430,6 +475,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEmpresa\": \"5\",\r\n    \"nombre\": \"Megapaca\",\r\n    \"imagen\": \"\",\r\n    \"calificacion\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8088/empresas/guardar",
 					"protocol": "http",
@@ -469,8 +523,17 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEmpresa\": \"1\",\r\n    \"nombre\": \"Megapaca\",\r\n    \"imagen\": \"https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/776f84130…\",\r\n    \"calificacion\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8088/empresas/1/empresa/actualizar",
+					"raw": "http://localhost:8088/empresas/5/empresa/actualizar",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -478,7 +541,7 @@
 					"port": "8088",
 					"path": [
 						"empresas",
-						"1",
+						"5",
 						"empresa",
 						"actualizar"
 					]
@@ -492,7 +555,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8088/empresas/:id/empresa/eliminar",
+					"raw": "http://localhost:8088/empresas/5/empresa/eliminar",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -500,22 +563,16 @@
 					"port": "8088",
 					"path": [
 						"empresas",
-						":id",
+						"5",
 						"empresa",
 						"eliminar"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": ""
-						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Obtener categorias productos",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -528,6 +585,26 @@
 					"port": "8088",
 					"path": [
 						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener categorias pedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/categorias/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"categorias",
+						"pedidos"
 					]
 				}
 			},
