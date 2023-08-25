@@ -1,5 +1,5 @@
 var pedido = [];
-
+var usuarioGuardado = '';
 const mostrarLogIn = () => {
     document.getElementById('categoriasEmpresas').style.display= 'none';
     document.getElementById('finalizar-compra').style.display= 'none';
@@ -233,10 +233,9 @@ const renderizarEmpresas = async () => {
     htmlEstrellas = `<div><h4><i class="icon fa-solid fa-star"></i></h4></div>`;
     htmlSinEstrellas = `<div><h4><i class="icon fa-regular fa-star"></i></h4></div>`
     empresas.resultado.forEach((empresa) => {
-
         document.getElementById('categoriasEmpresa').innerHTML +=
         `
-        <div onclick="renderizarCategoriasUsuario()" class="catgEmpresas shadow-lg" >
+        <div onclick="renderizarCategoriasUsuario('${empresa.nombre}')" class="catgEmpresas shadow-lg" >
                 <div><img alt="" style="height: 120px; " src="${empresa.imagen}"></div>
                 <div class="descripcion-empresa">
                     <div><p>${empresa.nombre}</p></div>
@@ -267,7 +266,8 @@ const cargarCategoriasUsuario = async () => {
     return categoriasUsuario;
 }
 
-const renderizarCategoriasUsuario = async () => {
+const renderizarCategoriasUsuario = async (empresa) => {
+    localStorage.setItem("empresa", JSON.stringify(empresa));
     const categorias = await cargarCategoriasUsuario();
     console.log(categorias);
     document.getElementById('categoriasProducto').innerHTML = "";
@@ -303,7 +303,7 @@ const renderizarProductosCategoria = async (id, categoriaNombre) => {
                 <div class="img"><img class="card-img" src="${producto.img}" class="card-img-top" alt="..."></div>
                 <div class="card-text card-body">
                     <h5 class="card-title">${producto.nombreProducto}</h5>
-                    <h4>${producto.precio}</h4>
+                    <h4>L.${producto.precio}</h4>
                     <h4>
                         <i class="icon fa-solid fa-star"></i>
                         <i class="icon fa-solid fa-star"></i>
@@ -344,7 +344,7 @@ const renderizarProductoPorCategoria = async (id) => {
             <div><img alt="" style="height: 120px; " src="${product.img}"></div>
             <div class="descripcion-empresa">
                 <div><p>${product.nombreProducto}</p></div>
-                <div><p>${product.precio}</p></div>
+                <div><p>L.${product.precio}</p></div>
                 <div><h4>
                     <i class="icon fa-solid fa-star"></i>
                     <i class="icon fa-solid fa-star"></i>
@@ -419,7 +419,7 @@ const renderizarCarrito = async (cantidad, idProducto) => {
                 <div class="img"><img class="card-img" src="${elegido.img}" class="card-img-top" alt="..."></div>
                 <div class="card-text card-body">
                     <h5 class="card-title">${elegido.nombreProducto}</h5>
-                    <h4>${elegido.precio}</h4>
+                    <h4>L.${elegido.precio}</h4>
                     <h4>
                         <i class="icon fa-solid fa-star"></i>
                         <i class="icon fa-solid fa-star"></i>
@@ -434,10 +434,9 @@ const renderizarCarrito = async (cantidad, idProducto) => {
     }
     console.log(pedido);
     
-    document.getElementById('btnFinalizar').innerHTML = `<button onclick="agregarPedido(${pedido})" id="finalizar">Finalizar Compra</button>`
+    document.getElementById('btnFinalizar').innerHTML = `<button onclick="agregarPedido()" id="finalizar">Finalizar Compra</button>`
     mostrarCarrito();
 }
-
 const cargarProducto = async (id) => {
     let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto`,
     {
@@ -451,20 +450,63 @@ const cargarProducto = async (id) => {
     return producto;
 }
 
-const agregarPedido = async (pedido) => {
+const agregarPedido = async () => {
+    const id = await obtenerPedidos() + 1;
+    const usuario = usuarioGuardado.usuario;
     console.log(pedido);
-    // let respuesta = await fetch(`http://localhost:8088/pedidos/guardar`,
-    //     {
-    //         method: "PUT",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(json)
-    //     }
-    // );
-    // const pedido = await respuesta.json();
-    // console.log(pedido);
+    let pago = 0;
+    let precio = 0;
+    let impuesto = 0;
+    let total = 0;
+    let establecimiento = JSON.parse(localStorage.getItem('empresa'));
+    for (let i = 0; i < pedido.length; i++) {
+        precio = Number(pedido[i].precio)
+        pago += precio;
+    }
+    impuesto = pago*(0.15);
+    total = pago + impuesto;
+    console.log(total);
+    const json = {
+        "idPedido": `${id}`,   
+        "nombreCliente": `${usuario.nombre}`,  
+        "pedido": pedido, 
+        "impuesto": `${impuesto}`,   
+        "total": `${total}`,  
+        "fecha": `28/08/2023`,  
+        "establecimiento":  `${establecimiento}`,
+        "direccion": `${usuario.direccion}`,  
+        "estadoOrden":  "disponible",
+        "idUsuario": `${usuario.id}`
+    }
+    console.log(json);
+    let respuesta = await fetch(`http://localhost:8088/pedidos/guardar`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(json)
+        }
+    );
+    const pedidoAgregado = await respuesta.json();
+    console.log(pedidoAgregado);
+    mostrarGracias();
 }
+
+const obtenerPedidos = async () => {
+    let respuesta = await fetch("http://localhost:8088/pedidos/",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    pedidos = await respuesta.json();
+    console.log(pedidos);
+    return pedidos.result.length;
+}
+
 
 
 

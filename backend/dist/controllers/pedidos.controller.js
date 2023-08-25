@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.obtenerPedidosEntregados = exports.obtenerPedidosPendientes = exports.obtenerPedidosDisponibles = exports.obtenerPedido = exports.agregarPedido = void 0;
+exports.obtenerPedidosEntregados = exports.obtenerPedidosPendientes = exports.obtenerPedidosDisponibles = exports.obtenerPedidos = exports.obtenerPedido = exports.agregarPedido = void 0;
 const pedidos_schema_1 = require("../models/pedidos.schema");
 const agregarPedido = (req, res) => {
     let pedido = new pedidos_schema_1.PedidoSchema(req.body);
@@ -24,7 +24,7 @@ const agregarPedido = (req, res) => {
 };
 exports.agregarPedido = agregarPedido;
 const obtenerPedido = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    pedidos_schema_1.PedidoSchema.findOne({ idPedido: req.params.id })
+    pedidos_schema_1.PedidoSchema.findOne({ idPedido: req.params.id }, { cantidad: false })
         .then((result) => {
         res.send({ status: true, message: 'Pedido obtenido', result });
         res.end();
@@ -34,6 +34,17 @@ const obtenerPedido = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     });
 });
 exports.obtenerPedido = obtenerPedido;
+const obtenerPedidos = (req, res) => {
+    pedidos_schema_1.PedidoSchema.find({}, { cantidad: false })
+        .then((result) => {
+        res.send({ status: true, message: 'Pedidos obtenidos', result });
+        res.end();
+    }).catch((error) => {
+        res.send("No encontrados");
+        res.end();
+    });
+};
+exports.obtenerPedidos = obtenerPedidos;
 const obtenerPedidosDisponibles = (req, res) => {
     pedidos_schema_1.PedidoSchema.find({ estadoOrden: "disponible" })
         .then((result) => {

@@ -15,7 +15,7 @@ export const agregarPedido = (req:Request, res:Response) => {
 }
 
 export const obtenerPedido = async (req:Request, res:Response) => {
-    PedidoSchema.findOne({idPedido: req.params.id})
+    PedidoSchema.findOne({idPedido: req.params.id},{cantidad: false})
     .then((result)=>{
         res.send({status: true, message: 'Pedido obtenido', result});
         res.end();
@@ -23,6 +23,17 @@ export const obtenerPedido = async (req:Request, res:Response) => {
         res.send(error);
         res.end();
     })
+}
+
+export const obtenerPedidos = (req:Request, res:Response) => {
+    PedidoSchema.find({},{cantidad: false})
+.then((result)=>{
+    res.send({status: true, message: 'Pedidos obtenidos', result});
+    res.end();
+}).catch((error)=>{
+    res.send("No encontrados");
+    res.end();
+})
 }
 
 export const obtenerPedidosDisponibles = (req:Request, res:Response) => {

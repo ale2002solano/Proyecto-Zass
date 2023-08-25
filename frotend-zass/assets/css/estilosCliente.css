@@ -472,9 +472,9 @@
 #carritoIcon{
     display: none;
     height: 800px;
-    width: 89%;
+    width: 97%;
     margin-top: 20px;
-    margin-left: 10%;
+    margin-left: 4%;
     background-color: rgb(221, 221, 221);
     border: 3px solid transparent;
     border-image: linear-gradient(to bottom, #edb6a2 0%, #2dc2ac 100%) 1;
@@ -495,14 +495,14 @@
     overflow: scroll;
     top: 20%;
     width: auto;
-    left: 20%;
+    left: 9%;
 }
 
 #finalizar{
     height: 40px;
     position: absolute;
     top: 88%;
-    left: 30%;
+    left: 26%;
     width: 200px;
     border-radius: 20px;
     background-color: #e6795b;
