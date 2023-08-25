@@ -1,3 +1,5 @@
+var pedido = [];
+
 const mostrarLogIn = () => {
     document.getElementById('categoriasEmpresas').style.display= 'none';
     document.getElementById('finalizar-compra').style.display= 'none';
@@ -384,7 +386,7 @@ const cargarProductoPorCategoria = async (id) => {
 
 const actualizarCantidad = async (id) => {
     console.log(id);
-    const cant = parseInt(document.getElementById('unidades').value);
+    const cant = document.getElementById('unidades').value;
     console.log(cant);
     const json = {
         "cantidad": `${cant}`
@@ -400,7 +402,68 @@ const actualizarCantidad = async (id) => {
     );
     const usuarioActualizado = await respuesta.json();
     console.log(usuarioActualizado);
-    mostrarCarrito()
+    renderizarCarrito(cant, id);
+}
+
+const renderizarCarrito = async (cantidad, idProducto) => {
+    console.log(cantidad, idProducto);
+    
+    const producto = await cargarProducto(idProducto);
+    console.log(producto);
+    let elegido = producto.resultado;
+    
+    for (let i = 0; i < cantidad; i++) {
+        document.getElementById('productos-elegidos').innerHTML +=
+        `
+        <div class=" card-productos shadow" onclick="mostrarProducto()">
+                <div class="img"><img class="card-img" src="${elegido.img}" class="card-img-top" alt="..."></div>
+                <div class="card-text card-body">
+                    <h5 class="card-title">${elegido.nombreProducto}</h5>
+                    <h4>${elegido.precio}</h4>
+                    <h4>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-regular fa-star"></i>
+                    </h4>
+                </div>
+        </div>
+        `
+        pedido.push(producto.resultado);
+    }
+    console.log(pedido);
+    
+    document.getElementById('btnFinalizar').innerHTML = `<button onclick="agregarPedido(${pedido})" id="finalizar">Finalizar Compra</button>`
+    mostrarCarrito();
+}
+
+const cargarProducto = async (id) => {
+    let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto`,
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    let producto = await respuesta.json();
+    return producto;
+}
+
+const agregarPedido = async (pedido) => {
+    console.log(pedido);
+    // let respuesta = await fetch(`http://localhost:8088/pedidos/guardar`,
+    //     {
+    //         method: "PUT",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(json)
+    //     }
+    // );
+    // const pedido = await respuesta.json();
+    // console.log(pedido);
 }
 
 

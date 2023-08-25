@@ -27,7 +27,7 @@ const obtenerProducto = (req, res) => {
 };
 exports.obtenerProducto = obtenerProducto;
 const obtenerProductosPorCategoria = (req, res) => {
-    productos_schema_1.ProductoSchema.find({ idCategoria: req.params.id })
+    productos_schema_1.ProductoSchema.find({ idCategoria: req.params.id }, { cantidad: false })
         .then(resultado => {
         res.send({ status: true, message: 'Productos obtenidos con exito', resultado });
         res.end();
@@ -51,7 +51,7 @@ const actualizarProducto = (req, res) => {
 };
 exports.actualizarProducto = actualizarProducto;
 const actualizarProductoCantidad = (req, res) => {
-    productos_schema_1.ProductoSchema.updateOne({}, req.body).then((result) => {
+    productos_schema_1.ProductoSchema.updateOne({ idProductos: req.params.id }, req.body).then((result) => {
         res.send({ status: true, message: 'Cantidad agregada', result });
         res.end();
     }).catch((error) => {
