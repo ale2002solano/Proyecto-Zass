@@ -50,6 +50,17 @@ export const actualizarProducto = (req:Request, res:Response) => {
     });
 }
 
+export const actualizarProductoCantidad = (req:Request, res:Response) => {
+    ProductoSchema.updateOne({Number(idProductos): req.params.id},req.body
+    ).then((result)=>{
+        res.send({status: true, message: 'Cantidad agregada', result});
+        res.end();
+    }).catch((error)=>{
+        res.send(error);
+        res.end();
+    });
+}
+
 export const guardarProducto = (req:Request, res:Response) => {
     let producto = new ProductoSchema(req.body);
     producto.save()

@@ -10,6 +10,7 @@ const schema = new mongoose_1.default.Schema({
     img: String,
     idCategoria: String,
     nombreProducto: String,
-    precio: String
+    precio: String,
+    cantidad: String
 });
 exports.ProductoSchema = mongoose_1.default.model('productos', schema);

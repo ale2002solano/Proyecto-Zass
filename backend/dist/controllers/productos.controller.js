@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.eliminarProducto = exports.guardarProducto = exports.actualizarProducto = exports.obtenerProductosPorCategoria = exports.obtenerProducto = exports.obtenerProductos = void 0;
+exports.eliminarProducto = exports.guardarProducto = exports.actualizarProductoCantidad = exports.actualizarProducto = exports.obtenerProductosPorCategoria = exports.obtenerProducto = exports.obtenerProductos = void 0;
 const productos_schema_1 = require("../models/productos.schema");
 const obtenerProductos = (req, res) => {
     productos_schema_1.ProductoSchema.find()
@@ -50,6 +50,16 @@ const actualizarProducto = (req, res) => {
     });
 };
 exports.actualizarProducto = actualizarProducto;
+const actualizarProductoCantidad = (req, res) => {
+    productos_schema_1.ProductoSchema.updateOne({}, req.body).then((result) => {
+        res.send({ status: true, message: 'Cantidad agregada', result });
+        res.end();
+    }).catch((error) => {
+        res.send(error);
+        res.end();
+    });
+};
+exports.actualizarProductoCantidad = actualizarProductoCantidad;
 const guardarProducto = (req, res) => {
     let producto = new productos_schema_1.ProductoSchema(req.body);
     producto.save()

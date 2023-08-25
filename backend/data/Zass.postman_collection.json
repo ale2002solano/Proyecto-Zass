@@ -58,7 +58,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"id\": \"4\",\r\n\"nombre\": \"Tommy\",\r\n\"apellido\": \"\",\r\n\"correo\": \"tommy@gmail.com\",\r\n\"contrasena\": \"asd.456\",\r\n\"contrasenaVerificar\": \"asd.456\",\r\n\"direccion\": \"21 de Octubre\"\r\n}",
+					"raw": "{\r\n\"id\": \"4\",\r\n\"nombre\": \"Tommy\",\r\n\"apellido\": \"\",\r\n\"correo\": \"tommy@gmail.com\",\r\n\"contrasena\": \"asd.456\",\r\n\"contrasenaVerificar\": \"asd.4\",\r\n\"direccion\": \"21 de Octubre\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -75,6 +75,25 @@
 					"path": [
 						"usuarios",
 						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"usuarios"
 					]
 				}
 			},
@@ -605,6 +624,59 @@
 					"path": [
 						"categorias",
 						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener productos por categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/productos/2/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"productos",
+						"2",
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar cantidad",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cantidad\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/productos/3/producto/actualizar/cantidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"productos",
+						"3",
+						"producto",
+						"actualizar",
+						"cantidad"
 					]
 				}
 			},

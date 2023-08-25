@@ -15,6 +15,9 @@ router.get('/:id/producto', productos_controller_1.obtenerProducto);
 // (coleccion productos) actualizar cantidad de productos para pedidos
 //http://localhost:8088/productos/:id/producto/actualizar
 router.put('/:id/producto/actualizar', productos_controller_1.actualizarProducto);
+// (coleccion productos) actualizar cantidad de productos para pedidos
+//http://localhost:8088/productos/:id/producto/actualizar/cantidad
+router.put('/:id/producto/actualizar/cantidad', productos_controller_1.actualizarProductoCantidad);
 // (coleccion productos) agregar producto
 //http://localhost:8088/productos/guardar
 router.post('/guardar', productos_controller_1.guardarProducto);

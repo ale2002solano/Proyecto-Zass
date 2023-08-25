@@ -360,7 +360,7 @@ const renderizarProductoPorCategoria = async (id) => {
                     <div><i id="plus" class="fa-regular fa-square-plus" style="color: #009694;"></i></div>
                     <div><input id="unidades" placeholder="Unidades"></div>
                 </div>
-                <div><button id="añadir" onclick="mostrarCarrito()">Añadir al carrito</button></div>
+                <div><button id="añadir" onclick="actualizarCantidad(${product.idProductos})">Añadir al carrito</button></div>
             </div>
         </div>
         `
@@ -381,5 +381,27 @@ const cargarProductoPorCategoria = async (id) => {
     
     return productoC;
 }
+
+const actualizarCantidad = async (id) => {
+    console.log(id);
+    const cant = parseInt(document.getElementById('unidades').value);
+    console.log(cant);
+    const json = {
+        "cantidad": `${cant}`
+    }
+    let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto/actualizar/cantidad`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(json)
+        }
+    );
+    const usuarioActualizado = await respuesta.json();
+    console.log(usuarioActualizado);
+    mostrarCarrito()
+}
+
 
 

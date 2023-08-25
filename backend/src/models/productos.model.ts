@@ -7,5 +7,5 @@ export interface Producto {
     img: string;
     nombreProducto: string;
     precio: string;
-    cantidad?: string;
+    cantidad: string;
 }
