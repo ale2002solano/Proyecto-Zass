@@ -18,6 +18,9 @@ router.put('/:id/producto/actualizar', productos_controller_1.actualizarProducto
 // (coleccion productos) agregar producto
 //http://localhost:8088/productos/guardar
 router.post('/guardar', productos_controller_1.guardarProducto);
+// (coleccion productos) agregar producto
+//http://localhost:8088/productos/:id/categoria
+router.get('/:id/categoria', productos_controller_1.obtenerProductosPorCategoria);
 //  eliminar producto
 //http://localhost:8088/productos/:id/producto/eliminar
 router.delete('/:id/producto/eliminar', productos_controller_1.eliminarProducto);

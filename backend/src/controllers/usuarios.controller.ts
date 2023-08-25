@@ -28,9 +28,20 @@ export const registrarUsuarios = (req:Request, res:Response) => {
             res.end();
         })
     }else{
-        res.send("Contraseñas no coinciden");
+        res.send(false);
         res.end();
     }
+}
+
+export const obtenerUsuarios = (req:Request, res:Response) => {
+    UsuarioSchema.find()
+    .then((result)=>{
+        res.send({status: true, message: 'Todos los usuarios obtenidos', result});
+        res.end();
+    }).catch((error)=>{
+        res.send(error);
+        res.end();
+    })
 }
 
 

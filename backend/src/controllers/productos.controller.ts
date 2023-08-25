@@ -26,6 +26,18 @@ export const obtenerProducto = (req:Request, res:Response) => {
     })
 }
 
+export const obtenerProductosPorCategoria = (req:Request, res:Response) => {
+    ProductoSchema.find({idCategoria: req.params.id})
+    .then(resultado=>{
+        res.send({status: true, message: 'Productos obtenidos con exito', resultado});
+        res.end();
+    })
+    .catch(error=>{
+        res.send({status: false, message: 'Productos no encontrados', error});
+        res.end();
+    })
+}
+
 export const actualizarProducto = (req:Request, res:Response) => {
     ProductoSchema.updateOne({Number(idProductos): req.params.id},req.body
     //req.body

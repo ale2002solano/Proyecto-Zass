@@ -9,6 +9,7 @@ const schema = new mongoose_1.default.Schema({
     idCategoria: String,
     tipo: String,
     nombreCategoria: String,
+    imagen: String,
     detalleProductos: (Array)
 });
 exports.CategoriaSchema = mongoose_1.default.model('categorias', schema);

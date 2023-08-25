@@ -61,9 +61,9 @@
         <div class="login-box shadow-lg">
             <i style="color: #2dc2ac;" class="carita fa-solid fa-user"></i>
             <div>
-                <div><input class="login-inputs shadow" placeholder="Correo electrónico" type="email"></div>
-                <div><input class="login-inputs shadow" placeholder="Contraseña" type="password"></div>
-                <button class="shadow boton-iniciar" onclick="mostrarCategoriasEmpresas()">Iniciar</button>
+                <div><input id="correoUsuario" class="login-inputs shadow" placeholder="Correo electrónico" type="email"></div>
+                <div><input id="contraUsuario" class="login-inputs shadow" placeholder="Contraseña" type="password"></div>
+                <button class="shadow boton-iniciar" onclick="loginUsuario()">Iniciar</button>
             </div>
             <div id="login-registrarse">
                 <p style="color: gray;">¿No tienes cuenta?</p>
@@ -80,12 +80,12 @@
         <div style="height: 70%; padding-top: 100px;" class="login-box shadow-lg">
             <i style="color: #2dc2ac; margin-top: -173px; margin-left: 37%;" class="carita fa-solid fa-user-plus"></i>
             <div id="input-registro">
-                <div><input class="login-inputs shadow" placeholder="Nombres" type="text"></div>
-                <div><input class="login-inputs shadow" placeholder="Apellidos" type="text"></div>
-                <div><input class="login-inputs shadow" placeholder="Correo electrónico" type="email"></div>
-                <div><input class="login-inputs shadow" placeholder="Contraseña" type="password"></div>
-                <div><input class="login-inputs shadow" placeholder="Confirmar contraseña" type="password"></div>
-                <button class="shadow boton-iniciar" onclick="mostrarLogIn()">Registrarse</button>
+                <div><input id="nombres" class="login-inputs shadow" placeholder="Nombres" type="text"></div>
+                <div><input id="apellidos" class="login-inputs shadow" placeholder="Apellidos" type="text"></div>
+                <div><input id="correo" class="login-inputs shadow" placeholder="Correo electrónico" type="email"></div>
+                <div><input id="contrasena" class="login-inputs shadow" placeholder="Contraseña" type="password"></div>
+                <div><input id="confirmar" class="login-inputs shadow" placeholder="Confirmar contraseña" type="password"></div>
+                <button class="shadow boton-iniciar" onclick="registroUsuario()">Registrarse</button>
             </div>
             <!-- <div id="login-registrarse">
                 <p style="color: gray;">¿No tienes cuenta?</p>
@@ -102,7 +102,7 @@
             <div><p class="descripcion-categoria">Elige tu tienda favorita</p></div>
         </div>
         
-        <div class="categorias">
+        <div id="categoriasEmpresa">
             <div onclick="mostrarCategoriasProductos()" class="catgEmpresas shadow-lg" >
                 <div><img alt="" style="height: 120px; " src="assets/img/zara.png"></div>
                 <div class="descripcion-empresa">
@@ -175,7 +175,7 @@
             <div class="img-logo"><img id="logo1" src="assets/img/logo.png" alt=""></div>
             <div><p style="left: 106px;" class="descripcion-categoria">Elige la categoria </p></div>
         </div>
-        <div class="categorias">
+        <div id="categoriasProducto">
             <div onclick="mostrarProductos()" class="catg shadow-lg">
                 <img alt="" src="assets/img/camisas.png">Camisas
             </div>
@@ -193,7 +193,10 @@
 
 <!-- Visualizacion de productos -->
     <div id="productos">
-        <div id="flex">
+        <div id="catDescripcion">
+            <div><p class="iniciar" style="font-family: 'Parisienne', cursive; font-size: 40px; top: 14$;">Pantalones</p></div>
+        </div>
+        <div id="flex" style="margin-left: 8px;">
             <div class=" card-productos shadow" onclick="mostrarProducto()">
                 <div class="img"><img class="card-img" src="assets/img/pantalones.png" class="card-img-top" alt="..."></div>
                 <div class="card-text card-body">

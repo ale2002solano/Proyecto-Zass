@@ -6,5 +6,6 @@ export interface Categoria {
     idCategoria: string;
     tipo: string;
     nombreCategoria: string;
+    imagen: string,
     detalleProductos?: Array<Producto>;
 }

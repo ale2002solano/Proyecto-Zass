@@ -1,5 +1,5 @@
 import express from "express";
-import { actualizarProducto, eliminarProducto, guardarProducto, obtenerProducto, obtenerProductos } from "../controllers/productos.controller";
+import { actualizarProducto, eliminarProducto, guardarProducto, obtenerProducto, obtenerProductos, obtenerProductosPorCategoria } from "../controllers/productos.controller";
 
 const router = express();
 
@@ -18,6 +18,10 @@ router.put('/:id/producto/actualizar', actualizarProducto);
 // (coleccion productos) agregar producto
 //http://localhost:8088/productos/guardar
 router.post('/guardar', guardarProducto);
+
+// (coleccion productos) agregar producto
+//http://localhost:8088/productos/:id/categoria
+router.get('/:id/categoria', obtenerProductosPorCategoria);
 
 //  eliminar producto
 //http://localhost:8088/productos/:id/producto/eliminar

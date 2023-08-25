@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.actualizarUsuario = exports.registrarUsuarios = exports.loginUsuario = void 0;
+exports.actualizarUsuario = exports.obtenerUsuarios = exports.registrarUsuarios = exports.loginUsuario = void 0;
 const usuarios_schema_1 = require("../models/usuarios.schema");
 const loginUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const usuario = yield usuarios_schema_1.UsuarioSchema.findOne({ correo: req.body.correo, contrasena: req.body.contrasena }, { contrasena: false });
@@ -36,11 +36,22 @@ const registrarUsuarios = (req, res) => {
         });
     }
     else {
-        res.send("Contraseñas no coinciden");
+        res.send(false);
         res.end();
     }
 };
 exports.registrarUsuarios = registrarUsuarios;
+const obtenerUsuarios = (req, res) => {
+    usuarios_schema_1.UsuarioSchema.find()
+        .then((result) => {
+        res.send({ status: true, message: 'Todos los usuarios obtenidos', result });
+        res.end();
+    }).catch((error) => {
+        res.send(error);
+        res.end();
+    });
+};
+exports.obtenerUsuarios = obtenerUsuarios;
 const actualizarUsuario = (req, res) => {
     usuarios_schema_1.UsuarioSchema.updateOne({ id: req.params.id }, {
         direccion: req.body.direccion

@@ -1,5 +1,5 @@
 import express from "express";
-import { actualizarUsuario, loginUsuario, registrarUsuarios } from "../controllers/usuarios.controller";
+import { actualizarUsuario, loginUsuario, obtenerUsuarios, registrarUsuarios } from "../controllers/usuarios.controller";
 
 const router = express();
 
@@ -12,6 +12,9 @@ router.post('/login', loginUsuario);
 //http://localhost:8088/usuarios/registrar
 router.post('/registrar', registrarUsuarios);
 
+// (coleccion usuarios) Obtener usuarios
+//http://localhost:8088/usuarios/:id/actualizar
+router.get('/', obtenerUsuarios);
 
 // (coleccion usuarios) actualizar usuario con direccion
 //http://localhost:8088/usuarios/:id/actualizar

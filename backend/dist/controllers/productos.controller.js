@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.eliminarProducto = exports.guardarProducto = exports.actualizarProducto = exports.obtenerProducto = exports.obtenerProductos = void 0;
+exports.eliminarProducto = exports.guardarProducto = exports.actualizarProducto = exports.obtenerProductosPorCategoria = exports.obtenerProducto = exports.obtenerProductos = void 0;
 const productos_schema_1 = require("../models/productos.schema");
 const obtenerProductos = (req, res) => {
     productos_schema_1.ProductoSchema.find()
@@ -26,6 +26,18 @@ const obtenerProducto = (req, res) => {
     });
 };
 exports.obtenerProducto = obtenerProducto;
+const obtenerProductosPorCategoria = (req, res) => {
+    productos_schema_1.ProductoSchema.find({ idCategoria: req.params.id })
+        .then(resultado => {
+        res.send({ status: true, message: 'Productos obtenidos con exito', resultado });
+        res.end();
+    })
+        .catch(error => {
+        res.send({ status: false, message: 'Productos no encontrados', error });
+        res.end();
+    });
+};
+exports.obtenerProductosPorCategoria = obtenerProductosPorCategoria;
 const actualizarProducto = (req, res) => {
     productos_schema_1.ProductoSchema.updateOne({}, req.body
     //req.body

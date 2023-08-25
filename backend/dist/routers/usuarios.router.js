@@ -12,6 +12,9 @@ router.post('/login', usuarios_controller_1.loginUsuario);
 // (coleccion usuarios) resgistro (nombres, apellidos, correo, contrasena y confirmar contrasena)
 //http://localhost:8088/usuarios/registrar
 router.post('/registrar', usuarios_controller_1.registrarUsuarios);
+// (coleccion usuarios) Obtener usuarios
+//http://localhost:8088/usuarios/:id/actualizar
+router.get('/', usuarios_controller_1.obtenerUsuarios);
 // (coleccion usuarios) actualizar usuario con direccion
 //http://localhost:8088/usuarios/:id/actualizar
 router.put('/:id/actualizar', usuarios_controller_1.actualizarUsuario);

@@ -148,7 +148,6 @@
     left: 10%;
     font-size: 33px;
     font-weight: 400;
-    
 }
 
 .carita{
@@ -174,7 +173,7 @@
     margin-top: 15px;
     padding: 3%;
     font-weight: bold;
-    color: rgb(158, 157, 157);
+    color: rgb(53, 52, 52);
     font-size: 18px;
     border: 2px solid rgb(139, 139, 139);
 }
@@ -281,7 +280,33 @@
     align-items: center;
 }
 
+#categoriasEmpresa{
+    /* margin-top: 35%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#categoriasProducto{
+    /* margin-top: 35%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .categorias img{
+    height: 90px;
+    padding: 15px 0 15px 0;
+}
+
+#categoriasEmpresa img{
+    height: 90px;
+    padding: 15px 0 15px 0;
+}
+
+#categoriasProducto img{
     height: 90px;
     padding: 15px 0 15px 0;
 }
@@ -318,7 +343,7 @@
     flex-direction: column;
     height: 74%;
     top: 22%;
-    width: 100%;
+    width: auto;
     margin-left: -20px;
     position: absolute;
     overflow: scroll !important;
@@ -326,7 +351,7 @@
 
 .card-productos{
     height: 130px;
-    width: 92%;
+    width: auto;
     padding: 18px;
     border: 2px solid transparent;
     border-image: linear-gradient(to bottom, #edb6a2 0%, #2dc2ac 100%) 1;
@@ -380,8 +405,9 @@
 /* añadir a carrito y visualizacion de producto*/
 
 #producto-carrito{
-    margin-top: 75px;
+    margin-top: 110px;
     background-color: white;
+    width: 104%;
 }
 
 #cantidad{
@@ -468,7 +494,7 @@
     position: absolute;
     overflow: scroll;
     top: 20%;
-    width: 370px;
+    width: auto;
     left: 20%;
 }
 
@@ -490,7 +516,7 @@
     display: none;
     height: 71%;
     width: 88%;
-    margin: 117px 23px 0;
+    margin: 117px 23px 0 35px;
     background-color: white;
     border: 3px solid transparent;
     border-image: linear-gradient(to bottom, #2dc2ac 0%, #edb6a2 100%) 1;
@@ -517,6 +543,10 @@
 #metodo-pago{
     display: flex;
     justify-content: space-around;
+}
+
+#metodo-pago:hover{
+    cursor: pointer;
 }
 
 .mtd-pago{
@@ -615,7 +645,7 @@
     width: 90%;
     background-color: white;
     margin: 2%;
-    
+    margin-left: 50px;
 }
 
 
@@ -684,11 +714,21 @@
     }
 
     .categorias {
-        /* margin-top: 6%;
-        margin-left: 5%; */
         margin-top: 3%;
-    margin-left: 20%;
-    width: 68%;
+        margin-left: 20%;
+        width: 68%;
+    }
+
+    #categoriasEmpresa {
+        margin-top: 3%;
+        margin-left: 20%;
+        width: 68%;
+    }
+
+    #categoriasProducto {
+        margin-top: 3%;
+        margin-left: 20%;
+        width: 68%;
     }
 
     .catg{
@@ -743,6 +783,18 @@
         margin-top: 3%;
     margin-left: 30%;
     width: 700px;
+    }
+
+    #categoriasEmpresa {
+        margin-top: 3%;
+        margin-left: 30%;
+        width: 700px;
+    }
+
+    #categoriasProducto {
+        margin-top: 3%;
+        margin-left: 30%;
+        width: 700px;
     }
 
     .img-logo {

@@ -5,7 +5,6 @@ const mostrarLogIn = () => {
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
-    document.getElementById('logo').style.display= 'none';
     document.getElementById('producto').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('loginCliente').style.margin= '210px 0 0 35px';
@@ -13,7 +12,6 @@ const mostrarLogIn = () => {
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('carrito').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
-    // document.getElementById('finalizar-compra').style.display= 'none';
 }
 
 const mostrarCrearCuenta = () => {
@@ -23,7 +21,6 @@ const mostrarCrearCuenta = () => {
     document.getElementById('loginCliente').style.display= 'none';
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
-    document.getElementById('logo').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'block';
     document.getElementById('carritoIcon').style.display= 'none';
@@ -33,13 +30,13 @@ const mostrarCrearCuenta = () => {
 }
 
 const mostrarCategoriasEmpresas = () => {
+    renderizarEmpresas();
     document.getElementById('categoriasEmpresas').style.display= 'block';
     document.getElementById('loginCliente').style.display= 'none';
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
-    document.getElementById('logo').style.display= 'block';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('producto').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
@@ -53,7 +50,6 @@ const mostrarCategoriasProductos = () => {
     document.getElementById('categoriasProductos').style.display= 'block';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
-    document.getElementById('logo').style.display= 'block';
     document.getElementById('producto').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
@@ -72,7 +68,6 @@ const mostrarProductos = () => {
     document.getElementById('loginCliente').style.display= 'none';
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
-    document.getElementById('logo').style.display= 'block';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
 }
@@ -86,7 +81,6 @@ const mostrarProducto = () => {
     document.getElementById('categoriasProductos').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
-    document.getElementById('logo').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
@@ -102,7 +96,6 @@ const mostrarCarrito = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
     document.getElementById('producto').style.display= 'none';
-    document.getElementById('logo').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
 }
@@ -116,27 +109,11 @@ const mostrarFinalizarCompra = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
     document.getElementById('producto').style.display= 'none';
-    // document.getElementById('logo').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
 
 }
-
-// const mostrarFinalizacion = () => {
-//     document.getElementById('categoriasEmpresas').style.display= 'none';
-//     document.getElementById('loginCliente').style.display= 'none';
-//     document.getElementById('categoriasProductos').style.display= 'none';
-//     document.getElementById('crearCuenta').style.display= 'none';
-//     document.getElementById('productos').style.display= 'none';
-//     document.getElementById('producto').style.display= 'none';
-//     document.getElementById('logo').style.display= 'block';
-//     document.getElementById('crearCuenta').style.display= 'none';
-//     document.getElementById('carritoIcon').style.display= 'none';
-//     document.getElementById('carrito').style.display= 'none';
-//     document.getElementById('finalizar-compra').style.display= 'none';
-//     document.getElementById('gracias').style.display= 'block';
-// }
 
 const mostrarGracias = () => {
     document.getElementById('gracias').style.display= 'block';
@@ -146,9 +123,263 @@ const mostrarGracias = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('productos').style.display= 'none';
     document.getElementById('producto').style.display= 'none';
-    // document.getElementById('logo').style.display= 'block';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('carrito').style.display= 'none';
     document.getElementById('finalizar-compra').style.display= 'none';
 }
+
+const loginUsuario = async () => {
+    const correo = document.getElementById('correoUsuario').value;
+    const contrasena = document.getElementById('contraUsuario').value;
+
+    json = {
+        "correo": `${correo}`,
+        "contrasena": `${contrasena}`
+    }
+
+    let respuesta = await fetch("http://localhost:8088/usuarios/login",
+    {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(json)
+    }
+    );
+    usuarioGuardado = await respuesta.json();
+    console.log(usuarioGuardado);
+    if(usuarioGuardado.status){
+        mostrarCategoriasEmpresas();
+    }else{
+        alert("Error en correo/contraseña");
+    }
+}
+const cargarUsuarios = async () => {
+    let respuesta = await fetch("http://localhost:8088/usuarios",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    usuarios = await respuesta.json();
+    return usuarios;
+}
+
+
+const registroUsuario = async () => {
+    const users = await cargarUsuarios();
+    console.log(users);
+    const id = users.result.length + 1;
+    const nombres = document.getElementById('nombres').value;
+    const apellidos = document.getElementById('apellidos').value;
+    const correo = document.getElementById('correo').value;
+    const contrasena = document.getElementById('contrasena').value;
+    const contrasenaVerificar = document.getElementById('confirmar').value;
+
+    json = {
+        "id": `${id}`, 
+        "nombre": `${nombres}`,  
+        "apellido": `${apellidos}`,  
+        "correo": `${correo}`,  
+        "contrasena": `${contrasena}`,  
+        "contrasenaVerificar": `${contrasenaVerificar}`
+    }
+    console.log(json);
+
+    let respuesta = await fetch("http://localhost:8088/usuarios/registrar",
+    {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(json)
+    }
+    );
+    usuarioGuardado = await respuesta.json();
+    if(usuarioGuardado){
+        console.log(usuarioGuardado);
+        mostrarLogIn();
+        alert("¡Bienvenido!");
+    }else{
+        alert("Contraseñas no coinciden");
+    }
+}
+
+const cargarEmpresas = async () => {
+    let respuesta = await fetch("http://localhost:8088/empresas",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    empresas = await respuesta.json();
+    return empresas;
+}
+
+const renderizarEmpresas = async () => {
+    console.log("renderizado");
+    const empresas = await cargarEmpresas();
+    document.getElementById('categoriasEmpresa').innerHTML = "";
+    console.log(empresas);
+    let htmlEstrellas = '';
+    let htmlSinEstrellas = '';
+    htmlEstrellas = `<div><h4><i class="icon fa-solid fa-star"></i></h4></div>`;
+    htmlSinEstrellas = `<div><h4><i class="icon fa-regular fa-star"></i></h4></div>`
+    empresas.resultado.forEach((empresa) => {
+
+        document.getElementById('categoriasEmpresa').innerHTML +=
+        `
+        <div onclick="renderizarCategoriasUsuario()" class="catgEmpresas shadow-lg" >
+                <div><img alt="" style="height: 120px; " src="${empresa.imagen}"></div>
+                <div class="descripcion-empresa">
+                    <div><p>${empresa.nombre}</p></div>
+                    <div><h4>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-regular fa-star"></i>
+                    </h4></div>
+                </div>
+            </div>
+        `
+    });
+}
+
+const cargarCategoriasUsuario = async () => {
+    let respuesta = await fetch("http://localhost:8088/categorias",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    categoriasUsuario = await respuesta.json();
+    console.log(categoriasUsuario);
+    return categoriasUsuario;
+}
+
+const renderizarCategoriasUsuario = async () => {
+    const categorias = await cargarCategoriasUsuario();
+    console.log(categorias);
+    document.getElementById('categoriasProducto').innerHTML = "";
+    
+    categorias.result.forEach((categoria) => {
+
+        document.getElementById('categoriasProducto').innerHTML +=
+        `
+        <div onclick="renderizarProductosCategoria(${categoria.idCategoria},'${categoria.nombreCategoria}')" class="catg shadow-lg">
+                <img alt="" src="${categoria.imagen}">${categoria.nombreCategoria}
+            </div>
+        `
+    });
+    mostrarCategoriasProductos();
+}
+
+const renderizarProductosCategoria = async (id, categoriaNombre) => {
+    const productos = await obtenerProductosCategoria(id);
+    console.log(productos);
+    document.getElementById('flex').innerHTML = "";
+    
+    document.getElementById('catDescripcion').innerHTML = '';
+    document.getElementById('catDescripcion').innerHTML =
+    `
+    <div><h4><p class="iniciar" style="font-family: 'Parisienne', cursive; font-size: 40px; top: 14$;">${categoriaNombre}</p></div></h4>
+    `
+
+    productos.resultado.forEach((producto) => {
+
+        document.getElementById('flex').innerHTML +=
+        `
+        <div class=" card-productos shadow" onclick="renderizarProductoPorCategoria(${producto.idProductos})">
+                <div class="img"><img class="card-img" src="${producto.img}" class="card-img-top" alt="..."></div>
+                <div class="card-text card-body">
+                    <h5 class="card-title">${producto.nombreProducto}</h5>
+                    <h4>${producto.precio}</h4>
+                    <h4>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-regular fa-star"></i>
+                    </h4>
+                </div>
+        </div>
+        `
+    });
+
+    mostrarProductos()
+}
+
+const obtenerProductosCategoria = async (id) => {
+    let respuesta = await fetch(`http://localhost:8088/productos/${id}/categoria`,
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    let productosCat = await respuesta.json();
+    return productosCat;
+}
+
+const renderizarProductoPorCategoria = async (id) => {
+    const producto = await cargarProductoPorCategoria(id);
+    console.log(producto);
+    let product = producto.resultado;
+    document.getElementById('producto').innerHTML = "";
+    
+        document.getElementById('producto').innerHTML +=
+        `
+        <div onclick="mostrarCategoriasProductos()" class="catg-producto shadow-lg" >
+            <div><img alt="" style="height: 120px; " src="${product.img}"></div>
+            <div class="descripcion-empresa">
+                <div><p>${product.nombreProducto}</p></div>
+                <div><p>${product.precio}</p></div>
+                <div><h4>
+                    <i class="icon fa-solid fa-star"></i>
+                    <i class="icon fa-solid fa-star"></i>
+                    <i class="icon fa-solid fa-star"></i>
+                    <i class="icon fa-solid fa-star"></i>
+                    <i class="icon fa-regular fa-star"></i>
+                </h4></div>
+            </div>
+        </div>
+
+        <div id="producto-carrito" class="shadow-lg">
+            <div id="cantidad">Cantidad</div>
+            <div id="carrito2">
+                <div id="cant">
+                    <div><i id="plus" class="fa-regular fa-square-plus" style="color: #009694;"></i></div>
+                    <div><input id="unidades" placeholder="Unidades"></div>
+                </div>
+                <div><button id="añadir" onclick="mostrarCarrito()">Añadir al carrito</button></div>
+            </div>
+        </div>
+        `
+    
+    mostrarProducto()
+}
+
+const cargarProductoPorCategoria = async (id) => {
+    let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto`,
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    let productoC = await respuesta.json();
+    
+    return productoC;
+}
+
+

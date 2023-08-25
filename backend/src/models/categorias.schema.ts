@@ -6,6 +6,7 @@ const schema = new mongoose.Schema<Categoria>({
     idCategoria: String,
     tipo: String,
     nombreCategoria: String,
+    imagen: String,
     detalleProductos: Array<Producto>
 });
 
