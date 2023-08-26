@@ -56,10 +56,10 @@
         </div>
     <div id="loginMotorista" class="shadow-lg">
         <img src="assetsMotorista/img/logoverde.png" id="logo2">
-        <input type="text" placeholder="username" class="input-log">
-        <input type="password" placeholder="password" class="input-log">
+        <input id="correo" type="text" placeholder="username" class="input-log">
+        <input id="contrasena" type="password" placeholder="password" class="input-log">
         <a href="" id="links">¿Haz olvidado tu contraseña?</a>
-        <div onclick="mostrarCategoriasMotoristas()"><button id="btnlogin">Iniciar Sesión</button></div>
+        <div onclick="loginMotorista()"><button id="btnlogin">Iniciar Sesión</button></div>
         <p style="font-size: small;">¿No tienes cuenta?.<a id="links" onclick="registro();">Crear cuenta</a></p>
     </div>
 </div>
@@ -71,12 +71,12 @@
     </div>
     <div id="registro" class="shadow-lg">
         <i style="color: #2dc2ac; margin-top: -347px; margin-left: 11%; font-size: 78px; padding-bottom: 61px;" class="carita fa-solid fa-user-plus"></i>
-        <img src="assetsMotorista/img/logoverde.png" id="logo">
-        <input type="text" placeholder="name" class="input-registro">
-        <input type="email" placeholder="email" class="input-registro">
-        <input type="password" placeholder="confirm password" class="input-registro">
-        <input type="password" placeholder="password" class="input-registro">
-        <button id="btnlogin">Registrar</button>
+        <img id="logo" src="assetsMotorista/img/logoverde.png" alt="">
+        <input id="nombres" type="text" placeholder="name" class="input-registro">
+        <input id="correo1" type="email" placeholder="email" class="input-registro">
+        <input id="confirmar" type="password" placeholder="confirm password" class="input-registro">
+        <input id="contrasena1" type="password" placeholder="password" class="input-registro">
+        <button id="btnlogin" onclick="registroMotorista()">Registrar</button>
         <p style="font-size: small;">Ya tengo una cuenta <a id="links" onclick="irLogin();">Login</a></p>
     </div>
 </div>
@@ -94,7 +94,7 @@
             <div><p class="descripcion-categoria">Elige tu próxima entrega</p></div>
         </div>
         <div class="categorias">
-            <div onclick="mostrarPedidosDisponibles()" class="catgEmpresas shadow-lg" >
+            <div onclick="renderizarPedidosDisponibles()" class="catgEmpresas shadow-lg" >
                 <div class="descripcion-empresa">
                     <div><img id="img-tip-ordenes" src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png"></div>
                     <div><h5>
@@ -102,7 +102,7 @@
                     </h4></div>
                 </div>
             </div>
-            <div onclick="mostrarPedidosPendientes()" class="catgEmpresas shadow-lg" >
+            <div onclick="renderizarPedidosPendientes()" class="catgEmpresas shadow-lg" >
                 <div class="descripcion-empresa">
                     <div><img id="img-tip-ordenes" src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png"></div>
                     <div><h5>
@@ -110,7 +110,7 @@
                     </h4></div>
                 </div>
             </div>
-            <div onclick="mostrarPedidosEntregados()" class="catgEmpresas shadow-lg" >
+            <div onclick="renderizarPedidosEntregados()" class="catgEmpresas shadow-lg" >
                 <div class="descripcion-empresa">
                     <div><img id="img-tip-ordenes" src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png"></div>
                     <div><h5>
@@ -123,124 +123,36 @@
 
     <div id="pedidos-disponibles">
         <div id="logo-descripcion">
-            <!-- <div class="img-logo"><img id="logo1" src="../assets/img/logo.png" alt=""></div> -->
             <div><p class="descripcion">Elige tu próximo pedido</p></div>
         </div>
         <div class="pedidos">
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png">
-                    <div><button class="button-tomar-pedido">Tomar pedido</button></div>
-                </div>
-            </div>
-
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png">
-                    <div><button class="button-tomar-pedido">Tomar pedido</button></div>
-                </div>
-            </div>
-
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png">
-                    <div><button class="button-tomar-pedido">Tomar pedido</button></div>
-                </div>
+            <div id="pedidos-disp">
+                
+                
             </div>
         </div>
     </div>
 
     <div id="pedidos-pendientes">
         <div id="logo-descripcion">
-            <!-- <div class="img-logo"><img id="logo1" src="../assets/img/logo.png" alt=""></div> -->
             <div><p class="descripcion">Entregas pendientes</p></div>
         </div>
         <div class="pedidos">
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png">
-                    <div><button class="button-tomar-pedido">Entregado</button></div>
-                </div>
-            </div>
+            <div id="pedidos.pend">
+                
 
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png">
-                    <div><button class="button-tomar-pedido">Entregado</button></div>
-                </div>
             </div>
-
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png">
-                    <div><button class="button-tomar-pedido">Entregado</button></div>
-                </div>
-            </div>
-
         </div>
     </div>
 
     <div id="pedidos-entregados">
         <div id="logo-descripcion">
-            <!-- <div class="img-logo"><img id="logo1" src="../assets/img/logo.png" alt=""></div> -->
             <div><p class="descripcion">¡Felicidades! Entregas</p></div>
         </div>
         <div class="pedidos">
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png">
-                    <div><button class="button-tomar-pedido">Factura</button></div>
-                </div>
-            </div>
+            <div id="pedidos-entreg">
+                
 
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png">
-                    <div><button class="button-tomar-pedido">Factura</button></div>
-                </div>
-            </div>
-
-            <div class="tamaño-pedidos shadow-lg" >
-                <div class="descripcion-empresa">
-                    <div><h5>Descripcion de pedido:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                    <div><h5>Dirección:</h5><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, voluptatem?</p></div>
-                </div>
-                <div class="fin">
-                    <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png">
-                    <div><button class="button-tomar-pedido">Factura</button></div>
-                </div>
             </div>
         </div>
     </div>

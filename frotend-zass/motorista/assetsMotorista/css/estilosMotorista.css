@@ -100,13 +100,13 @@
     font-family: 'Parisienne', cursive;
 }
 
-.pedidos{
+/* .pedidos{
     display: flex;
     justify-content: start;
     align-items: center;
     overflow: scroll;
     height: 80%;
-}
+} */
 
 .button-tomar-pedido{
     padding: 10px;
@@ -132,13 +132,18 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 90%;
+}
+
+.descripcion-empresa p{
+    margin-left: 10%;
 }
 
 .tamaño-pedidos{
     display: flex;
 	flex-direction: column;
 	align-items: center;
-    width: 80%;
+    width: 87%;
     height: auto;
     padding: 15px;
     margin: 10px;
@@ -163,7 +168,7 @@
     height: 76%;
     top: 22%;
     width: 100%;
-    margin-left: 8px;
+    margin-left: 31px;
     position: absolute;
     overflow: scroll !important;
 } 

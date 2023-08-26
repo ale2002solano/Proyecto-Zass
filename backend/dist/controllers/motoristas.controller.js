@@ -36,7 +36,7 @@ const registroMotorista = (req, res) => {
         });
     }
     else {
-        res.send("Contraseñas no coinciden");
+        res.send(false);
         res.end();
     }
 };

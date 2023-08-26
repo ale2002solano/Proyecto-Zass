@@ -26,7 +26,7 @@ export const registroMotorista = (req:Request, res:Response) => {
             res.end();
         })
     }else{
-        res.send("Contraseñas no coinciden");
+        res.send(false);
         res.end();
     }
 }

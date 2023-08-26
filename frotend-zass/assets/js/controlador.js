@@ -118,6 +118,7 @@ const mostrarFinalizarCompra = () => {
 }
 
 const mostrarGracias = () => {
+    agregarPedido()
     document.getElementById('gracias').style.display= 'block';
     document.getElementById('categoriasEmpresas').style.display= 'none';
     document.getElementById('loginCliente').style.display= 'none';
@@ -434,9 +435,15 @@ const renderizarCarrito = async (cantidad, idProducto) => {
     }
     console.log(pedido);
     
-    document.getElementById('btnFinalizar').innerHTML = `<button onclick="agregarPedido()" id="finalizar">Finalizar Compra</button>`
+    document.getElementById('btnFinalizar').innerHTML = `<button onclick="direccionEnvio()" id="finalizar">Finalizar Compra</button>`
     mostrarCarrito();
 }
+
+const direccionEnvio = () => {
+    
+    mostrarFinalizarCompra()
+}
+
 const cargarProducto = async (id) => {
     let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto`,
     {
@@ -458,6 +465,7 @@ const agregarPedido = async () => {
     let precio = 0;
     let impuesto = 0;
     let total = 0;
+    let direccion = document.getElementById('direccion').value;
     let establecimiento = JSON.parse(localStorage.getItem('empresa'));
     for (let i = 0; i < pedido.length; i++) {
         precio = Number(pedido[i].precio)
@@ -474,7 +482,7 @@ const agregarPedido = async () => {
         "total": `${total}`,  
         "fecha": `28/08/2023`,  
         "establecimiento":  `${establecimiento}`,
-        "direccion": `${usuario.direccion}`,  
+        "direccion": `${direccion}`,  
         "estadoOrden":  "disponible",
         "idUsuario": `${usuario.id}`
     }
@@ -490,7 +498,6 @@ const agregarPedido = async () => {
     );
     const pedidoAgregado = await respuesta.json();
     console.log(pedidoAgregado);
-    mostrarGracias();
 }
 
 const obtenerPedidos = async () => {
