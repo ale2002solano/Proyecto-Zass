@@ -16,7 +16,7 @@ import categoriasRouter from './routers/categorias.router'
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT||8088;
+const port = 8088;
 const database = new Database();
 
 app.use(cors());
