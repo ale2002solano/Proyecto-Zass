@@ -2,6 +2,7 @@ var pedido = [];
 var usuarioGuardado = '';
 const mostrarLogIn = () => {
     document.getElementById('categoriasEmpresas').style.display= 'none';
+    document.getElementById('footer').style.display= 'none';
     document.getElementById('finalizar-compra').style.display= 'none';
     document.getElementById('loginCliente').style.display= 'block';
     document.getElementById('categoriasProductos').style.display= 'none';
@@ -18,6 +19,7 @@ const mostrarLogIn = () => {
 
 const mostrarCrearCuenta = () => {
     document.getElementById('producto').style.display= 'none';
+    document.getElementById('footer').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'block';
     document.getElementById('categoriasEmpresas').style.display= 'none';
     document.getElementById('loginCliente').style.display= 'none';
@@ -44,6 +46,9 @@ const mostrarCategoriasEmpresas = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carrito').style.display= 'block';
     document.getElementById('finalizar-compra').style.display= 'none';
+    document.getElementById('footer').style.display= 'none';
+    // document.getElementById('op1').style.backgroundColor = '#edb6a2';
+    // document.getElementById('op2').style.backgroundColor = 'white';
 }
 
 const mostrarCategoriasProductos = () => {
@@ -58,6 +63,8 @@ const mostrarCategoriasProductos = () => {
     document.getElementById('carrito').style.display= 'block';
     document.getElementById('finalizar-compra').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
+    document.getElementById('footer').style.display= 'block';
+    // document.getElementById('op2').style.backgroundColor = '#edb6a2';
 }
 
 const mostrarProductos = () => {
@@ -72,6 +79,7 @@ const mostrarProductos = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
+    document.getElementById('footer').style.display= 'block';
 }
 
 const mostrarProducto = () => {
@@ -86,6 +94,7 @@ const mostrarProducto = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
+    document.getElementById('footer').style.display= 'none';
 }
 
 const mostrarCarrito = () => {
@@ -100,6 +109,7 @@ const mostrarCarrito = () => {
     document.getElementById('producto').style.display= 'none';
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
+    document.getElementById('footer').style.display= 'block';
 }
 
 const mostrarFinalizarCompra = () => {
@@ -114,7 +124,7 @@ const mostrarFinalizarCompra = () => {
     document.getElementById('crearCuenta').style.display= 'none';
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('gracias').style.display= 'none';
-
+    document.getElementById('footer').style.display= 'block';
 }
 
 const mostrarGracias = () => {
@@ -130,6 +140,7 @@ const mostrarGracias = () => {
     document.getElementById('carritoIcon').style.display= 'none';
     document.getElementById('carrito').style.display= 'none';
     document.getElementById('finalizar-compra').style.display= 'none';
+    document.getElementById('footer').style.display= 'block';
 }
 
 const loginUsuario = async () => {
@@ -293,7 +304,7 @@ const renderizarProductosCategoria = async (id, categoriaNombre) => {
     document.getElementById('catDescripcion').innerHTML = '';
     document.getElementById('catDescripcion').innerHTML =
     `
-    <div><h4><p class="iniciar" style="font-family: 'Parisienne', cursive; font-size: 40px; top: 14$;">${categoriaNombre}</p></div></h4>
+    <div><h4><p class="iniciar" style="font-family: 'Parisienne', cursive; font-size: 40px; top: 12%;">${categoriaNombre}</p></div></h4>
     `
 
     productos.resultado.forEach((producto) => {
@@ -367,7 +378,7 @@ const renderizarProductoPorCategoria = async (id) => {
             </div>
         </div>
         `
-    
+        
     mostrarProducto()
 }
 
@@ -386,24 +397,30 @@ const cargarProductoPorCategoria = async (id) => {
 }
 
 const actualizarCantidad = async (id) => {
+    
     console.log(id);
     const cant = document.getElementById('unidades').value;
     console.log(cant);
-    const json = {
-        "cantidad": `${cant}`
-    }
-    let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto/actualizar/cantidad`,
-        {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(json)
+    if (cant) {
+        const json = {
+            "cantidad": `${cant}`
         }
-    );
-    const usuarioActualizado = await respuesta.json();
-    console.log(usuarioActualizado);
-    renderizarCarrito(cant, id);
+        let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto/actualizar/cantidad`,
+            {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(json)
+            }
+        );
+        const usuarioActualizado = await respuesta.json();
+        console.log(usuarioActualizado);
+        renderizarCarrito(cant, id);
+    }else{
+        alert('Escribe la cantidad en "Unidades" para agregar al carrito')
+    }
+    
 }
 
 const renderizarCarrito = async (cantidad, idProducto) => {
@@ -435,13 +452,8 @@ const renderizarCarrito = async (cantidad, idProducto) => {
     }
     console.log(pedido);
     
-    document.getElementById('btnFinalizar').innerHTML = `<button onclick="direccionEnvio()" id="finalizar">Finalizar Compra</button>`
+    document.getElementById('btnFinalizar').innerHTML = `<button onclick="mostrarFinalizarCompra()" id="finalizar">Finalizar Compra</button>`
     mostrarCarrito();
-}
-
-const direccionEnvio = () => {
-    
-    mostrarFinalizarCompra()
 }
 
 const cargarProducto = async (id) => {
