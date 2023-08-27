@@ -247,7 +247,7 @@ const eliminarProducto = (id) => {
 const guardarProducto = async () => {
   let productos = await cargarProductos();
   let id = productos.resultado.length + 1;
-  let nombre = document.getElementById('nombre').value;
+  let nombre = document.getElementById('nombreProducto').value;
   let precio = document.getElementById('precio').value;
   let url = document.getElementById('url').value;
   let idCategoria = document.getElementById('categoria').value;
@@ -255,7 +255,7 @@ const guardarProducto = async () => {
 
   let json = {
     "idProductos": `${id}`,
-    "nombre": `${nombre}`,
+    "nombreProducto": `${nombre}`,
     "precio": `${precio}`,
     "img": `${url}`,
     "idCategoria": `${idCategoria}`
