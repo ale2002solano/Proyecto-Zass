@@ -132,58 +132,7 @@
 
       </div>
     </div>
-    <!-- FIN DE CAMISA -->
-
-    <!-- PANTALONES -->
-    <div id="pantalones" style="display: none;">
-    <div id="camisas">
-      <div class="card-empresa" style="width: 18rem;">
-        <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-titulo">Pantalon 1</h5>
-          <p class="card-text">L.500</p>
-          <button class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
-          <button class="btn btn-outline-success btn-sm" style="float:right"><i class="fa-regular fa-pen-to-square"></i></button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-    <!-- FIN DE PANTALONES -->
-
-     <!-- ACCESORIOS -->
-     <div id="accesorios" style="display: none;">
-    <div id="camisas">
-      <div class="card-empresa" style="width: 18rem;">
-        <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-titulo">Accesorio 1</h5>
-          <p class="card-text">L.500</p>
-          <button class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
-          <button class="btn btn-outline-success btn-sm" style="float:right"><i class="fa-regular fa-pen-to-square"></i></button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-    <!-- FIN DE ACCESORIOS -->
-
-    <!-- ZAPATOS -->
-    <div id="zapatos" style="display: none;">
-    <div id="camisas">
-      <div class="card-empresa" style="width: 18rem;">
-        <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-titulo">Zapatos 1</h5>
-          <p class="card-text">L.500</p>
-          <button class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
-          <button class="btn btn-outline-success btn-sm" style="float:right"><i class="fa-regular fa-pen-to-square"></i></button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-    <!-- FIN DE ZAPATOS -->
+   <!--FIN DE CAMISA-->
   </div>
     <!-- FIN DE PRODUCTOS -->
    </div>
@@ -199,15 +148,15 @@
     <div id="tipoOrdenes">
 
       <div id="cardsAdmin">
-        <div class="card-ordenes" onclick="formatoOrdenes(); estadoOrden();" id="1">
+        <div class="card-ordenes" onclick="formatoOrdenes(); Ordenes(); estadoOrden();" id="1">
           <img src="assetsAdmin/img/orden-disponible.png" id="img-tip-ordenes">
             Ordenes disponibles
           </div>
-          <div class="card-ordenes" onclick="formatoOrdenes();" id="2">
+          <div class="card-ordenes" onclick="formatoOrdenes(); Ordenes2();" id="2">
             <img src="assetsAdmin/img/orden-pendiente.png" id="img-tip-ordenes">
             Ordenes pendientes
           </div>
-          <div class="card-ordenes" onclick="formartoOrdenes();" id="3">
+          <div class="card-ordenes" onclick="formatoOrdenes(); Ordenes3();" id="3">
             <img src="assetsAdmin/img/orden-entregada.png" id="img-tip-ordenes">
             Ordenes entregadas
           </div>
@@ -220,6 +169,7 @@
     <!-- INICIO DEL FORMATO DE LAS ORDENES -->
     <div id="formato" style="display: none;">
       <div id="boton"><button id="new-empresa" data-toggle="modal" data-target="#pedidoModal"><i class="fa-solid fa-plus"></i> Agregar</button> <br></div>
+      <div id="form">
       <div id="formato-ordenes">
 
         <table class="table table-borderless">
@@ -282,70 +232,8 @@
             </tr>
           </tbody>
         </table>
-
-        <table class="table table-borderless">
-          <tbody>
-            <tr>
-              <th scope="row">Nombre cliente:</th>
-              <td>Axel</td>
-            </tr>
-            <tr>
-              <th scope="row">Carrito/Pedido:</th>
-              <td>
-                <table class="carrito">
-                  <tbody>
-                    <tr>
-                      <th>Cant.</th>
-                      <th>Descrip.</th>
-                      <th>Precio.</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Camisa amarilla</td>
-                      <td>L.500</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Impuesto:</th>
-              <td>99</td>
-            </tr>
-            <tr>
-              <th scope="row">Total:</th>
-              <td>400</td>
-            </tr>
-            <tr>
-              <th scope="row">Fecha:</th>
-              <td>15-05-22</td>
-            </tr>
-            <tr>
-              <th scope="row">Estado orden:</th>
-              <td>disponible</td>
-            </tr>
-            <tr>
-              <th scope="row">Establecimiento:</th>
-              <td>Charly</td>
-            </tr>
-            <tr>
-              <th scope="row">Domicilio:</th>
-              <td>Comayaguela,Bo. La Obrera</td>
-            </tr>
-            <tr>
-              <th scope="row">Motorista:</th>
-              <td>
-                <select name="" id="">
-                  <option disabled selected>Seleccione un motorista</option>
-                  <option>Mario</option>
-                </select>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
       </div>
-      
+    </div>
     </div>
     <!-- FIN DEL FORMATO -->
     </div>
@@ -359,18 +247,6 @@
     <div id="boton"><button id="new-empresa" data-toggle="modal" data-target="#motoristaModal"><i class="fa-solid fa-plus"></i> Agregar</button> <br></div>
 
     <div id="motoristas">
-
-      <div class="card-motoristas" style="width: 25rem;">
-        <img src="assetsAdmin/img/shop.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Pedro</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, culpa.</p>
-          <p>Región de trabajo:Comayaguela</p>
-          <p>Celular: +504 8865-9597</p>
-          <br>
-          <button class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
-        </div>
-      </div>
 
     </div>
     
@@ -391,15 +267,12 @@
       </div>
       <div class="modal-body">
         <input class="form-control my-2"  type="text"  id="nombre-empresa" placeholder="Nombre empresa">
-        <textarea class="form-control my-2"  id="descrip" placeholder="Descripcion" cols="30" rows="10"></textarea>
         <input class="form-control my-2"  type="number"  id="calificacion" placeholder="Calificacion" min="0" max="5">
-        <select id="lista-imagenes">
-        </select>
+        <input class="form-control my-2"  type="text"  id="imagen" placeholder="URL imagen">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button id="btn-guardar" type="button" class="btn save" onclick="guardar()">Guardar</button>
-        <button id="btn-actualizar" type="button" class="btn btn-primary" onclick="actualizar()">Actualizar</button>
+        <button id="btn-guardar" type="button" class="btn save" onclick="agregarEmpresa();">Guardar</button>
       </div>
     </div>
   </div>
@@ -423,13 +296,11 @@
       <div class="modal-body">
         <input class="form-control my-2"  type="text"  id="nombre-producto" placeholder="Nombre producto">
         <input class="form-control my-2"  type="text"  id="precio-producto" placeholder="Precio producto">
-        <select id="lista-imagenes">
-        </select>
+        <input class="form-control my-2"  type="text"  id="imagen-producto" placeholder="URL imagen">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button id="btn-guardar" type="button" class="btn save" onclick="guardar()">Guardar</button>
-        <button id="btn-actualizar" type="button" class="btn btn-primary" onclick="actualizar()">Actualizar</button>
+        <button id="btn-guardar" type="button" class="btn save" onclick="AgregarProducto();">Guardar</button>
       </div>
     </div>
   </div>
