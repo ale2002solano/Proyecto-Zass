@@ -276,8 +276,8 @@ const renderizarPedidosEntregados = async () => {
                 </div>
             </div>
         `
+        html = '';
     });
-    html = '';
     mostrarPedidosEntregados()
 }
 
@@ -317,6 +317,7 @@ const renderizarPedidosPendientes = async () => {
                 </div>
             </div>
         `
+        html = '';
     });
     mostrarPedidosPendientes()
 }
