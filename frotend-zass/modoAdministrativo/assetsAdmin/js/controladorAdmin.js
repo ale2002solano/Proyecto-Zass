@@ -57,6 +57,9 @@ function formatoOrdenes(){
 function agregarEmpresa(){
     AgregarEmpresa();
 }
+function agregarProducto(){
+    AgregarProducto();
+}
 
 //ESTABLECER ESTADO DE LA ORDEN
 var divs = document.querySelectorAll("div");
@@ -554,6 +557,19 @@ const renderizarPedidosEntregados = async () => {
     });
 }
 
+
+const cargarProductos = async () => {
+    let respuesta = await fetch("http://localhost:8088/productos",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    );
+    productos = await respuesta.json();
+    return productos;
+}
 //AGREGAR
 const AgregarEmpresa = async () => {
     const bikers = await cargarEmpresas();
@@ -585,6 +601,39 @@ const AgregarEmpresa = async () => {
         alert("¡Empresa agregada!");
     }else{
         alert("No se guardo empresa");
+    }
+}
+
+const AgregarProducto = async () => {
+    const bikers = await cargarProductos();
+    console.log(bikers);
+    const id = bikers.resultado.length + 1;
+    const nombres = document.getElementById('nombre-producto').value;
+    const precio = document.getElementById('precio-producto').value;
+    const imagen = document.getElementById('imagen-producto').value;
+
+    json = {
+        "id": `${id}`, 
+        "nombreProducto": `${nombres}`,    
+        "precio": `${precio}`,  
+        "img": `${imagen}`
+    }
+
+    let respuesta = await fetch("http://localhost:8088/productos/guardar",
+    {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(json)
+    }
+    );
+    productoGuardado = await respuesta.json();
+    if(productoGuardado){
+        console.log(productoGuardado);
+        alert("¡Producto agregada!");
+    }else{
+        alert("No se guardo producto");
     }
 }
 //ELIMINAR
