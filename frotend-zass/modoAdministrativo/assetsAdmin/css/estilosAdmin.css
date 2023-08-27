@@ -253,6 +253,26 @@ th{
     align-content: center;
     padding: 10px;
 }
+#form{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+#tabla-ordenes{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
 .card-motoristas{
     display: grid;
     justify-content: center;
