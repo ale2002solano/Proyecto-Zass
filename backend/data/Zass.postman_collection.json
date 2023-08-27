@@ -170,6 +170,27 @@
 			"response": []
 		},
 		{
+			"name": "Obtener productos por categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/productos/2/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"productos",
+						"2",
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Actualizar producto",
 			"request": {
 				"method": "PUT",
@@ -275,6 +296,57 @@
 					"path": [
 						"pedidos",
 						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar pedido",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPedido\": \"3\",\r\n    \"nombreCliente\": \"Valeria\",\r\n    \"pedido\": [{\r\n        \"idProductos\": \"8\",\r\n        \"nombreProducto\": \"Pantalon rasgado\",\r\n        \"precio\": \"L.630\",\r\n        \"img\": \"https://i.pinimg.com/564x/a9/d9/25/a9d9259c6daa286267441b4c4d57c2dc.jp…\",\r\n        \"idCategoria\": \"2\",\r\n        \"cantidad\": 4\r\n    }],\r\n    \"impuesto\": \"L.99\",\r\n    \"total\": \"L.400\",\r\n    \"fecha\": \"15/05/22\",\r\n    \"establecimiento\": \"Charly\",\r\n    \"direccion\": \"Comayaguela\",\r\n    \"motorista\": \"Pedro\",\r\n    \"estadoOrden\": \"pendiente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/pedidos/3/pedido/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"pedidos",
+						"3",
+						"pedido",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener pedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/pedidos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"pedidos",
+						""
 					]
 				}
 			},
@@ -630,27 +702,6 @@
 			"response": []
 		},
 		{
-			"name": "Obtener productos por categoria",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8088/productos/2/categoria",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8088",
-					"path": [
-						"productos",
-						"2",
-						"categoria"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Actualizar cantidad",
 			"request": {
 				"method": "PUT",
@@ -665,7 +716,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8088/productos/3/producto/actualizar/cantidad",
+					"raw": "http://localhost:8088/productos/2/producto/actualizar/cantidad",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -673,7 +724,7 @@
 					"port": "8088",
 					"path": [
 						"productos",
-						"3",
+						"2",
 						"producto",
 						"actualizar",
 						"cantidad"
