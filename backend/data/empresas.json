@@ -1,26 +1,36 @@
-[
-    {
-        "idEmpresa": "1",
-        "nombre": "Zara",
-        "imagen": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/776f84130254669.617be9fea165e.jpg",
-        "calificacion": "4"
-    },
-    {
-        "idEmpresa": "2",
-        "nombre": "Pull&Bear",
-        "imagen": "https://th.bing.com/th/id/R.64b5069cdb1381894a98ec3b55b066b3?rik=vVbuh8f4FN4o9A&riu=http%3a%2f%2fwww.znackovamoda.eu%2fwp-content%2fuploads%2f2015%2f08%2fPull-Bear-logo.jpg&ehk=ucImPkV20kPqZ7lNGlp3Bw3V6BIFGIBdKKTo7RSrWok%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1",
-        "calificacion": "3"
-    },
-    {
-        "idEmpresa": "3",
-        "nombre": "Charly",
-        "imagen": "https://seeklogo.com/images/C/charly-s-a-logo-7A9A328E1A-seeklogo.com.png",
-        "calificacion": "4"
-    },
-    {
-        "idEmpresa": "4",
-        "nombre": "Carrion",
-        "imagen": "https://logodix.com/logo/1602770.jpg",
-        "calificacion": "4"
-    }
-]
+[{
+  "_id": {
+    "$oid": "64eb28bf145f41df912bb3d1"
+  },
+  "idEmpresa": "1",
+  "nombre": "Zara",
+  "imagen": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/776f84130254669.617be9fea165e.jpg",
+  "calificacion": "4"
+},
+{
+  "_id": {
+    "$oid": "64eb28bf145f41df912bb3d2"
+  },
+  "idEmpresa": "2",
+  "nombre": "Pull&Bear",
+  "imagen": "https://th.bing.com/th/id/R.64b5069cdb1381894a98ec3b55b066b3?rik=vVbuh8f4FN4o9A&riu=http%3a%2f%2fwww.znackovamoda.eu%2fwp-content%2fuploads%2f2015%2f08%2fPull-Bear-logo.jpg&ehk=ucImPkV20kPqZ7lNGlp3Bw3V6BIFGIBdKKTo7RSrWok%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1",
+  "calificacion": "3"
+},
+{
+  "_id": {
+    "$oid": "64eb28bf145f41df912bb3d3"
+  },
+  "idEmpresa": "3",
+  "nombre": "Charly",
+  "imagen": "https://seeklogo.com/images/C/charly-s-a-logo-7A9A328E1A-seeklogo.com.png",
+  "calificacion": "4"
+},
+{
+  "_id": {
+    "$oid": "64eb28bf145f41df912bb3d4"
+  },
+  "idEmpresa": "4",
+  "nombre": "Shein",
+  "imagen": "https://logodix.com/logo/1602770.jpg",
+  "calificacion": "4"
+}]
