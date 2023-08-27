@@ -57,9 +57,9 @@ function formatoOrdenes(){
 function agregarEmpresa(){
     AgregarEmpresa();
 }
-function agregarProducto(){
-    AgregarProducto();
-}
+// function agregarProducto(){
+//     AgregarProducto();
+// }
 
 //ESTABLECER ESTADO DE LA ORDEN
 var divs = document.querySelectorAll("div");
@@ -103,7 +103,7 @@ const renderizarEmpresas = async () => {
     empresas.resultado.forEach((empresa) => {
         document.getElementById('empresas').innerHTML +=
         `
-        <div onclick="renderizarCategoriasProductos('${empresa.nombre}')" class="catgEmpresas shadow-lg" >
+        <div class="catgEmpresas shadow-lg" >
         <div class="card-empresa" style="width: 18rem;">
         <img src="${empresa.imagen}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -117,14 +117,18 @@ const renderizarEmpresas = async () => {
                         <i class="icon fa-regular fa-star"></i>
          </h4></div>
           <br>
-          <button class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
-          <button class="btn btn-outline-success btn-sm" style="float:right"><i class="fa-regular fa-pen-to-square"></i></button>
+          <button onclick="eliminarEmpresa('${empresa.idEmpresa}')" class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
         </div>
       </div>
       </div>
       `
         
     });
+}
+
+const eliminarEmpresa = (id) => {
+  console.log(id);
+  eliminarEmpresaBackend(id);
 }
 //FIN ADMINISTRAR EMPRESAS
 
@@ -161,7 +165,6 @@ const ObtenerCategoriasProductos = async () => {
     }
     );
     CatgProductos = await respuesta.json();
-    console.log(CatgProductos);
     return CatgProductos;
 }
 const renderizarCategoriasProductos = async (empresa) => {
@@ -229,13 +232,51 @@ const renderizarProductosCategoria = async (id) => {
           <div class="card-body">
             <h5 class="card-titulo">${producto.nombreProducto}</h5>
             <p class="card-text">L.${producto.precio}</p>
-            <button class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
-            <button class="btn btn-outline-success btn-sm" style="float:right"><i class="fa-regular fa-pen-to-square"></i></button>
+            <button onclick="eliminarProducto(${producto.idProductos})" class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
           </div>
         </div>
         `
     });
 }
+
+const eliminarProducto = (id) => {
+  console.log(id);
+  eliminarProductoBackend(id);
+}
+
+const guardarProducto = async () => {
+  let productos = await cargarProductos();
+  let id = productos.resultado.length + 1;
+  let nombre = document.getElementById('nombre').value;
+  let precio = document.getElementById('precio').value;
+  let url = document.getElementById('url').value;
+  let idCategoria = document.getElementById('categoria').value;
+
+
+  let json = {
+    "idProductos": `${id}`,
+    "nombre": `${nombre}`,
+    "precio": `${precio}`,
+    "img": `${url}`,
+    "idCategoria": `${idCategoria}`
+  }
+  console.log(json);
+
+  let respuesta = await fetch("http://localhost:8088/productos/guardar",
+  {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(json)
+  }
+  );
+  let productoGuardado = await respuesta.json();
+  console.log(productoGuardado);
+
+}
+
+
 // FIN ADMINISTRAR PRODUCTOS
 
 
@@ -249,7 +290,7 @@ const cargarMotoristas = async () => {
         },
     }
     );
-    motoristas = await respuesta.json();
+    let motoristas = await respuesta.json();
     return motoristas;
 }
 const renderizarMotoristas = async () => {
@@ -258,7 +299,7 @@ const renderizarMotoristas = async () => {
     document.getElementById("motoristas").innerHTML = "";
     console.log(motoristas);
     motoristas.result.forEach((motorista) => {
-        document.getElementById("motoristas").innerHTML +=
+      console.log('hola');
         document.getElementById("motoristas").innerHTML +=
         `
         <div class="card-motoristas" style="width: 25rem;">
@@ -268,13 +309,50 @@ const renderizarMotoristas = async () => {
           <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, culpa.</p>
           <p>Correo electronico: ${motorista.correo}</p>
           <br>
-          <button class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
+          <button onclick="eliminarMotorista(${motorista.id})" class="btn btn-outline-danger btn-sm" style="float:right"><i class="fas fa-trash-alt"></i></button>
         </div>
       </div>
       `
-        
     });
 }
+
+const guardarMotorista = async () => {
+  const motoristas = await cargarMotoristas();
+  let id = motoristas.result.length + 1;
+  let nombre = document.getElementById('nombreMotorista').value;
+  let apellido = document.getElementById('apellidoMotorista').value;
+  let email = document.getElementById('emailMotorista').value;
+  let contrasena = document.getElementById('contrasenaMotorista').value;
+
+  let json = {
+    "id": `${id}`,
+    "nombre": `${nombre}`,
+    "apellido": `${apellido}`,
+    "correo": `${email}`,
+    "contrasena": `${contrasena}`
+  }
+  console.log(json);
+
+  let respuesta = await fetch("http://localhost:8088/motoristas/guardar",
+  {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(json)
+  }
+  );
+  let motoristaGuardado = await respuesta.json();
+  console.log(motoristaGuardado);
+
+}
+
+const eliminarMotorista = (id) => {
+  console.log(id);
+  eliminarMotoristaBackend(id);
+}
+
+
 //FIN ADMIN MOTORISTAS
 
 //ADMINISTRAR PEDIDOS DISPONIBLES,ENTREGADOS, PENDIENTES
@@ -604,49 +682,107 @@ const AgregarEmpresa = async () => {
     }
 }
 
-const AgregarProducto = async () => {
-    const bikers = await cargarProductos();
-    console.log(bikers);
-    const id = bikers.resultado.length + 1;
-    const nombres = document.getElementById('nombre-producto').value;
-    const precio = document.getElementById('precio-producto').value;
-    const imagen = document.getElementById('imagen-producto').value;
+// const AgregarProducto = async () => {
+//     const bikers = await cargarProductos();
+//     console.log(bikers);
+//     const id = bikers.resultado.length + 1;
+//     const nombres = document.getElementById('nombre-producto').value;
+//     const precio = document.getElementById('precio-producto').value;
+//     const imagen = document.getElementById('imagen-producto').value;
 
-    json = {
-        "id": `${id}`, 
-        "nombreProducto": `${nombres}`,    
-        "precio": `${precio}`,  
-        "img": `${imagen}`
-    }
+//     json = {
+//         "id": `${id}`, 
+//         "nombreProducto": `${nombres}`,    
+//         "precio": `${precio}`,  
+//         "img": `${imagen}`
+//     }
 
-    let respuesta = await fetch("http://localhost:8088/productos/guardar",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(json)
-    }
-    );
-    productoGuardado = await respuesta.json();
-    if(productoGuardado){
-        console.log(productoGuardado);
-        alert("¡Producto agregada!");
-    }else{
-        alert("No se guardo producto");
-    }
-}
+//     let respuesta = await fetch("http://localhost:8088/productos/guardar",
+//     {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(json)
+//     }
+//     );
+//     productoGuardado = await respuesta.json();
+//     if(productoGuardado){
+//         console.log(productoGuardado);
+//         alert("¡Producto agregada!");
+//     }else{
+//         alert("No se guardo producto");
+//     }
+// }
 //ELIMINAR
-const eliminarEmpresa = async (id) => {
+const eliminarEmpresaBackend = async (id) => {
     let respuesta = await fetch(`http://localhost:8088/empresas/${id}/empresa/eliminar`,
         {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(steph)
         }
     );
     let empresaEliminada = await respuesta.json();
     console.log(empresaEliminada);
+}
+
+const eliminarProductoBackend = async (id) => {
+  let respuesta = await fetch(`http://localhost:8088/productos/${id}/producto/eliminar`,
+      {
+          method: "DELETE",
+          headers: {
+              "Content-Type": "application/json",
+          },
+      }
+  );
+  let empresaEliminada = await respuesta.json();
+  console.log(empresaEliminada);
+}
+
+const eliminarMotoristaBackend = async (id) => {
+  let respuesta = await fetch(`http://localhost:8088/motoristas/${id}/motorista/eliminar`,
+      {
+          method: "DELETE",
+          headers: {
+              "Content-Type": "application/json",
+          },
+      }
+  );
+  let motoristaEliminada = await respuesta.json();
+  console.log(motoristaEliminada);
+}
+
+const guardarPedido = async () => {
+  let productos = await cargarProductos();
+  let id = productos.resultado.length + 1;
+  
+  let nombre = document.getElementById('nombre').value;
+  let precio = document.getElementById('precio').value;
+  let url = document.getElementById('url').value;
+  let idCategoria = document.getElementById('categoria').value;
+
+
+  let json = {
+    "idProductos": `${id}`,
+    "nombre": `${nombre}`,
+    "precio": `${precio}`,
+    "img": `${url}`,
+    "idCategoria": `${idCategoria}`
+  }
+  console.log(json);
+
+  let respuesta = await fetch("http://localhost:8088/productos/guardar",
+  {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(json)
+  }
+  );
+  let productoGuardado = await respuesta.json();
+  console.log(productoGuardado);
+
 }

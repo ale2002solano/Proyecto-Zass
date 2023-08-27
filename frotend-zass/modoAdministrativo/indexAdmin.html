@@ -115,7 +115,7 @@
 
     <!-- INCIO DE PRODUCTOS -->
     <div id="productos">
-      <button id="new-empresa" data-toggle="modal" data-target="#productosModal"><i class="fa-solid fa-plus"></i> Agregar</button> <br>
+      <button onclick="guardarProducto()" id="new-empresa" data-toggle="modal" data-target="#productosModal"><i class="fa-solid fa-plus"></i> Agregar</button> <br>
       <!-- CAMISAS -->
       <div id="camisa" style="display: none;">
       <div id="camisas">
@@ -294,13 +294,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <input class="form-control my-2"  type="text"  id="nombre-producto" placeholder="Nombre producto">
-        <input class="form-control my-2"  type="text"  id="precio-producto" placeholder="Precio producto">
-        <input class="form-control my-2"  type="text"  id="imagen-producto" placeholder="URL imagen">
+        <input id="nombre" class="form-control my-2"  type="text"  id="nombre-producto" placeholder="Nombre producto">
+        <input id="precio" class="form-control my-2"  type="text"  id="precio-producto" placeholder="Precio producto">
+        <input id="url" class="form-control my-2"  type="text"  id="imagen-producto" placeholder="URL imagen">
+        <input id="categoria" class="form-control my-2"  type="text"  id="imagen-producto" placeholder="idCategoria(1-4)">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button id="btn-guardar" type="button" class="btn save" onclick="AgregarProducto();">Guardar</button>
+        <button id="btn-guardar" type="button" class="btn save" onclick="guardarProducto()">Guardar</button>
       </div>
     </div>
   </div>
@@ -321,16 +322,17 @@
         </button>
       </div>
       <div class="modal-body">
-        <input class="form-control my-2"  type="text"  id="nombre-motorista" placeholder="Nombre">
-        <textarea class="form-control my-2"  id="descrip" placeholder="Descripcion" cols="30" rows="10"></textarea>
-        <input class="form-control my-2"  type="text"  id="region-trabajo" placeholder="Region de trabajo">
-        <input class="form-control my-2"  type="tel"  id="numero-celular" placeholder="+504 ---- -----">
+        <input id="nombreMotorista" class="form-control my-2"  type="text"  id="nombre-motorista" placeholder="Nombres">
+        <input id="apellidoMotorista" class="form-control my-2"  type="text"  id="nombre-motorista" placeholder="Apellidos">
+        <!-- <textarea class="form-control my-2"  id="descrip" placeholder="Descripcion" cols="30" rows="10"></textarea> -->
+        <input id="emailMotorista" class="form-control my-2"  type="text"  id="region-trabajo" placeholder="Correo">
+        <input id="contrasenaMotorista" class="form-control my-2"  type="tel"  id="numero-celular" placeholder="Contraseña">
         <select id="lista-imagenes">
         </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button id="btn-guardar" type="button" class="btn save" onclick="guardar()">Guardar</button>
+        <button id="btn-guardar" type="button" class="btn save" onclick="guardarMotorista()">Guardar</button>
       </div>
     </div>
   </div>
@@ -351,7 +353,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <input class="form-control my-2"  type="text"  id="nombre-motorista" placeholder="Nombre cliente">
+        <input class="form-control my-2"  type="text"  id="nombre" placeholder="Nombre cliente">
         <label for="">Carrito/Pedido:</label>
         <input class="form-control my-2"  type="number"  id="cantidad" placeholder="Cantidad producto">
         <input class="form-control my-2"  type="text"  id="descrip" placeholder="Descripcion/nombre producto">
@@ -370,7 +372,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button id="btn-guardar" type="button" class="btn save" onclick="guardar()">Guardar</button>
+        <button id="guardarPedido()" type="button" class="btn save" onclick="guardar()">Guardar</button>
       </div>
     </div>
   </div>
