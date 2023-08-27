@@ -1,0 +1,251 @@
+[{
+  "_id": {
+    "$oid": "64e684e9ca9ccd6f32dce272"
+  },
+  "idCategoria": "1",
+  "nombreCategoria": "Camisas",
+  "detalleProductos": [
+    {
+      "_id": {
+        "$oid": "64e60e811d3b2e9e32d95f0f"
+      },
+      "idProductos": "5",
+      "nombreProducto": "Camisa rainbow",
+      "precio": "L.230",
+      "img": "https://i.pinimg.com/564x/6f/cf/8e/6fcf8ee8ebf2970913898cc0bb57b06d.jp…"
+    },
+    {
+      "_id": {
+        "$oid": "64e60e811d3b2e9e32d95f0e"
+      },
+      "idProductos": "4",
+      "nombreProducto": "Camisa baby blue",
+      "precio": "L.230",
+      "img": "https://i.pinimg.com/564x/33/a8/00/33a800788db952d4a70e142b97c99d81.jp…"
+    },
+    {
+      "_id": {
+        "$oid": "64e60e811d3b2e9e32d95f0c"
+      },
+      "idProducto": "2",
+      "nombreProducto": "Camisa amarilla",
+      "precio": "L.230",
+      "img": "https://i.pinimg.com/564x/1b/53/29/1b5329a481b6b087de661998c85b5af6.jp…"
+    },
+    {
+      "_id": {
+        "$oid": "64e60e811d3b2e9e32d95f0d"
+      },
+      "idProductos": "3",
+      "nombreProducto": "Camisa blanca",
+      "precio": "L.230",
+      "img": "https://i.pinimg.com/564x/38/2d/0b/382d0b221d9af4a46fdce789941ad6d4.jp…"
+    },
+    {
+      "_id": {
+        "$oid": "64e60e811d3b2e9e32d95f0b"
+      },
+      "idProductos": "1",
+      "nombreProducto": "Camisa rosa",
+      "precio": "L.230",
+      "img": "https://i.pinimg.com/564x/98/57/eb/9857eb9fd60d71465c232ec30102ddbc.jp…"
+    }
+  ],
+  "tipo": "producto",
+  "imagen": "https://img.freepik.com/vector-gratis/camisa-blanca-mangas-verdes-sobre-fondo-blanco_1308-91355.jpg?w=740&t=st=1692919442~exp=1692920042~hmac=bcc8c9a54759179932ee35746f24adb2a841b9af8d06e8caf29c2403e1448150"
+},
+{
+  "_id": {
+    "$oid": "64e68e1cca9ccd6f32dce274"
+  },
+  "idCategoria": "2",
+  "nombreCategoria": "Pantalones",
+  "detalleProductos": [
+    {
+      "_id": {
+        "$oid": "64e622151d3b2e9e32d95f10"
+      },
+      "idProductos": "6",
+      "nombreProducto": "Pantalon azul claro",
+      "precio": "L.630",
+      "img": "https://i.pinimg.com/564x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e622151d3b2e9e32d95f11"
+      },
+      "idProductos": "7",
+      "nombreProducto": "Pantalon azul oscuro",
+      "precio": "L.630",
+      "img": "https://i.pinimg.com/564x/75/61/7f/75617f79ef53d552a6df48a00f90e80e.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e622151d3b2e9e32d95f12"
+      },
+      "idProductos": "8",
+      "nombreProducto": "Pantalon rasgado",
+      "precio": "L.630",
+      "img": "https://i.pinimg.com/564x/a9/d9/25/a9d9259c6daa286267441b4c4d57c2dc.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e622151d3b2e9e32d95f13"
+      },
+      "idProductos": "9",
+      "nombreProducto": "Pantalon rasgado claro",
+      "precio": "L.630",
+      "img": "https://i.pinimg.com/564x/08/25/18/082518d260fbc545092571f4e425b3d3.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e622151d3b2e9e32d95f14"
+      },
+      "idProductos": "10",
+      "nombreProducto": "Pantalon negro",
+      "precio": "L.630",
+      "img": "https://i.pinimg.com/564x/2d/32/a2/2d32a24a7df945b7da181c477fdf274a.jpg"
+    }
+  ],
+  "tipo": "producto",
+  "imagen": "https://img.freepik.com/vector-gratis/etiqueta-engomada-historieta-pantalones-mezclilla_1308-81792.jpg?w=360&t=st=1692919563~exp=1692920163~hmac=e6842ac6fe26e336e60fcf5ddd7320a8e028cd24e9a49c28c6d2967ccbce3e07"
+},
+{
+  "_id": {
+    "$oid": "64e69411ddb8c1627e6e0d73"
+  },
+  "idCategoria": "4",
+  "nombreCategoria": "Zapatos",
+  "detalleProductos": [
+    {
+      "_id": {
+        "$oid": "64e628221d3b2e9e32d95f1a"
+      },
+      "idProductos": "16",
+      "nombreProducto": "Botines beige",
+      "precio": "L.730",
+      "img": "https://i.pinimg.com/564x/41/4d/f8/414df878b1c8413564dead9c5d22d0fa.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e628221d3b2e9e32d95f1b"
+      },
+      "idProductos": "17",
+      "nombreProducto": "Sandalias Strappy",
+      "precio": "L.730",
+      "img": "https://i.pinimg.com/564x/60/6f/9d/606f9d3a071d2ed1c7eb427109478236.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e628221d3b2e9e32d95f1c"
+      },
+      "idProductos": "18",
+      "nombreProducto": "Tenis blancos",
+      "precio": "L.730",
+      "img": "https://i.pinimg.com/564x/7d/92/da/7d92dac157c7740d26ca43d887e88041.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e628221d3b2e9e32d95f1d"
+      },
+      "idProductos": "19",
+      "nombreProducto": "Tacones verde",
+      "precio": "L.730",
+      "img": "https://i.pinimg.com/564x/aa/1a/1c/aa1a1cde6f962a7321601edc16c08578.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e628221d3b2e9e32d95f1e"
+      },
+      "idProductos": "20",
+      "nombreProducto": "Flats negros",
+      "precio": "L.730",
+      "img": "https://i.pinimg.com/564x/48/8f/8f/488f8f642cf53da0d243944138985ef9.jpg"
+    }
+  ],
+  "tipo": "producto",
+  "imagen": "https://img.freepik.com/vector-gratis/conjunto-zapatillas-deporte_1308-134554.jpg?w=740&t=st=1692919614~exp=1692920214~hmac=00a90aaa31fe5978699109575c38835304dd22e8104f081a4760c52af133627d"
+},
+{
+  "_id": {
+    "$oid": "64e692d2ddb8c1627e6e0d6b"
+  },
+  "idCategoria": "3",
+  "nombreCategoria": "Accesorios",
+  "detalleProductos": [
+    {
+      "_id": {
+        "$oid": "64e625571d3b2e9e32d95f17"
+      },
+      "idProductos": "13",
+      "nombreProducto": "Gancho de perlas delgados",
+      "precio": "L.530",
+      "img": "https://i.pinimg.com/564x/44/9c/1b/449c1b2bb258079c0ae6adb848d3582a.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e625571d3b2e9e32d95f15"
+      },
+      "idProductos": "11",
+      "nombreProducto": "Bolso negro",
+      "precio": "L.530",
+      "img": "https://i.pinimg.com/564x/42/1f/d7/421fd7a6fe3d7af922b3413b3159a51c.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e625571d3b2e9e32d95f16"
+      },
+      "idProductos": "12",
+      "nombreProducto": "Gacho de perlas",
+      "precio": "L.530",
+      "img": "https://i.pinimg.com/564x/61/fa/15/61fa1580d751db0020ed4e8835468324.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e625571d3b2e9e32d95f18"
+      },
+      "idProductos": "14",
+      "nombreProducto": "Gancho color solido",
+      "precio": "L.530",
+      "img": "https://i.pinimg.com/564x/75/0f/9e/750f9e8bced39719ff70e9ebd983e973.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "64e625571d3b2e9e32d95f19"
+      },
+      "idProductos": "15",
+      "nombreProducto": "Bolso rosado",
+      "precio": "L.530",
+      "img": "https://i.pinimg.com/564x/fc/1c/fe/fc1cfe3a16da4047f67436818cfbc810.jpg"
+    }
+  ],
+  "tipo": "producto",
+  "imagen": "https://img.freepik.com/vector-gratis/juego-accesorios-cuero-marron_1308-2386.jpg?w=740&t=st=1692919676~exp=1692920276~hmac=9279c50f8174935c06dfe00fc4c4f66917a50ce6ce19c719baf2210256942daa"
+},
+{
+  "_id": {
+    "$oid": "64e799cccf26e04c5f38cf79"
+  },
+  "idCategoria": "5",
+  "tipo": "pedido",
+  "nombre": "Pedidos disponibles",
+  "imagen": ""
+},
+{
+  "_id": {
+    "$oid": "64e799cccf26e04c5f38cf7a"
+  },
+  "idCategoria": "6",
+  "tipo": "pedido",
+  "nombre": "Pedidos entregados",
+  "imagen": ""
+},
+{
+  "_id": {
+    "$oid": "64e799cccf26e04c5f38cf7b"
+  },
+  "idCategoria": "7",
+  "tipo": "pedido",
+  "nombre": "Pedidos pendientes",
+  "imagen": ""
+}]

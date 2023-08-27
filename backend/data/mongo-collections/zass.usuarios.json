@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "64e7a7bbcf26e04c5f38cf86"
+  },
+  "id": "1",
+  "nombre": "Valeria",
+  "apellido": "",
+  "correo": "valeria@gmail.com",
+  "contrasena": "asd.456",
+  "direccion": "Las casitas"
+},
+{
+  "_id": {
+    "$oid": "64e7a7bbcf26e04c5f38cf87"
+  },
+  "id": "2",
+  "nombre": "Josue",
+  "apellido": "",
+  "correo": "josue@gmail.com",
+  "contrasena": "asd.456",
+  "direccion": "La kennedy"
+},
+{
+  "_id": {
+    "$oid": "64e7a7bbcf26e04c5f38cf88"
+  },
+  "id": "3",
+  "nombre": "Erick",
+  "apellido": "",
+  "correo": "erick@gmail.com",
+  "contrasena": "asd.456",
+  "direccion": "21 de Octubre"
+},
+{
+  "_id": {
+    "$oid": "64eaffb5511324965289d021"
+  },
+  "id": "4",
+  "nombre": "Tommy",
+  "apellido": "Matamoros",
+  "correo": "tommy@gmail.com",
+  "contrasena": "12345",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb11e131e77e629661b5ed"
+  },
+  "id": "5",
+  "nombre": "Javier",
+  "apellido": "Torres",
+  "correo": "javier@gmail.com",
+  "contrasena": "asd.456",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb14cc31e77e629661b604"
+  },
+  "id": "6",
+  "nombre": "javier",
+  "apellido": "torres",
+  "correo": "javier@gmail.com",
+  "contrasena": "asd.456",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb20e37b18c0342f7a9b63"
+  },
+  "id": "7",
+  "nombre": "Pascal",
+  "apellido": "Marin",
+  "correo": "pascal@gmail.com",
+  "contrasena": "1234",
+  "__v": 0
+}]

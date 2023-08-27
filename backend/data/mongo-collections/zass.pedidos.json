@@ -1,0 +1,211 @@
+[{
+  "_id": {
+    "$oid": "64e6c320eac1d827cf281995"
+  },
+  "idPedido": "3",
+  "nombreCliente": "Valeria",
+  "pedido": [
+    {
+      "idProductos": "8",
+      "nombreProducto": "Pantalon rasgado",
+      "precio": "L.630",
+      "img": "https://i.pinimg.com/564x/a9/d9/25/a9d9259c6daa286267441b4c4d57c2dc.jp…",
+      "idCategoria": "2",
+      "cantidad": 4
+    }
+  ],
+  "impuesto": "L.99",
+  "total": "L.400",
+  "fecha": "15/05/22",
+  "establecimiento": "Charly",
+  "direccion": "Comayaguela",
+  "motorista": "Pedro",
+  "estadoOrden": "pendiente",
+  "idUsuario": "1"
+},
+{
+  "_id": {
+    "$oid": "64e6c320eac1d827cf281993"
+  },
+  "idPedido": "1",
+  "nombreCliente": "Axel",
+  "pedido": [
+    {
+      "idProducto": "2",
+      "idCategoria": "1",
+      "nombreProducto": "Camisa amarilla",
+      "precio": "500",
+      "cantidad": "3"
+    },
+    {
+      "idProducto": "10",
+      "idCategoria": "2",
+      "nombreProducto": "Pantalon negro",
+      "precio": "500",
+      "cantidad": "2"
+    }
+  ],
+  "impuesto": "99",
+  "total": "400",
+  "fecha": "15/05/22",
+  "establecimiento": "Charly",
+  "direccion": "Comayaguela",
+  "motorista": "",
+  "estadoOrden": "disponible",
+  "idUsuario": "3"
+},
+{
+  "_id": {
+    "$oid": "64e6c320eac1d827cf281994"
+  },
+  "idPedido": "2",
+  "nombreCliente": "Josue",
+  "pedido": [
+    {
+      "idProducto": "18",
+      "idCategoria": "4",
+      "nombreProducto": "Tenis blancos",
+      "precio": "500",
+      "cantidad": "5"
+    }
+  ],
+  "impuesto": "99",
+  "total": "400",
+  "fecha": "15/05/22",
+  "establecimiento": "Charly",
+  "direccion": "Comayaguela",
+  "motorista": "Elisa",
+  "idUsuario": "2",
+  "estadoOrden": "entregado"
+},
+{
+  "_id": {
+    "$oid": "64e8502a10b9f7568d65cf39"
+  },
+  "idPedido": "4",
+  "nombreCliente": "Tommy",
+  "pedido": [
+    {
+      "_id": "64e60e811d3b2e9e32d95f0f",
+      "idProductos": "5",
+      "nombreProducto": "Camisa rainbow",
+      "precio": "230",
+      "img": "https://img.ltwebstatic.com/images3_pi/2020/05/26/1590458520c385838e95c6d2fe88991c108a8ad16a_thumbnail_405x552.jpg",
+      "idCategoria": "1",
+      "cantidad": "1"
+    },
+    {
+      "_id": "64e622151d3b2e9e32d95f14",
+      "idProductos": "10",
+      "nombreProducto": "Pantalon negro",
+      "precio": "630",
+      "img": "https://i.pinimg.com/564x/2d/32/a2/2d32a24a7df945b7da181c477fdf274a.jpg",
+      "idCategoria": "2",
+      "cantidad": "1"
+    },
+    {
+      "_id": "64e628221d3b2e9e32d95f1c",
+      "idProductos": "18",
+      "nombreProducto": "Tenis blancos",
+      "precio": "730",
+      "img": "https://i.pinimg.com/564x/7d/92/da/7d92dac157c7740d26ca43d887e88041.jpg",
+      "idCategoria": "4",
+      "cantidad": "1"
+    },
+    {
+      "_id": "64e625571d3b2e9e32d95f17",
+      "idProductos": "13",
+      "nombreProducto": "Gancho de perlas delgados",
+      "precio": "530",
+      "img": "https://i.pinimg.com/564x/44/9c/1b/449c1b2bb258079c0ae6adb848d3582a.jpg",
+      "idCategoria": "3",
+      "cantidad": "1"
+    }
+  ],
+  "impuesto": "318",
+  "total": "2438",
+  "fecha": "28/08/2023",
+  "establecimiento": "Zara",
+  "direccion": "Las casitas",
+  "estadoOrden": "entregado",
+  "__v": 0,
+  "motorista": "Yanely Matamoros"
+},
+{
+  "_id": {
+    "$oid": "64eb224f7b18c0342f7a9b6d"
+  },
+  "idPedido": "5",
+  "nombreCliente": "Pascal",
+  "pedido": [
+    {
+      "_id": "64e622151d3b2e9e32d95f10",
+      "idProductos": "6",
+      "nombreProducto": "Pantalon azul claro",
+      "precio": "630",
+      "img": "https://i.pinimg.com/564x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg",
+      "idCategoria": "2",
+      "cantidad": "4"
+    },
+    {
+      "_id": "64e622151d3b2e9e32d95f10",
+      "idProductos": "6",
+      "nombreProducto": "Pantalon azul claro",
+      "precio": "630",
+      "img": "https://i.pinimg.com/564x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg",
+      "idCategoria": "2",
+      "cantidad": "4"
+    },
+    {
+      "_id": "64e622151d3b2e9e32d95f10",
+      "idProductos": "6",
+      "nombreProducto": "Pantalon azul claro",
+      "precio": "630",
+      "img": "https://i.pinimg.com/564x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg",
+      "idCategoria": "2",
+      "cantidad": "4"
+    },
+    {
+      "_id": "64e622151d3b2e9e32d95f10",
+      "idProductos": "6",
+      "nombreProducto": "Pantalon azul claro",
+      "precio": "630",
+      "img": "https://i.pinimg.com/564x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg",
+      "idCategoria": "2",
+      "cantidad": "4"
+    }
+  ],
+  "impuesto": "378",
+  "total": "2898",
+  "fecha": "28/08/2023",
+  "establecimiento": "Charly",
+  "direccion": "Altos de toncontin",
+  "estadoOrden": "disponible",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb23bd7b18c0342f7a9b7c"
+  },
+  "idPedido": "6",
+  "nombreCliente": "Pascal",
+  "pedido": [
+    {
+      "_id": "64e622151d3b2e9e32d95f10",
+      "idProductos": "6",
+      "nombreProducto": "Pantalon azul claro",
+      "precio": "630",
+      "img": "https://i.pinimg.com/564x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg",
+      "idCategoria": "2",
+      "cantidad": "1"
+    }
+  ],
+  "impuesto": "94.5",
+  "total": "724.5",
+  "fecha": "28/08/2023",
+  "establecimiento": "Pull&Bear",
+  "direccion": "Altos de toncontin",
+  "estadoOrden": "entregado",
+  "__v": 0,
+  "motorista": "Tommy"
+}]

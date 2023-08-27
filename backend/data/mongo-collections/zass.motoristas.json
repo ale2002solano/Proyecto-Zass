@@ -1,0 +1,62 @@
+[{
+  "_id": {
+    "$oid": "64e528a2f9fb98ad4f9179ab"
+  },
+  "id": "3",
+  "nombre": "Elisa",
+  "apellido": "Lopez",
+  "correo": "jelisa@gmail.com",
+  "contrasena": "asd.456"
+},
+{
+  "_id": {
+    "$oid": "64e7a14b69a1cc9a51fd583c"
+  },
+  "id": "2",
+  "nombre": "Fernanda",
+  "apellido": "Martinez",
+  "correo": "fernanda@gmail.com",
+  "contrasena": "asd.456",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e93105525a7e1e16566828"
+  },
+  "id": "4",
+  "nombre": "Yanely Matamoros",
+  "correo": "yanely@gmail.com",
+  "contrasena": "1234",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb17ad31e77e629661b618"
+  },
+  "id": "5",
+  "nombre": "axel",
+  "correo": "axel@gmail.com",
+  "contrasena": "1234",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb22a47b18c0342f7a9b70"
+  },
+  "id": "6",
+  "nombre": "Tommy",
+  "correo": "tommy@gmail.com",
+  "contrasena": "1234",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb236431e77e629661b6c7"
+  },
+  "id": "6",
+  "nombre": "Axel",
+  "apellido": "Coello",
+  "correo": "axel@gmail.com",
+  "contrasena": "1234",
+  "__v": 0
+}]
