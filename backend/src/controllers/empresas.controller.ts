@@ -30,7 +30,7 @@ export const obtenerEmpresas = (req:Request, res:Response) => {
 export const actualizarEmpresa = (req:Request, res:Response) => {
     EmpresaSchema.updateOne({Number(idEmpresa): req.params.id},req.body
     ).then(result => {
-        res.send({message: 'Usuario actualizado', result});
+        res.send({message: 'Empresa actualizado', result});
         res.end();
     }).catch(error => {
         res.send({message: 'Ocurrio un error', error});

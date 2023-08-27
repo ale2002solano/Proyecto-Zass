@@ -118,6 +118,11 @@
     margin-left: 10px;
 }
 
+.button-tomar-pedido:hover{
+    cursor: pointer;
+    background-color: #055347;
+}
+
 .fin{
     display: flex;
     align-items: center;

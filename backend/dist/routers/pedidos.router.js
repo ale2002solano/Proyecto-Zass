@@ -12,6 +12,9 @@ router.put('/guardar', pedidos_controller_1.agregarPedido);
 // (coleccion pedidos) obtener pedido y direccion de usuario (cruce)
 //http://localhost:8088/pedidos/:id/pedido
 router.get('/:id/pedido', pedidos_controller_1.obtenerPedido);
+// (coleccion pedidos) actualizar
+//http://localhost:8088/pedidos/:id/pedido/actualizar
+router.put('/:id/pedido/actualizar', pedidos_controller_1.actualizarPedido);
 // (coleccion pedidos) obtener pedido y direccion de usuario (cruce)
 //http://localhost:8088/pedidos/
 router.get('/', pedidos_controller_1.obtenerPedidos);

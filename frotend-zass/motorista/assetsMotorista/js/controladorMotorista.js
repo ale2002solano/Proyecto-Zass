@@ -81,6 +81,7 @@ const loginMotorista = async () => {
     );
     motoristaObtenido = await respuesta.json();
     console.log(motoristaObtenido);
+    localStorage.setItem('motorista', JSON.stringify(motoristaObtenido.motorista.nombre));
     if(motoristaObtenido.status){
         mostrarCategoriasMotoristas();
     }else{
@@ -202,6 +203,7 @@ const renderizarPedidosDisponibles = async () => {
     disponibles.result.forEach((disponible) => {
     let cont = 0;
         let pedidos = disponible.pedido;
+        
         pedidos.forEach((descripcion)=>{
             cont++;
             html += 
@@ -226,10 +228,11 @@ const renderizarPedidosDisponibles = async () => {
                 </div>
                 <div class="fin">
                     <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-disponible.png">
-                    <div><button class="button-tomar-pedido">Tomar pedido</button></div>
+                    <div><button class="button-tomar-pedido" onclick="pedidoPendiente(${disponible.idPedido})" >Tomar pedido</button></div>
                 </div>
             </div>
         `
+    html = '';
     });
     mostrarPedidosDisponibles()
 }
@@ -269,11 +272,12 @@ const renderizarPedidosEntregados = async () => {
                 </div>
                 <div class="fin">
                         <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-entregada.png">
-                        <div><button class="button-tomar-pedido">Factura</button></div>
+                        <div><button class="button-tomar-pedido">Entregado</button></div>
                 </div>
             </div>
         `
     });
+    html = '';
     mostrarPedidosEntregados()
 }
 
@@ -309,10 +313,44 @@ const renderizarPedidosPendientes = async () => {
                 </div>
                 <div class="fin">
                     <img alt="" style="height: 70px; " src="../modoAdministrativo/assetsAdmin/img/orden-pendiente.png">
-                    <div><button class="button-tomar-pedido">Entregado</button></div>
+                    <div><button class="button-tomar-pedido" onclick="pedidoEntregado('${disponible.idPedido}')" >Entregado</button></div>
                 </div>
             </div>
         `
     });
     mostrarPedidosPendientes()
+}
+
+const pedidoPendiente = (id) => {
+    console.log(id);
+    let motorista = JSON.parse(localStorage.getItem('motorista'));
+    let json = {
+        "estadoOrden": "pendiente",
+        "motorista": `${motorista}`
+    }
+    console.log(json);
+    actualizarPedido(id, json);
+}
+
+
+const pedidoEntregado = (id) => {
+    console.log(id);
+    let json = {
+        "estadoOrden": "entregado"
+    }
+    actualizarPedido(id, json);
+}
+
+const actualizarPedido = async (id, json) => {
+    let respuesta = await fetch(`http://localhost:8088/pedidos/${id}/pedido/actualizar`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(json)
+        }
+    );
+    const pedidoActualizado = await respuesta.json();
+    console.log(pedidoActualizado);
 }

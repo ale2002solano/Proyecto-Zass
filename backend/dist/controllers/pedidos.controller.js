@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.obtenerPedidosEntregados = exports.obtenerPedidosPendientes = exports.obtenerPedidosDisponibles = exports.obtenerPedidos = exports.obtenerPedido = exports.agregarPedido = void 0;
+exports.actualizarPedido = exports.obtenerPedidosEntregados = exports.obtenerPedidosPendientes = exports.obtenerPedidosDisponibles = exports.obtenerPedidos = exports.obtenerPedido = exports.agregarPedido = void 0;
 const pedidos_schema_1 = require("../models/pedidos.schema");
 const agregarPedido = (req, res) => {
     let pedido = new pedidos_schema_1.PedidoSchema(req.body);
@@ -78,3 +78,13 @@ const obtenerPedidosEntregados = (req, res) => {
     });
 };
 exports.obtenerPedidosEntregados = obtenerPedidosEntregados;
+const actualizarPedido = (req, res) => {
+    pedidos_schema_1.PedidoSchema.updateOne({ idPedido: req.params.id }, req.body).then(result => {
+        res.send({ message: 'Pedido actualizado', result });
+        res.end();
+    }).catch(error => {
+        res.send({ message: 'Ocurrio un error', error });
+        res.end();
+    });
+};
+exports.actualizarPedido = actualizarPedido;

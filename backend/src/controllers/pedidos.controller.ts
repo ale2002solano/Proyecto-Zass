@@ -68,3 +68,14 @@ export const obtenerPedidosEntregados = (req:Request, res:Response) => {
         res.end();
     })
 }
+
+export const actualizarPedido = (req:Request, res:Response) => {
+    PedidoSchema.updateOne({idPedido: req.params.id},req.body
+    ).then(result => {
+        res.send({message: 'Pedido actualizado', result});
+        res.end();
+    }).catch(error => {
+        res.send({message: 'Ocurrio un error', error});
+        res.end();
+    })
+}
